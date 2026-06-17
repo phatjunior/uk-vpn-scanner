@@ -799,21 +799,22 @@ async def main():
             }
             code_to_flag = {v: k for k, v in _FLAG_MAP.items()}
 
-            country_counters = {}
             formatted_uris = []
             
-            # Добавляем название подписки в самом верху (распознаётся многими клиентами)
+            # Добавляем расширенные метаданные подписки
             formatted_uris.append("#profile-title: phatVPN")
+            formatted_uris.append("#profile-update-interval: 2")
+            formatted_uris.append("#support-url: https://t.me/phatBeats")
+            formatted_uris.append("#profile-web-page-url: https://phatjunior.github.io/uk-vpn-scanner/")
+            formatted_uris.append("#subscription-userinfo: upload=1073741824; download=5368709120; total=107374182400; expire=1798761600")
 
-            for n in top:
+            for rank, n in enumerate(top, 1):
                 cc = n.get("country", "??")
                 flag = code_to_flag.get(cc, "🏳️")
                 c_name = country_names_full.get(cc, "Unknown")
                 
-                country_counters[cc] = country_counters.get(cc, 0) + 1
-                idx = country_counters[cc]
-                
-                new_name = f"{flag} {c_name} #{idx}"
+                # Порядковый номер по качеству (месту в топе)
+                new_name = f"{flag} {c_name} #{rank}"
                 
                 raw_uri = n["raw"]
                 if "#" in raw_uri:
@@ -831,6 +832,7 @@ async def main():
             with open(PHAT_SUBSCRIPTION_FILE, "w") as f:
                 f.write(sub_b64)
             log.info(f"   ✅ Подписка сохранена: {SUBSCRIPTION_FILE} и {PHAT_SUBSCRIPTION_FILE} ({len(top)} нод)")
+
 
 
             # Статистика для Web Dashboard
