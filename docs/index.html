@@ -1320,8 +1320,42 @@
             if (!subUrl || subUrl === 'Loading...') return;
             
             const links = APP_LINKS[appId];
-            let importUrl = '';
             
+            // Happ does not support standard HTTP subscription import via scheme,
+            // it relies on copying the link to clipboard and opening the app.
+            if (appId === 'happ') {
+                navigator.clipboard.writeText(subUrl).then(() => {
+                    showToast(); // Show Copied! notification
+                    
+                    let hasLanded = false;
+                    const onBlur = () => {
+                        hasLanded = true;
+                        window.removeEventListener('blur', onBlur);
+                    };
+                    window.addEventListener('blur', onBlur);
+                    
+                    window.location.href = 'happ://';
+                    
+                    setTimeout(() => {
+                        window.removeEventListener('blur', onBlur);
+                        if (hasLanded || !document.hasFocus() || document.hidden) {
+                            return;
+                        }
+                        const os = getOS();
+                        if (os === 'desktop') {
+                            alert(`It seems Happ is not installed on your computer, or auto-import is not supported on desktop. Please copy the subscription URL manually.`);
+                        } else if (confirm(`It seems Happ is not installed. Would you like to download it now?`)) {
+                            openStore(appId, true);
+                        }
+                    }, 2500);
+                }).catch(() => {
+                    // Fallback if clipboard API is blocked
+                    window.location.href = 'happ://';
+                });
+                return;
+            }
+
+            let importUrl = '';
             if (appId === 'karing') {
                 importUrl = links.scheme + encodeURIComponent(subUrl);
             } else {
