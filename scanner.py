@@ -72,6 +72,8 @@ SPEED_TEST_URL = "https://speed.cloudflare.com/__down?bytes=524288"  # 512 KB
 HISTORY_FILE = "history.json"
 STATS_FILE = "docs/stats.json"
 SUBSCRIPTION_FILE = "docs/sub.txt"
+PHAT_SUBSCRIPTION_FILE = "docs/phatVPN.txt"
+
 
 MAX_CONCURRENCY = 20           # Параллельных тестов Xray
 MAX_CANDIDATES = 300           # Макс. нод на тестирование
@@ -774,13 +776,62 @@ async def main():
         os.makedirs("docs", exist_ok=True)
 
         if top:
-            # Base64 подписка (универсальный формат для всех VPN клиентов)
-            sub_content = "\n".join(n["raw"] for n in top)
+            # Маппинг ISO кодов в полные названия стран
+            country_names_full = {
+                "US": "United States", "GB": "United Kingdom", "DE": "Germany",
+                "FR": "France", "NL": "Netherlands", "CA": "Canada",
+                "JP": "Japan", "KR": "South Korea", "SG": "Singapore",
+                "AU": "Australia", "IE": "Ireland", "SE": "Sweden",
+                "NO": "Norway", "FI": "Finland", "DK": "Denmark",
+                "CH": "Switzerland", "AT": "Austria", "BE": "Belgium",
+                "ES": "Spain", "IT": "Italy", "PL": "Poland",
+                "RU": "Russia", "TR": "Turkey", "IN": "India",
+                "BR": "Brazil", "HK": "Hong Kong", "TW": "Taiwan",
+                "IL": "Israel", "ZA": "South Africa", "MX": "Mexico",
+                "UA": "Ukraine", "RO": "Romania", "CZ": "Czechia",
+                "HU": "Hungary", "PT": "Portugal", "LU": "Luxembourg",
+                "BG": "Bulgaria", "HR": "Croatia", "LT": "Lithuania",
+                "LV": "Latvia", "EE": "Estonia", "RS": "Serbia",
+                "MD": "Moldova", "GE": "Georgia", "AM": "Armenia",
+                "AZ": "Azerbaijan", "KZ": "Kazakhstan", "TH": "Thailand",
+                "VN": "Vietnam", "ID": "Indonesia", "PH": "Philippines",
+                "MY": "Malaysia",
+            }
+            code_to_flag = {v: k for k, v in _FLAG_MAP.items()}
+
+            country_counters = {}
+            formatted_uris = []
+            
+            # Добавляем название подписки в самом верху (распознаётся многими клиентами)
+            formatted_uris.append("#profile-title: phatVPN")
+
+            for n in top:
+                cc = n.get("country", "??")
+                flag = code_to_flag.get(cc, "🏳️")
+                c_name = country_names_full.get(cc, "Unknown")
+                
+                country_counters[cc] = country_counters.get(cc, 0) + 1
+                idx = country_counters[cc]
+                
+                new_name = f"{flag} {c_name} #{idx}"
+                
+                raw_uri = n["raw"]
+                if "#" in raw_uri:
+                    base_uri = raw_uri.split("#")[0]
+                else:
+                    base_uri = raw_uri
+                
+                formatted_uris.append(f"{base_uri}#{new_name}")
+
+            sub_content = "\n".join(formatted_uris)
             sub_b64 = base64.b64encode(sub_content.encode()).decode()
 
             with open(SUBSCRIPTION_FILE, "w") as f:
                 f.write(sub_b64)
-            log.info(f"   ✅ Подписка: {SUBSCRIPTION_FILE} ({len(top)} нод)")
+            with open(PHAT_SUBSCRIPTION_FILE, "w") as f:
+                f.write(sub_b64)
+            log.info(f"   ✅ Подписка сохранена: {SUBSCRIPTION_FILE} и {PHAT_SUBSCRIPTION_FILE} ({len(top)} нод)")
+
 
             # Статистика для Web Dashboard
             stats = {
