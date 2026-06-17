@@ -737,6 +737,102 @@
         }
 
         /* ═══════════════════════════════════════════
+           QUICK START SECTION
+           ═══════════════════════════════════════════ */
+        .quick-start {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 32px;
+            margin-bottom: 36px;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .quick-start__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-primary);
+        }
+
+        .step-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .step-container { grid-template-columns: 1fr; gap: 20px; }
+            .quick-start { padding: 24px 20px; }
+        }
+
+        .step-block {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+        }
+
+        .step-block__header {
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .app-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .app-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 12px 16px;
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            font-family: var(--font-sans);
+        }
+
+        .app-btn:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: var(--accent-blue);
+            transform: translateX(4px);
+        }
+        
+        .app-btn--import {
+            background: linear-gradient(135deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.1) 100%);
+            border-color: rgba(99,102,241,0.3);
+        }
+        
+        .app-btn--import:hover {
+            background: linear-gradient(135deg, rgba(99,102,241,0.2) 0%, rgba(139,92,246,0.2) 100%);
+            border-color: var(--accent-purple);
+        }
+
+        .app-btn__icon {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* ═══════════════════════════════════════════
            RESPONSIVE
            ═══════════════════════════════════════════ */
         @media (max-width: 640px) {
@@ -755,7 +851,7 @@
         <header class="header animate-in">
             <div class="header__badge">
                 <span class="pulse"></span>
-                Auto-updating every 6 hours
+                Auto-updating every 2 hours
             </div>
             <h1 class="header__title">UK VPN Scanner</h1>
             <p class="header__subtitle">VLESS Reality Node Monitor — bypass UK Content Control</p>
@@ -764,12 +860,12 @@
         <!-- ═══ STATUS BAR ═══ -->
         <div class="status-bar animate-in animate-delay-1" id="statusBar">
             <div class="status-item">
-                <span class="status-item__icon">🕐</span>
+                <span class="status-item__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
                 <span>Last scan:</span>
                 <span class="status-item__value" id="lastUpdate">—</span>
             </div>
             <div class="status-item">
-                <span class="status-item__icon">📡</span>
+                <span class="status-item__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span>
                 <span>Repos:</span>
                 <span class="status-item__value" id="reposCount">—</span>
             </div>
@@ -778,14 +874,68 @@
         <!-- ═══ SUBSCRIPTION CARD ═══ -->
         <div class="sub-card animate-in animate-delay-2" id="subCard">
             <div class="sub-card__info">
-                <div class="sub-card__title">📋 Subscription URL</div>
-                <div class="sub-card__desc">Add this URL to your VPN client (Hiddify, v2rayTun, HApp, etc.)</div>
+                <div class="sub-card__title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:-3px"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>Subscription URL</div>
+                <div class="sub-card__desc">Add this URL to your VPN client (Hiddify, v2rayTun, Karing, etc.)</div>
             </div>
             <div class="sub-card__url">
                 <input type="text" class="sub-card__input" id="subUrl" value="" readonly placeholder="Loading...">
                 <button class="btn btn--primary" id="copyBtn" onclick="copySubUrl()">
-                    📋 Copy
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg> Copy
                 </button>
+            </div>
+        </div>
+
+        <!-- ═══ QUICK START ═══ -->
+        <div class="quick-start animate-in animate-delay-2" id="quickStart" style="display: none;">
+            <div class="quick-start__title">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                Quick Start Guide
+            </div>
+            <div class="step-container">
+                <!-- Step 1 -->
+                <div class="step-block">
+                    <div class="step-block__header"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(34,211,238,0.15);border-radius:50%;color:var(--accent-cyan);font-size:12px;margin-right:8px;">1</span> Install an App</div>
+                    <div class="app-list">
+                        <button class="app-btn" onclick="openStore('karing')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Karing</div>
+                            <span style="font-size:0.8em;color:var(--text-muted)">Get App ↗</span>
+                        </button>
+                        <button class="app-btn" onclick="openStore('happ')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Happ</div>
+                            <span style="font-size:0.8em;color:var(--text-muted)">Get App ↗</span>
+                        </button>
+                        <button class="app-btn" onclick="openStore('hiddify')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Hiddify</div>
+                            <span style="font-size:0.8em;color:var(--text-muted)">Get App ↗</span>
+                        </button>
+                        <button class="app-btn" onclick="openStore('v2raytun')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-cyan)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> v2rayTun</div>
+                            <span style="font-size:0.8em;color:var(--text-muted)">Get App ↗</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-block">
+                    <div class="step-block__header"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(99,102,241,0.15);border-radius:50%;color:var(--accent-blue);font-size:12px;margin-right:8px;">2</span> Auto-Import</div>
+                    <div class="app-list">
+                        <button class="app-btn app-btn--import" onclick="autoImport('karing')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Karing</div>
+                            <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
+                        </button>
+                        <button class="app-btn app-btn--import" onclick="autoImport('happ')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Happ</div>
+                            <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
+                        </button>
+                        <button class="app-btn app-btn--import" onclick="autoImport('hiddify')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Hiddify</div>
+                            <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
+                        </button>
+                        <button class="app-btn app-btn--import" onclick="autoImport('v2raytun')">
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to v2rayTun</div>
+                            <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -799,9 +949,22 @@
     </div>
 
     <!-- Toast notification -->
-    <div class="toast" id="toast">✅ Copied to clipboard!</div>
+    <div class="toast" id="toast">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Copied to clipboard!
+    </div>
 
     <script>
+        // ═══════════════════════════════════════════════
+        //  ICONS
+        // ═══════════════════════════════════════════════
+        const ICONS = {
+            globe: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
+            zap: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+            trophy: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>`,
+            wifiOff: `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="2" x2="22" y1="2" y2="22"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 4.17-2.65"/><path d="M10.66 5c4.01-.36 8.14.9 11.34 3.82"/><path d="M5 12.86a10 10 0 0 1 12.83-2.1"/></svg>`,
+        };
+
         // ═══════════════════════════════════════════════
         //  DATA & STATE
         // ═══════════════════════════════════════════════
@@ -832,7 +995,7 @@
             } catch (err) {
                 document.getElementById('mainContent').innerHTML = `
                     <div class="error-state">
-                        <div class="error-state__icon">📡</div>
+                        <div class="error-state__icon">${ICONS.wifiOff}</div>
                         <div class="error-state__title">No scan data available yet</div>
                         <div class="error-state__desc">
                             The scanner hasn't run yet or stats.json is not accessible.<br>
@@ -852,6 +1015,7 @@
             // ── Subscription URL ──
             const baseUrl = window.location.href.replace(/\/[^/]*$/, '');
             document.getElementById('subUrl').value = `${baseUrl}/phatVPN.txt`;
+            document.getElementById('quickStart').style.display = 'block';
 
             // ── Status bar ──
             const dt = new Date(data.updated_at);
@@ -926,7 +1090,7 @@
 
             return `
             <div class="chart-card animate-in animate-delay-4">
-                <div class="chart-card__title">🌍 Country Distribution</div>
+                <div class="chart-card__title">${ICONS.globe} Country Distribution</div>
                 <div class="country-bars">${bars || '<p style="color:var(--text-muted)">No data</p>'}</div>
             </div>`;
         }
@@ -936,7 +1100,7 @@
             if (!nodes.length) {
                 return `
                 <div class="chart-card animate-in animate-delay-4">
-                    <div class="chart-card__title">⚡ Latency Distribution</div>
+                    <div class="chart-card__title">${ICONS.zap} Latency Distribution</div>
                     <p style="color:var(--text-muted);padding:20px">No data</p>
                 </div>`;
             }
@@ -973,7 +1137,7 @@
 
             return `
             <div class="chart-card animate-in animate-delay-4">
-                <div class="chart-card__title">⚡ Latency Distribution</div>
+                <div class="chart-card__title">${ICONS.zap} Latency Distribution</div>
                 <div class="latency-chart">${rows}</div>
                 <div class="latency-legend">
                     <div class="latency-legend__item">
@@ -1010,7 +1174,7 @@
 
                 return `
                 <tr>
-                    <td class="td-rank ${rankClass}">${n.rank <= 3 ? '🏆' : '#'} ${n.rank}</td>
+                    <td class="td-rank ${rankClass}">${n.rank <= 3 ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent-amber);vertical-align:middle;margin-right:2px"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>' : '#'} ${n.rank}</td>
                     <td class="td-score">
                         <div class="score-bar">
                             <span>${n.score}</span>
@@ -1032,7 +1196,7 @@
             return `
             <div class="section animate-in animate-delay-5">
                 <div class="section__header">
-                    <span class="section__icon">🏆</span>
+                    <span class="section__icon">${ICONS.trophy}</span>
                     <h2 class="section__title">Top ${nodes.length} Nodes</h2>
                 </div>
                 <div class="table-wrapper">
@@ -1044,7 +1208,7 @@
                                     <th>Score</th>
                                     <th>Latency</th>
                                     <th>Speed</th>
-                                    <th>🌍</th>
+                                    <th title="Country">${ICONS.globe}</th>
                                     <th>Host</th>
                                     <th>SNI</th>
                                 </tr>
@@ -1056,7 +1220,7 @@
             </div>
 
             <footer class="footer">
-                <p>UK VPN Scanner v2.0 — Auto-updates every 6 hours via GitHub Actions</p>
+                <p>UK VPN Scanner v2.0 — Auto-updates every 2 hours via GitHub Actions</p>
                 <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
             </footer>
             `;
@@ -1103,6 +1267,79 @@
             const toast = document.getElementById('toast');
             toast.classList.add('toast--visible');
             setTimeout(() => toast.classList.remove('toast--visible'), 2500);
+        }
+
+        // ═══════════════════════════════════════════════
+        //  SMART LINKS LOGIC
+        // ═══════════════════════════════════════════════
+
+        const APP_LINKS = {
+            karing: {
+                ios: 'https://apps.apple.com/us/app/karing/id6472431552',
+                android: 'https://dot.karing.app/client.html?tag=android-stable',
+                scheme: 'karing://import?url='
+            },
+            happ: {
+                ios: 'https://apps.apple.com/us/app/happ-proxy-utility/id6504287215',
+                android: 'https://play.google.com/store/apps/details?id=com.happproxy',
+                scheme: 'happ://import?url='
+            },
+            hiddify: {
+                ios: 'https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532',
+                android: 'https://play.google.com/store/apps/details?id=app.hiddify.com',
+                scheme: 'hiddify://import/'
+            },
+            v2raytun: {
+                ios: 'https://apps.apple.com/us/app/v2raytun/id6476628951',
+                android: 'https://play.google.com/store/apps/details?id=com.v2raytun.android',
+                scheme: 'v2raytun://import?url='
+            }
+        };
+
+        function getOS() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            if (/iPad|iPhone|iPod|Macintosh/.test(ua)) return 'ios';
+            if (/android/i.test(ua)) return 'android';
+            return 'desktop';
+        }
+
+        function openStore(appId) {
+            const os = getOS();
+            const links = APP_LINKS[appId];
+            // If desktop, default to iOS link, but they probably can't install it directly anyway
+            let url = links[os] || links.ios; 
+            window.open(url, '_blank');
+        }
+
+        function autoImport(appId) {
+            const subUrl = document.getElementById('subUrl').value;
+            if (!subUrl || subUrl === 'Loading...') return;
+            
+            const links = APP_LINKS[appId];
+            let importUrl = '';
+            
+            // Hiddify uses a slightly different URL scheme format
+            if (appId === 'hiddify') {
+                importUrl = links.scheme + subUrl;
+            } else {
+                importUrl = links.scheme + encodeURIComponent(subUrl);
+            }
+
+            // Try to open custom scheme
+            const start = Date.now();
+            window.location.href = importUrl;
+
+            // Fallback checking if app is not installed
+            setTimeout(() => {
+                if (Date.now() - start < 1500) {
+                    const os = getOS();
+                    if (os === 'desktop') {
+                        alert(`It seems ${appId} is not installed on your computer, or auto-import is not supported on desktop. Please copy the subscription URL manually.`);
+                    } else if (confirm(`It seems ${appId} is not installed. Would you like to download it now?`)) {
+                        openStore(appId);
+                    }
+                }
+            }, 1000);
         }
 
         // ═══════════════════════════════════════════════

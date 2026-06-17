@@ -76,7 +76,7 @@ PHAT_SUBSCRIPTION_FILE = "docs/phatVPN.txt"
 
 
 MAX_CONCURRENCY = 20           # Параллельных тестов Xray
-MAX_CANDIDATES = 300           # Макс. нод на тестирование
+MAX_CANDIDATES = 500           # Макс. нод на тестирование
 TOP_N = 50                     # Сколько лучших нод в подписку
 HISTORY_MAX_AGE_DAYS = 14      # Очистка старых записей из истории
 XRAY_STARTUP_TIMEOUT = 4.0    # Таймаут ожидания запуска Xray (сек)
@@ -825,12 +825,20 @@ async def main():
                 formatted_uris.append(f"{base_uri}#{new_name}")
 
             sub_content = "\n".join(formatted_uris)
-            sub_b64 = base64.b64encode(sub_content.encode()).decode()
+            # Изменили кодировку на plain text: v2RayTun и другие клиенты часто
+            # не могут прочитать #profile-title, если файл полностью в Base64.
+            # Plain text VLESS-ссылки поддерживаются всеми современными клиентами.
 
             with open(SUBSCRIPTION_FILE, "w") as f:
-                f.write(sub_b64)
+                f.write(sub_content)
             with open(PHAT_SUBSCRIPTION_FILE, "w") as f:
+                f.write(sub_content)
+            
+            # Для обратной совместимости со старыми клиентами, создадим base64 версию
+            sub_b64 = base64.b64encode("\n".join(formatted_uris[5:]).encode()).decode()
+            with open("docs/sub_b64.txt", "w") as f:
                 f.write(sub_b64)
+
             log.info(f"   ✅ Подписка сохранена: {SUBSCRIPTION_FILE} и {PHAT_SUBSCRIPTION_FILE} ({len(top)} нод)")
 
 

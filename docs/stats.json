@@ -163,8 +163,35 @@
       "score": 16.3,
       "latency_ms": 971,
       "speed_kbps": null,
+      "country": "NL",
+      "host": "89.23.***. ***",
+      "sni": "www.samsung.com"
+    },
+    {
+      "rank": 15,
+      "score": 13.6,
+      "latency_ms": 1938,
+      "speed_kbps": 109.0,
+      "country": "FI",
+      "host": "107.181.***. ***",
+      "sni": "www.microsoft.com"
+    },
+    {
+      "rank": 16,
+      "score": 13.3,
+      "latency_ms": 1612,
+      "speed_kbps": 81.0,
       "country": "DE",
-      "host": "5.178.***. ***",
+      "host": "83.243.***. ***",
+      "sni": "www.cloudflare.com"
+    },
+    {
+      "rank": 17,
+      "score": 13.2,
+      "latency_ms": 2515,
+      "speed_kbps": 124.3,
+      "country": "FI",
+      "host": "107.181.***. ***",
       "sni": "www.microsoft.com"
     },
     {
@@ -205,8 +232,8 @@
     "FR": 99,
     "FI": 96,
     "RU": 87,
-    "GB": 81,
-    "TR": 64,
+    "GB": 82,
+    "TR": 66,
     "SE": 44,
     "JP": 44,
     "PL": 35,
@@ -232,6 +259,7 @@
     "BG": 6,
     "RS": 4,
     "GR": 4,
+    "RO": 3,
     "PK": 3,
     "RO": 3,
     "LT": 3,

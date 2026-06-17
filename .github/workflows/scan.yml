@@ -58,7 +58,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            NODES=$(cat docs/sub.txt 2>/dev/null | base64 -d | grep -c "vless://" || echo "0")
+            NODES=$(grep -c "vless://" docs/sub.txt 2>/dev/null || echo "0")
             git commit -m "🔄 Scan: ${NODES} nodes @ $(date -u '+%Y-%m-%d %H:%M UTC')"
             git push
           fi
