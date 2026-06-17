@@ -713,8 +713,9 @@ async def main():
         )
 
         # ═════ Шаг 4: Тестирование через Xray ═════
+        random.shuffle(deduped)
         candidates = deduped[:MAX_CANDIDATES]
-        random.shuffle(candidates)
+
 
         log.info(f"⚡ Шаг 4/6: Тестирование {len(candidates)} нод через Xray...")
 
