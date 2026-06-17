@@ -1277,12 +1277,12 @@
             karing: {
                 ios: 'https://apps.apple.com/us/app/karing/id6472431552',
                 android: 'https://dot.karing.app/client.html?tag=android-stable',
-                scheme: 'karing://import?url='
+                scheme: 'karing://install-config?url='
             },
             happ: {
                 ios: 'https://apps.apple.com/us/app/happ-proxy-utility/id6504287215',
                 android: 'https://play.google.com/store/apps/details?id=com.happproxy',
-                scheme: 'happ://import?url='
+                scheme: 'happ://import/'
             },
             hiddify: {
                 ios: 'https://apps.apple.com/us/app/hiddify-proxy-vpn/id6596777532',
@@ -1292,7 +1292,7 @@
             v2raytun: {
                 ios: 'https://apps.apple.com/us/app/v2raytun/id6476628951',
                 android: 'https://play.google.com/store/apps/details?id=com.v2raytun.android',
-                scheme: 'v2raytun://import?url='
+                scheme: 'v2raytun://import/'
             }
         };
 
@@ -1318,28 +1318,35 @@
             const links = APP_LINKS[appId];
             let importUrl = '';
             
-            // Hiddify uses a slightly different URL scheme format
-            if (appId === 'hiddify') {
-                importUrl = links.scheme + subUrl;
-            } else {
+            if (appId === 'karing') {
                 importUrl = links.scheme + encodeURIComponent(subUrl);
+            } else {
+                importUrl = links.scheme + subUrl;
             }
 
+            let hasLanded = false;
+            const onBlur = () => {
+                hasLanded = true;
+                window.removeEventListener('blur', onBlur);
+            };
+            window.addEventListener('blur', onBlur);
+
             // Try to open custom scheme
-            const start = Date.now();
             window.location.href = importUrl;
 
             // Fallback checking if app is not installed
             setTimeout(() => {
-                if (Date.now() - start < 1500) {
-                    const os = getOS();
-                    if (os === 'desktop') {
-                        alert(`It seems ${appId} is not installed on your computer, or auto-import is not supported on desktop. Please copy the subscription URL manually.`);
-                    } else if (confirm(`It seems ${appId} is not installed. Would you like to download it now?`)) {
-                        openStore(appId);
-                    }
+                window.removeEventListener('blur', onBlur);
+                if (hasLanded || !document.hasFocus() || document.hidden) {
+                    return;
                 }
-            }, 1000);
+                const os = getOS();
+                if (os === 'desktop') {
+                    alert(`It seems ${appId} is not installed on your computer, or auto-import is not supported on desktop. Please copy the subscription URL manually.`);
+                } else if (confirm(`It seems ${appId} is not installed. Would you like to download it now?`)) {
+                    openStore(appId);
+                }
+            }, 2500);
         }
 
         // ═══════════════════════════════════════════════
