@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK VPN Scanner — Dashboard</title>
+    <meta name="description" content="Real-time dashboard for UK VPN Node Scanner. Monitor VLESS Reality node status, latency, and global distribution.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ═══════════════════════════════════════════
+           DESIGN SYSTEM
+           ═══════════════════════════════════════════ */
+        :root {
+            --bg-primary: #0a0e17;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --bg-card-hover: rgba(30, 41, 59, 0.8);
+            --border: rgba(99, 102, 241, 0.15);
+            --border-hover: rgba(99, 102, 241, 0.35);
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent-blue: #6366f1;
+            --accent-cyan: #22d3ee;
+            --accent-emerald: #34d399;
+            --accent-amber: #fbbf24;
+            --accent-rose: #fb7185;
+            --accent-purple: #a78bfa;
+            --gradient-main: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+            --gradient-success: linear-gradient(135deg, #059669 0%, #34d399 100%);
+            --gradient-danger: linear-gradient(135deg, #dc2626 0%, #fb7185 100%);
+            --gradient-info: linear-gradient(135deg, #0891b2 0%, #22d3ee 100%);
+            --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.15);
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESET & BASE
+           ═══════════════════════════════════════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background mesh */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: 
+                radial-gradient(ellipse 600px 400px at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 500px 350px at 80% 60%, rgba(139, 92, 246, 0.06) 0%, transparent 70%),
+                radial-gradient(ellipse 400px 300px at 50% 90%, rgba(34, 211, 238, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: meshDrift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes meshDrift {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-20px, 15px) scale(1.05); }
+            100% { transform: translate(10px, -10px) scale(0.98); }
+        }
+
+        /* ═══════════════════════════════════════════
+           LAYOUT
+           ═══════════════════════════════════════════ */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ═══════════════════════════════════════════
+           HEADER
+           ═══════════════════════════════════════════ */
+        .header {
+            padding: 40px 0 32px;
+            text-align: center;
+        }
+
+        .header__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.12);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+        }
+
+        .header__badge .pulse {
+            width: 8px; height: 8px;
+            background: var(--accent-emerald);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+
+        .header__title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        .header__subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            font-weight: 400;
+        }
+
+        /* ═══════════════════════════════════════════
+           STATUS BAR
+           ═══════════════════════════════════════════ */
+        .status-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin: 8px 0 36px;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .status-item__icon {
+            font-size: 1rem;
+        }
+
+        .status-item__value {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-family: var(--font-mono);
+        }
+
+        /* ═══════════════════════════════════════════
+           SUBSCRIPTION CARD
+           ═══════════════════════════════════════════ */
+        .sub-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-bottom: 36px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .sub-card__info {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .sub-card__title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .sub-card__desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .sub-card__url {
+            flex: 2;
+            min-width: 280px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .sub-card__input {
+            flex: 1;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 16px;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .sub-card__input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-sans);
+            font-weight: 600;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn--primary {
+            background: var(--gradient-main);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
+        }
+
+        .btn--primary:active {
+            transform: translateY(0);
+        }
+
+        /* ═══════════════════════════════════════════
+           STAT CARDS GRID
+           ═══════════════════════════════════════════ */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+
+        .stat-card--scanned::before { background: var(--gradient-info); }
+        .stat-card--working::before { background: var(--gradient-success); }
+        .stat-card--dead::before { background: var(--gradient-danger); }
+        .stat-card--rate::before { background: var(--gradient-main); }
+
+        .stat-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .stat-card__label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+        }
+
+        .stat-card__value {
+            font-size: 2rem;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            letter-spacing: -0.02em;
+        }
+
+        .stat-card--scanned .stat-card__value { color: var(--accent-cyan); }
+        .stat-card--working .stat-card__value { color: var(--accent-emerald); }
+        .stat-card--dead .stat-card__value { color: var(--accent-rose); }
+        .stat-card--rate .stat-card__value { color: var(--accent-purple); }
+
+        /* ═══════════════════════════════════════════
+           SECTION
+           ═══════════════════════════════════════════ */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section__header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .section__icon {
+            font-size: 1.4rem;
+        }
+
+        .section__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        /* ═══════════════════════════════════════════
+           CHARTS ROW
+           ═══════════════════════════════════════════ */
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .charts-row { grid-template-columns: 1fr; }
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            backdrop-filter: blur(12px);
+        }
+
+        .chart-card__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* ── Country Distribution (Bar Chart) ── */
+        .country-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .country-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .country-bar__flag {
+            width: 28px;
+            font-size: 1.1rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .country-bar__code {
+            width: 28px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .country-bar__track {
+            flex: 1;
+            height: 26px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .country-bar__fill {
+            height: 100%;
+            border-radius: 6px;
+            transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            color: white;
+            min-width: 32px;
+        }
+
+        .country-bar__fill--1 { background: linear-gradient(90deg, #6366f1, #818cf8); }
+        .country-bar__fill--2 { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+        .country-bar__fill--3 { background: linear-gradient(90deg, #0891b2, #22d3ee); }
+        .country-bar__fill--4 { background: linear-gradient(90deg, #059669, #34d399); }
+        .country-bar__fill--5 { background: linear-gradient(90deg, #d97706, #fbbf24); }
+        .country-bar__fill--6 { background: linear-gradient(90deg, #dc2626, #fb7185); }
+        .country-bar__fill--7 { background: linear-gradient(90deg, #7c3aed, #c084fc); }
+        .country-bar__fill--8 { background: linear-gradient(90deg, #0e7490, #67e8f9); }
+
+        /* ── Latency Distribution (Dot Plot) ── */
+        .latency-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .latency-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .latency-row__label {
+            width: 80px;
+            font-size: 0.78rem;
+            font-family: var(--font-mono);
+            color: var(--text-muted);
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .latency-row__dots {
+            flex: 1;
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .latency-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            transition: transform 0.2s;
+        }
+
+        .latency-dot:hover {
+            transform: scale(1.8);
+        }
+
+        .latency-dot--fast { background: var(--accent-emerald); }
+        .latency-dot--medium { background: var(--accent-amber); }
+        .latency-dot--slow { background: var(--accent-rose); }
+
+        .latency-legend {
+            display: flex;
+            gap: 20px;
+            margin-top: 14px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .latency-legend__item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .latency-legend__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+        }
+
+        /* ═══════════════════════════════════════════
+           NODES TABLE
+           ═══════════════════════════════════════════ */
+        .table-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+
+        thead th {
+            background: rgba(99, 102, 241, 0.08);
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+        }
+
+        tbody tr {
+            transition: background 0.15s;
+        }
+
+        tbody tr:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        tbody td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            white-space: nowrap;
+        }
+
+        .td-rank {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            color: var(--text-muted);
+            width: 48px;
+            text-align: center;
+        }
+
+        .td-rank--top3 { color: var(--accent-amber); }
+
+        .td-score {
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        .td-latency {
+            font-family: var(--font-mono);
+        }
+
+        .td-speed {
+            font-family: var(--font-mono);
+        }
+
+        .td-country {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .td-host {
+            font-family: var(--font-mono);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .td-sni {
+            color: var(--accent-cyan);
+            font-size: 0.82rem;
+        }
+
+        /* ── Score bar inside cell ── */
+        .score-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .score-bar__track {
+            width: 60px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .score-bar__fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* ── Latency badge ── */
+        .latency-badge {
+            display: inline-flex;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        .latency-badge--fast {
+            background: rgba(52, 211, 153, 0.12);
+            color: var(--accent-emerald);
+        }
+
+        .latency-badge--medium {
+            background: rgba(251, 191, 36, 0.12);
+            color: var(--accent-amber);
+        }
+
+        .latency-badge--slow {
+            background: rgba(251, 113, 133, 0.12);
+            color: var(--accent-rose);
+        }
+
+        /* ═══════════════════════════════════════════
+           FOOTER
+           ═══════════════════════════════════════════ */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.82rem;
+        }
+
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover { text-decoration: underline; }
+
+        /* ═══════════════════════════════════════════
+           LOADING STATE
+           ═══════════════════════════════════════════ */
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            gap: 20px;
+        }
+
+        .loading__spinner {
+            width: 40px; height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .loading__text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* ═══════════════════════════════════════════
+           ERROR STATE
+           ═══════════════════════════════════════════ */
+        .error-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .error-state__icon { font-size: 3rem; margin-bottom: 16px; }
+        .error-state__title { font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; }
+        .error-state__desc { color: var(--text-secondary); font-size: 0.9rem; }
+
+        /* ═══════════════════════════════════════════
+           ANIMATIONS
+           ═══════════════════════════════════════════ */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        .animate-delay-5 { animation-delay: 0.5s; }
+
+        /* ═══════════════════════════════════════════
+           TOAST NOTIFICATION
+           ═══════════════════════════════════════════ */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--accent-emerald);
+            border-radius: var(--radius-sm);
+            padding: 14px 24px;
+            color: var(--accent-emerald);
+            font-weight: 500;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            z-index: 100;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .toast--visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* ═══════════════════════════════════════════
+           RESPONSIVE
+           ═══════════════════════════════════════════ */
+        @media (max-width: 640px) {
+            .container { padding: 0 16px; }
+            .sub-card { padding: 20px; flex-direction: column; }
+            .sub-card__url { width: 100%; flex-direction: column; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-card__value { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ═══ HEADER ═══ -->
+        <header class="header animate-in">
+            <div class="header__badge">
+                <span class="pulse"></span>
+                Auto-updating every 6 hours
+            </div>
+            <h1 class="header__title">UK VPN Scanner</h1>
+            <p class="header__subtitle">VLESS Reality Node Monitor — bypass UK Content Control</p>
+        </header>
+
+        <!-- ═══ STATUS BAR ═══ -->
+        <div class="status-bar animate-in animate-delay-1" id="statusBar">
+            <div class="status-item">
+                <span class="status-item__icon">🕐</span>
+                <span>Last scan:</span>
+                <span class="status-item__value" id="lastUpdate">—</span>
+            </div>
+            <div class="status-item">
+                <span class="status-item__icon">📡</span>
+                <span>Repos:</span>
+                <span class="status-item__value" id="reposCount">—</span>
+            </div>
+        </div>
+
+        <!-- ═══ SUBSCRIPTION CARD ═══ -->
+        <div class="sub-card animate-in animate-delay-2" id="subCard">
+            <div class="sub-card__info">
+                <div class="sub-card__title">📋 Subscription URL</div>
+                <div class="sub-card__desc">Add this URL to your VPN client (Hiddify, v2rayTun, HApp, etc.)</div>
+            </div>
+            <div class="sub-card__url">
+                <input type="text" class="sub-card__input" id="subUrl" value="" readonly placeholder="Loading...">
+                <button class="btn btn--primary" id="copyBtn" onclick="copySubUrl()">
+                    📋 Copy
+                </button>
+            </div>
+        </div>
+
+        <!-- ═══ MAIN CONTENT (loaded dynamically) ═══ -->
+        <div id="mainContent">
+            <div class="loading">
+                <div class="loading__spinner"></div>
+                <div class="loading__text">Loading scan data...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast">✅ Copied to clipboard!</div>
+
+    <script>
+        // ═══════════════════════════════════════════════
+        //  DATA & STATE
+        // ═══════════════════════════════════════════════
+
+        const FLAG_EMOJI = {
+            US:'🇺🇸',GB:'🇬🇧',DE:'🇩🇪',FR:'🇫🇷',NL:'🇳🇱',CA:'🇨🇦',JP:'🇯🇵',
+            KR:'🇰🇷',SG:'🇸🇬',AU:'🇦🇺',IE:'🇮🇪',SE:'🇸🇪',NO:'🇳🇴',FI:'🇫🇮',
+            DK:'🇩🇰',CH:'🇨🇭',AT:'🇦🇹',BE:'🇧🇪',ES:'🇪🇸',IT:'🇮🇹',PL:'🇵🇱',
+            RU:'🇷🇺',TR:'🇹🇷',IN:'🇮🇳',BR:'🇧🇷',HK:'🇭🇰',TW:'🇹🇼',IL:'🇮🇱',
+            ZA:'🇿🇦',MX:'🇲🇽',UA:'🇺🇦',RO:'🇷🇴',CZ:'🇨🇿',HU:'🇭🇺',PT:'🇵🇹',
+            LU:'🇱🇺',BG:'🇧🇬',HR:'🇭🇷',LT:'🇱🇹',LV:'🇱🇻',EE:'🇪🇪',RS:'🇷🇸',
+            MD:'🇲🇩',GE:'🇬🇪',AM:'🇦🇲',AZ:'🇦🇿',KZ:'🇰🇿',TH:'🇹🇭',VN:'🇻🇳',
+            ID:'🇮🇩',PH:'🇵🇭',MY:'🇲🇾',IR:'🇮🇷',CL:'🇨🇱',AR:'🇦🇷',CO:'🇨🇴',
+        };
+
+        let statsData = null;
+
+        // ═══════════════════════════════════════════════
+        //  LOAD DATA
+        // ═══════════════════════════════════════════════
+
+        async function loadStats() {
+            try {
+                const resp = await fetch('stats.json?' + Date.now());
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                statsData = await resp.json();
+                renderDashboard(statsData);
+            } catch (err) {
+                document.getElementById('mainContent').innerHTML = `
+                    <div class="error-state">
+                        <div class="error-state__icon">📡</div>
+                        <div class="error-state__title">No scan data available yet</div>
+                        <div class="error-state__desc">
+                            The scanner hasn't run yet or stats.json is not accessible.<br>
+                            Run the scanner manually or wait for the next GitHub Actions cron.
+                        </div>
+                    </div>
+                `;
+                console.error('Failed to load stats:', err);
+            }
+        }
+
+        // ═══════════════════════════════════════════════
+        //  RENDER
+        // ═══════════════════════════════════════════════
+
+        function renderDashboard(data) {
+            // ── Subscription URL ──
+            const baseUrl = window.location.href.replace(/\/[^/]*$/, '');
+            document.getElementById('subUrl').value = `${baseUrl}/sub.txt`;
+
+            // ── Status bar ──
+            const dt = new Date(data.updated_at);
+            document.getElementById('lastUpdate').textContent = formatRelativeTime(dt);
+            document.getElementById('reposCount').textContent = data.scan_config?.repos_scanned || '—';
+
+            // ── Main content ──
+            document.getElementById('mainContent').innerHTML = `
+                ${renderStatsGrid(data)}
+                ${renderChartsRow(data)}
+                ${renderNodesTable(data)}
+            `;
+
+            // Trigger animations
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.animate-in').forEach(el => {
+                    el.style.opacity = '1';
+                });
+            });
+        }
+
+        function renderStatsGrid(data) {
+            return `
+            <div class="stats-grid animate-in animate-delay-3">
+                <div class="stat-card stat-card--scanned">
+                    <div class="stat-card__label">Scanned</div>
+                    <div class="stat-card__value" id="statScanned">${animateNumber(data.total_scanned)}</div>
+                </div>
+                <div class="stat-card stat-card--working">
+                    <div class="stat-card__label">Working</div>
+                    <div class="stat-card__value" id="statWorking">${animateNumber(data.total_working)}</div>
+                </div>
+                <div class="stat-card stat-card--dead">
+                    <div class="stat-card__label">Dead</div>
+                    <div class="stat-card__value" id="statDead">${animateNumber(data.total_dead)}</div>
+                </div>
+                <div class="stat-card stat-card--rate">
+                    <div class="stat-card__label">Success Rate</div>
+                    <div class="stat-card__value">${data.success_rate}%</div>
+                </div>
+            </div>
+            `;
+        }
+
+        function renderChartsRow(data) {
+            return `
+            <div class="charts-row">
+                ${renderCountryChart(data)}
+                ${renderLatencyChart(data)}
+            </div>
+            `;
+        }
+
+        function renderCountryChart(data) {
+            const countries = data.country_distribution || {};
+            const sorted = Object.entries(countries).sort((a, b) => b[1] - a[1]).slice(0, 8);
+            const maxVal = sorted.length ? sorted[0][1] : 1;
+
+            const bars = sorted.map(([code, count], i) => {
+                const pct = Math.max((count / maxVal) * 100, 8);
+                const flag = FLAG_EMOJI[code] || '🏳️';
+                const colorClass = `country-bar__fill--${(i % 8) + 1}`;
+                return `
+                <div class="country-bar">
+                    <span class="country-bar__flag">${flag}</span>
+                    <span class="country-bar__code">${code}</span>
+                    <div class="country-bar__track">
+                        <div class="country-bar__fill ${colorClass}" style="width:${pct}%">${count}</div>
+                    </div>
+                </div>`;
+            }).join('');
+
+            return `
+            <div class="chart-card animate-in animate-delay-4">
+                <div class="chart-card__title">🌍 Country Distribution</div>
+                <div class="country-bars">${bars || '<p style="color:var(--text-muted)">No data</p>'}</div>
+            </div>`;
+        }
+
+        function renderLatencyChart(data) {
+            const nodes = data.top_nodes || [];
+            if (!nodes.length) {
+                return `
+                <div class="chart-card animate-in animate-delay-4">
+                    <div class="chart-card__title">⚡ Latency Distribution</div>
+                    <p style="color:var(--text-muted);padding:20px">No data</p>
+                </div>`;
+            }
+
+            // Bucket into ranges
+            const buckets = [
+                { label: '< 500ms', min: 0, max: 500, dots: [], class: 'fast' },
+                { label: '500-1000ms', min: 500, max: 1000, dots: [], class: 'medium' },
+                { label: '1000-2000ms', min: 1000, max: 2000, dots: [], class: 'medium' },
+                { label: '> 2000ms', min: 2000, max: Infinity, dots: [], class: 'slow' },
+            ];
+
+            nodes.forEach(n => {
+                const lat = n.latency_ms;
+                for (const b of buckets) {
+                    if (lat >= b.min && lat < b.max) {
+                        b.dots.push(n);
+                        break;
+                    }
+                }
+            });
+
+            const rows = buckets.map(b => {
+                const dots = b.dots.map(n => {
+                    const cc = FLAG_EMOJI[n.country] || n.country;
+                    return `<div class="latency-dot latency-dot--${b.class}" title="${cc} ${n.latency_ms}ms ${n.sni}"></div>`;
+                }).join('');
+                return `
+                <div class="latency-row">
+                    <span class="latency-row__label">${b.label}</span>
+                    <div class="latency-row__dots">${dots}</div>
+                </div>`;
+            }).join('');
+
+            return `
+            <div class="chart-card animate-in animate-delay-4">
+                <div class="chart-card__title">⚡ Latency Distribution</div>
+                <div class="latency-chart">${rows}</div>
+                <div class="latency-legend">
+                    <div class="latency-legend__item">
+                        <div class="latency-legend__dot" style="background:var(--accent-emerald)"></div> Fast (&lt;500ms)
+                    </div>
+                    <div class="latency-legend__item">
+                        <div class="latency-legend__dot" style="background:var(--accent-amber)"></div> Medium
+                    </div>
+                    <div class="latency-legend__item">
+                        <div class="latency-legend__dot" style="background:var(--accent-rose)"></div> Slow (&gt;2s)
+                    </div>
+                </div>
+            </div>`;
+        }
+
+        function renderNodesTable(data) {
+            const nodes = data.top_nodes || [];
+            if (!nodes.length) return '';
+
+            const maxScore = nodes.length ? nodes[0].score : 1;
+
+            const rows = nodes.map(n => {
+                const flag = FLAG_EMOJI[n.country] || '🏳️';
+                const rankClass = n.rank <= 3 ? 'td-rank--top3' : '';
+                const scorePct = Math.max((n.score / maxScore) * 100, 5);
+                const latClass = n.latency_ms < 500 ? 'fast' : n.latency_ms < 1500 ? 'medium' : 'slow';
+                const speed = n.speed_kbps ? `${n.speed_kbps} KB/s` : '—';
+
+                // Score bar color
+                let barColor;
+                if (scorePct > 70) barColor = 'var(--accent-emerald)';
+                else if (scorePct > 40) barColor = 'var(--accent-amber)';
+                else barColor = 'var(--accent-rose)';
+
+                return `
+                <tr>
+                    <td class="td-rank ${rankClass}">${n.rank <= 3 ? '🏆' : '#'} ${n.rank}</td>
+                    <td class="td-score">
+                        <div class="score-bar">
+                            <span>${n.score}</span>
+                            <div class="score-bar__track">
+                                <div class="score-bar__fill" style="width:${scorePct}%;background:${barColor}"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td-latency">
+                        <span class="latency-badge latency-badge--${latClass}">${n.latency_ms}ms</span>
+                    </td>
+                    <td class="td-speed">${speed}</td>
+                    <td class="td-country" title="${n.country}">${flag}</td>
+                    <td class="td-host">${n.host}</td>
+                    <td class="td-sni">${n.sni}</td>
+                </tr>`;
+            }).join('');
+
+            return `
+            <div class="section animate-in animate-delay-5">
+                <div class="section__header">
+                    <span class="section__icon">🏆</span>
+                    <h2 class="section__title">Top ${nodes.length} Nodes</h2>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Score</th>
+                                    <th>Latency</th>
+                                    <th>Speed</th>
+                                    <th>🌍</th>
+                                    <th>Host</th>
+                                    <th>SNI</th>
+                                </tr>
+                            </thead>
+                            <tbody>${rows}</tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>UK VPN Scanner v2.0 — Auto-updates every 6 hours via GitHub Actions</p>
+                <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
+            </footer>
+            `;
+        }
+
+        // ═══════════════════════════════════════════════
+        //  HELPERS
+        // ═══════════════════════════════════════════════
+
+        function animateNumber(n) {
+            return n != null ? n.toLocaleString() : '—';
+        }
+
+        function formatRelativeTime(date) {
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMin = Math.floor(diffMs / 60000);
+            const diffHr = Math.floor(diffMin / 60);
+
+            if (diffMin < 1) return 'just now';
+            if (diffMin < 60) return `${diffMin}m ago`;
+            if (diffHr < 24) return `${diffHr}h ago`;
+            return date.toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'short',
+                hour: '2-digit', minute: '2-digit'
+            });
+        }
+
+        function copySubUrl() {
+            const input = document.getElementById('subUrl');
+            if (!input.value || input.value === 'Loading...') return;
+
+            navigator.clipboard.writeText(input.value).then(() => {
+                showToast();
+            }).catch(() => {
+                // Fallback
+                input.select();
+                document.execCommand('copy');
+                showToast();
+            });
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('toast--visible');
+            setTimeout(() => toast.classList.remove('toast--visible'), 2500);
+        }
+
+        // ═══════════════════════════════════════════════
+        //  INIT
+        // ═══════════════════════════════════════════════
+
+        loadStats();
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+name: VPN Node Scanner
+
+on:
+  schedule:
+    # Каждые 6 часов — оптимальный баланс между свежестью и лимитами GitHub Actions
+    # Free tier: 2000 мин/мес → ~10 мин/запуск × 4/день × 30 = 1200 мин ✓
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    # Ручной запуск через UI GitHub
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: ⬇️ Download Xray Core
+        run: |
+          # Получаем последнюю версию Xray
+          XRAY_VERSION=$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases/latest | grep '"tag_name"' | head -1 | cut -d'"' -f4)
+          echo "Xray version: ${XRAY_VERSION}"
+          
+          wget -q "https://github.com/XTLS/Xray-core/releases/download/${XRAY_VERSION}/Xray-linux-64.zip" -O /tmp/xray.zip
+          unzip -q /tmp/xray.zip xray -d .
+          chmod +x ./xray
+          ./xray version
+
+      - name: 🚀 Run scanner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          XRAY_BIN: ./xray
+        run: python scanner.py
+
+      - name: 📤 Commit & Push results
+        run: |
+          git config user.name "VPN Scanner Bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+          
+          git add docs/ history.json
+          
+          # Коммит только если есть изменения
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            NODES=$(cat docs/sub.txt 2>/dev/null | base64 -d | grep -c "vless://" || echo "0")
+            git commit -m "🔄 Scan: ${NODES} nodes @ $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  # Деплой Web Dashboard на GitHub Pages
+  deploy-pages:
+    needs: scan
+    runs-on: ubuntu-latest
+    if: success()
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main  # Берём свежий коммит после scan
+
+      - name: 📄 Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: 📦 Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: 🚀 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,41 @@
+{
+  "updated_at": "2026-06-17T16:30:00Z",
+  "total_scanned": 247,
+  "total_working": 42,
+  "total_dead": 205,
+  "success_rate": 17.0,
+  "top_nodes": [
+    {"rank": 1, "score": 285.3, "latency_ms": 312, "speed_kbps": 489.2, "country": "DE", "host": "185.23.***.***", "sni": "dl.google.com"},
+    {"rank": 2, "score": 271.8, "latency_ms": 340, "speed_kbps": 412.5, "country": "NL", "host": "89.46.***.***", "sni": "cloudflare.com"},
+    {"rank": 3, "score": 259.1, "latency_ms": 388, "speed_kbps": 380.1, "country": "FR", "host": "51.75.***.***", "sni": "apple.com"},
+    {"rank": 4, "score": 241.6, "latency_ms": 421, "speed_kbps": 355.0, "country": "GB", "host": "178.62.***.***", "sni": "microsoft.com"},
+    {"rank": 5, "score": 228.4, "latency_ms": 456, "speed_kbps": null, "country": "US", "host": "104.18.***.***", "sni": "gstatic.com"},
+    {"rank": 6, "score": 215.9, "latency_ms": 512, "speed_kbps": 290.3, "country": "SE", "host": "185.22.***.***", "sni": "yahoo.com"},
+    {"rank": 7, "score": 198.2, "latency_ms": 589, "speed_kbps": 245.8, "country": "FI", "host": "95.216.***.***", "sni": "bing.com"},
+    {"rank": 8, "score": 185.7, "latency_ms": 645, "speed_kbps": null, "country": "DE", "host": "116.203.***.***", "sni": "googleapis.com"},
+    {"rank": 9, "score": 172.3, "latency_ms": 720, "speed_kbps": 180.5, "country": "TR", "host": "5.75.***.***", "sni": "azure.com"},
+    {"rank": 10, "score": 155.8, "latency_ms": 890, "speed_kbps": 145.2, "country": "US", "host": "172.67.***.***", "sni": "zoom.us"}
+  ],
+  "country_distribution": {
+    "DE": 45,
+    "NL": 38,
+    "US": 32,
+    "FR": 28,
+    "FI": 22,
+    "SE": 18,
+    "TR": 15,
+    "GB": 12,
+    "CA": 8,
+    "JP": 5,
+    "SG": 3,
+    "KR": 2
+  },
+  "scan_config": {
+    "repos_scanned": 7,
+    "files_found": 23,
+    "raw_configs": 1847,
+    "unique_valid": 312,
+    "max_concurrency": 20,
+    "top_n": 50
+  }
+}
