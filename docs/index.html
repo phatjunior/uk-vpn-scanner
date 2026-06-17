@@ -1303,12 +1303,16 @@
             return 'desktop';
         }
 
-        function openStore(appId) {
+        function openStore(appId, currentWindow = false) {
             const os = getOS();
             const links = APP_LINKS[appId];
             // If desktop, default to iOS link, but they probably can't install it directly anyway
             let url = links[os] || links.ios; 
-            window.open(url, '_blank');
+            if (currentWindow) {
+                window.location.href = url;
+            } else {
+                window.open(url, '_blank');
+            }
         }
 
         function autoImport(appId) {
@@ -1344,7 +1348,7 @@
                 if (os === 'desktop') {
                     alert(`It seems ${appId} is not installed on your computer, or auto-import is not supported on desktop. Please copy the subscription URL manually.`);
                 } else if (confirm(`It seems ${appId} is not installed. Would you like to download it now?`)) {
-                    openStore(appId);
+                    openStore(appId, true);
                 }
             }, 2500);
         }
