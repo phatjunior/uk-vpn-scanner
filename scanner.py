@@ -715,11 +715,23 @@ async def main():
         )
 
         # ═════ Шаг 4: Тестирование через Xray ═════
-        random.shuffle(deduped)
-        candidates = deduped[:MAX_CANDIDATES]
+        # Извлекаем ранее работавшие ноды из истории, чтобы они гарантированно проверились и накопились
+        known_working_nodes = []
+        for host, h_data in history.items():
+            if h_data.get("ok", 0) > 0 and h_data.get("node"):
+                known_working_nodes.append(h_data["node"])
 
+        known_keys = {(n["host"], n["port"]) for n in known_working_nodes}
+        new_scraped_nodes = [
+            n for n in deduped if (n["host"], n["port"]) not in known_keys
+        ]
+        
+        random.shuffle(new_scraped_nodes)
+        
+        candidates = known_working_nodes + new_scraped_nodes
+        candidates = candidates[:MAX_CANDIDATES]
 
-        log.info(f"⚡ Шаг 4/6: Тестирование {len(candidates)} нод через Xray...")
+        log.info(f"⚡ Шаг 4/6: Тестирование {len(candidates)} нод через Xray (из них {len(known_working_nodes)} ранее успешных)...")
 
         sem = asyncio.Semaphore(MAX_CONCURRENCY)
         base_port = 25000
@@ -748,6 +760,7 @@ async def main():
                 ok_count += 1
                 history[host]["ok"] += 1
                 history[host]["last_seen"] = datetime.now(timezone.utc).isoformat()
+                history[host]["node"] = node  # Сохраняем полную конфигурацию для повторных тестов
 
                 score = compute_score(
                     res["latency"], res.get("speed_kbps"), history[host],
