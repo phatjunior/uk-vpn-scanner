@@ -1038,18 +1038,19 @@
         }
 
         function renderStatsGrid(data) {
+            const histScanned = data.historical_unique_scanned !== undefined ? data.historical_unique_scanned : data.total_scanned;
             return `
             <div class="stats-grid animate-in animate-delay-3">
                 <div class="stat-card stat-card--scanned">
-                    <div class="stat-card__label">Scanned</div>
-                    <div class="stat-card__value" id="statScanned">${animateNumber(data.total_scanned)}</div>
+                    <div class="stat-card__label">Pool Size (Unique)</div>
+                    <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
                 </div>
                 <div class="stat-card stat-card--working">
-                    <div class="stat-card__label">Working</div>
+                    <div class="stat-card__label">Working (Round)</div>
                     <div class="stat-card__value" id="statWorking">${animateNumber(data.total_working)}</div>
                 </div>
                 <div class="stat-card stat-card--dead">
-                    <div class="stat-card__label">Dead</div>
+                    <div class="stat-card__label">Dead (Round)</div>
                     <div class="stat-card__value" id="statDead">${animateNumber(data.total_dead)}</div>
                 </div>
                 <div class="stat-card stat-card--rate">
@@ -1165,12 +1166,22 @@
                 const scorePct = Math.max((n.score / maxScore) * 100, 5);
                 const latClass = n.latency_ms < 500 ? 'fast' : n.latency_ms < 1500 ? 'medium' : 'slow';
                 const speed = n.speed_kbps ? `${n.speed_kbps} KB/s` : '—';
+                const uptime = n.uptime !== undefined ? `${n.uptime}%` : '—';
+                const age = n.age_days !== undefined ? `${n.age_days}d` : '—';
 
                 // Score bar color
                 let barColor;
                 if (scorePct > 70) barColor = 'var(--accent-emerald)';
                 else if (scorePct > 40) barColor = 'var(--accent-amber)';
                 else barColor = 'var(--accent-rose)';
+
+                // Uptime color
+                let uptimeColor = 'var(--text-secondary)';
+                if (n.uptime !== undefined) {
+                    if (n.uptime >= 90) uptimeColor = 'var(--accent-emerald)';
+                    else if (n.uptime >= 60) uptimeColor = 'var(--accent-amber)';
+                    else uptimeColor = 'var(--accent-rose)';
+                }
 
                 return `
                 <tr>
@@ -1188,6 +1199,8 @@
                     </td>
                     <td class="td-speed">${speed}</td>
                     <td class="td-country" title="${n.country}">${flag}</td>
+                    <td style="font-family: var(--font-mono); font-size: 0.85rem; color: ${uptimeColor}">${uptime}</td>
+                    <td style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary)">${age}</td>
                     <td class="td-host">${n.host}</td>
                     <td class="td-sni">${n.sni}</td>
                 </tr>`;
@@ -1209,6 +1222,8 @@
                                     <th>Latency</th>
                                     <th>Speed</th>
                                     <th title="Country">${ICONS.globe}</th>
+                                    <th>Uptime</th>
+                                    <th>Age</th>
                                     <th>Host</th>
                                     <th>SNI</th>
                                 </tr>
@@ -1220,7 +1235,7 @@
             </div>
 
             <footer class="footer">
-                <p>UK VPN Scanner v2.0 — Auto-updates every 2 hours via GitHub Actions</p>
+                <p>UK VPN Scanner v2.1 — Auto-updates every 2 hours via GitHub Actions</p>
                 <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
             </footer>
             `;

@@ -177,24 +177,27 @@ def compute_score(latency: int, speed_kbps: Optional[float],
       • Базовый балл — обратно пропорционален latency (быстрые = лучше)
       • Uptime множитель — стабильные ноды получают бонус
       • Speed бонус — быстрые ноды получают дополнительные очки
-      • Stability бонус — за долгую серию успешных тестов
-      • Fail штраф — за каждое падение
+      • Stability бонус — за долгую серию успешных тестов (основан на сглаженном ok)
+      • Fail штраф — основан на проценте сбоев (fail rate), а не на общей сумме
     """
     base = 10000 / max(latency, 1)
 
-    ok = hist_data.get("ok", 0)
-    fail = hist_data.get("fail", 0)
+    ok = hist_data.get("ok", 0.0)
+    fail = hist_data.get("fail", 0.0)
     total = ok + fail
-    uptime = ok / max(1, total)
+    uptime = ok / max(0.1, total)
 
     speed_bonus = 0.0
     if speed_kbps and speed_kbps > 0:
         speed_bonus = min(speed_kbps / 20, 50)  # cap 50
 
+    # Взвешиваем стабильность: чем дольше нода успешно работает, тем выше ее базовый авторитет
     stability_bonus = min(ok * 3, 30)  # cap 30
-    fail_penalty = fail * 8
+    
+    # Штраф за процент неудач (fail rate). Cоставляет до 50 баллов при 100% падений
+    fail_rate_penalty = (fail / max(0.1, total)) * 50
 
-    return (base * (0.3 + 0.7 * uptime)) + speed_bonus + stability_bonus - fail_penalty
+    return (base * (0.3 + 0.7 * uptime)) + speed_bonus + stability_bonus - fail_rate_penalty
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -753,14 +756,39 @@ async def main():
             node = res["node"]
             host = node["host"]
 
+            # Инициализация для новых нод
             if host not in history:
-                history[host] = {"ok": 0, "fail": 0, "last_seen": ""}
+                history[host] = {
+                    "ok": 0.0,
+                    "fail": 0.0,
+                    "first_seen": datetime.now(timezone.utc).isoformat(),
+                    "last_seen": ""
+                }
+            # Поддержка обратной совместимости для старых записей
+            elif "first_seen" not in history[host]:
+                history[host]["first_seen"] = "2026-06-17T00:00:00.000000+00:00"
 
             if res["success"]:
                 ok_count += 1
-                history[host]["ok"] += 1
+                # Экспоненциальное сглаживание (EMA) для ok и fail (decay = 0.9)
+                history[host]["ok"] = history[host].get("ok", 0.0) * 0.9 + 1.0
+                history[host]["fail"] = history[host].get("fail", 0.0) * 0.9
                 history[host]["last_seen"] = datetime.now(timezone.utc).isoformat()
                 history[host]["node"] = node  # Сохраняем полную конфигурацию для повторных тестов
+
+                h_ok = history[host]["ok"]
+                h_fail = history[host]["fail"]
+                uptime = h_ok / max(0.1, h_ok + h_fail)
+
+                # Вычисляем возраст ноды в днях
+                first_seen_str = history[host].get("first_seen", datetime.now(timezone.utc).isoformat())
+                try:
+                    clean_str = first_seen_str.replace("Z", "+00:00")
+                    first_seen_dt = datetime.fromisoformat(clean_str)
+                    age_delta = datetime.now(timezone.utc) - first_seen_dt
+                    age_days = max(0, age_delta.days)
+                except Exception:
+                    age_days = 0
 
                 score = compute_score(
                     res["latency"], res.get("speed_kbps"), history[host],
@@ -773,10 +801,13 @@ async def main():
                     "host": host,
                     "sni": node["sni"],
                     "raw": node["raw"],
+                    "age_days": age_days,
+                    "uptime": uptime,
                 })
             else:
                 fail_count += 1
-                history[host]["fail"] += 1
+                history[host]["ok"] = history[host].get("ok", 0.0) * 0.9
+                history[host]["fail"] = history[host].get("fail", 0.0) * 0.9 + 1.0
 
         scored.sort(key=lambda x: x["score"], reverse=True)
         top = scored[:TOP_N]
@@ -860,6 +891,7 @@ async def main():
             stats = {
                 "updated_at": datetime.now(timezone.utc).isoformat(),
                 "total_scanned": len(candidates),
+                "historical_unique_scanned": len(history),  # Общее число уникальных нод в истории
                 "total_working": ok_count,
                 "total_dead": fail_count,
                 "success_rate": round(ok_count / max(1, len(candidates)) * 100, 1),
@@ -872,6 +904,8 @@ async def main():
                         "country": n["country"],
                         "host": _mask_ip(n["host"]),
                         "sni": n["sni"],
+                        "age_days": n.get("age_days", 0),
+                        "uptime": round(n.get("uptime", 1.0) * 100, 1),
                     }
                     for i, n in enumerate(top)
                 ],
