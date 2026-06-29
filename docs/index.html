@@ -838,12 +838,21 @@
         /* ═══════════════════════════════════════════
            RESPONSIVE
            ═══════════════════════════════════════════ */
+        @media (max-width: 900px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 640px) {
             .container { padding: 0 16px; }
             .sub-card { padding: 20px; flex-direction: column; }
             .sub-card__url { width: 100%; flex-direction: column; }
-            .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .stat-card__value { font-size: 1.6rem; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .app-btn span { display: none; } /* Скрывает "Get App ↗" и "Connect ↗" на смартфонах */
+            .import-prefix { display: none; } /* Скрывает "Import to " на смартфонах */
         }
 
         /* ── Tooltips (JS-powered) ── */
@@ -983,19 +992,19 @@
                     <div class="step-block__header"><span style="display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:rgba(99,102,241,0.15);border-radius:50%;color:var(--accent-blue);font-size:12px;margin-right:8px;">2</span> Auto-Import</div>
                     <div class="app-list">
                         <button class="app-btn app-btn--import" onclick="autoImport('karing')">
-                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Karing</div>
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span class="import-prefix">Import to </span>Karing</div>
                             <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
                         </button>
                         <button class="app-btn app-btn--import" onclick="autoImport('happ')">
-                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Happ</div>
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span class="import-prefix">Import to </span>Happ</div>
                             <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
                         </button>
                         <button class="app-btn app-btn--import" onclick="autoImport('hiddify')">
-                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to Hiddify</div>
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span class="import-prefix">Import to </span>Hiddify</div>
                             <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
                         </button>
                         <button class="app-btn app-btn--import" onclick="autoImport('v2raytun')">
-                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Import to v2rayTun</div>
+                            <div class="app-btn__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-blue)"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> <span class="import-prefix">Import to </span>v2rayTun</div>
                             <span style="font-size:0.8em;color:var(--accent-blue)">Connect ↗</span>
                         </button>
                     </div>
@@ -1128,7 +1137,7 @@
             const totalChecks = data.total_checks_ever !== undefined ? data.total_checks_ever : '—';
 
             return `
-            <div class="stats-grid animate-in animate-delay-3" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="stats-grid animate-in animate-delay-3">
                 <div class="stat-card stat-card--runs" data-tooltip="Total number of background scans executed since project launch.">
                     <div class="stat-card__label">Total Scanner Runs</div>
                     <div class="stat-card__value">${animateNumber(totalRuns)}</div>
@@ -1138,7 +1147,7 @@
                     <div class="stat-card__value">${animateNumber(totalChecks)}</div>
                 </div>
                 <div class="stat-card stat-card--scanned" data-tooltip="Total unique VLESS configurations discovered from open sources in the current run before filtering.">
-                    <div class="stat-card__label">Scraped Candidates Pool</div>
+                    <div class="stat-card__label">Scraped Candidates</div>
                     <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
                 </div>
                 <div class="stat-card stat-card--rate" data-tooltip="Percentage of scanned nodes that successfully responded, averaged over the last 30 runs.">
