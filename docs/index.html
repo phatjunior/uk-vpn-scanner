@@ -843,57 +843,40 @@
             .stat-card__value { font-size: 1.6rem; }
         }
 
-        /* ── Tooltips (Pure CSS) ── */
-        thead th[data-tooltip] {
-            position: relative;
-            cursor: help;
-        }
-
-        thead th[data-tooltip]::before {
-            content: attr(data-tooltip);
-            position: absolute;
-            bottom: 125%;
-            left: 50%;
-            transform: translateX(-50%) scale(0.9);
-            background: rgba(17, 24, 39, 0.95);
+        /* ── Tooltips (JS-powered) ── */
+        .tooltip-popup {
+            position: fixed;
+            background: rgba(17, 24, 39, 0.97);
             border: 1px solid rgba(99, 102, 241, 0.4);
             color: var(--text-primary);
-            padding: 8px 12px;
+            padding: 10px 14px;
             border-radius: 8px;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 500;
-            text-transform: none;
-            letter-spacing: normal;
             white-space: normal;
-            width: 220px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            max-width: 240px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.6);
             backdrop-filter: blur(8px);
-            opacity: 0;
+            z-index: 9999;
             pointer-events: none;
-            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 100;
-            text-align: center;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            line-height: 1.5;
+        }
+        .tooltip-popup.visible {
+            opacity: 1;
+        }
+
+        thead th[data-tooltip] {
+            cursor: help;
+            position: relative;
         }
 
         thead th[data-tooltip]::after {
-            content: '';
-            position: absolute;
-            bottom: 110%;
-            left: 50%;
-            transform: translateX(-50%);
-            border-width: 6px 6px 0;
-            border-style: solid;
-            border-color: rgba(99, 102, 241, 0.4) transparent transparent;
-            opacity: 0;
-            pointer-events: none;
-            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 100;
-        }
-
-        thead th[data-tooltip]:hover::before,
-        thead th[data-tooltip]:hover::after {
-            opacity: 1;
-            transform: translateX(-50%) scale(1);
+            content: ' ℹ';
+            font-size: 0.65rem;
+            opacity: 0.5;
+            font-style: normal;
         }
 
         /* ── Node Copy Button ── */
@@ -919,54 +902,6 @@
 
         .copy-btn:active {
             transform: scale(0.9);
-        }
-
-        /* ── Donation Section ── */
-        .donation-card {
-            background: linear-gradient(135deg, rgba(251, 191, 36, 0.06) 0%, rgba(167, 139, 250, 0.04) 100%);
-            border: 1px solid rgba(251, 191, 36, 0.15);
-            border-radius: var(--radius);
-            padding: 24px 32px;
-            margin-top: 40px;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .donation-card__info {
-            flex: 1;
-            min-width: 280px;
-        }
-
-        .donation-card__title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: var(--accent-amber);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .donation-card__desc {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .donation-card__methods {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .donation-card .btn {
-            padding: 10px 18px;
-            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -1292,7 +1227,7 @@
                 const scorePct = Math.max((n.score / maxScore) * 100, 5);
                 const latClass = n.latency_ms < 500 ? 'fast' : n.latency_ms < 1500 ? 'medium' : 'slow';
                 const speed = n.speed_mbps ? `${n.speed_mbps} Mbps` : '—';
-                const lossLabel = n.packet_loss ? `<div style="font-size: 0.72rem; color: var(--accent-rose); font-weight: 500;">Loss: ${n.packet_loss}%</div>` : '';
+                const lossLabel = n.packet_loss > 0 ? `<div style="font-size: 0.72rem; color: var(--accent-rose); font-weight: 500;">Loss: ${n.packet_loss}%</div>` : '';
                 const uptime = n.uptime !== undefined ? `${n.uptime}%` : '—';
                 const age = n.age_days !== undefined ? `${n.age_days}d` : '—';
 
@@ -1310,8 +1245,9 @@
                     else uptimeColor = 'var(--accent-rose)';
                 }
 
+                const safeRaw = n.raw ? n.raw.replace(/'/g, "\\'").replace(/"/g, '&quot;') : '';
                 const copyBtn = n.raw ? `
-                    <button class="copy-btn" onclick="copyNode('${n.raw}', this)" title="Copy VLESS configuration URL">
+                    <button class="copy-btn" onclick="copyNode('${safeRaw}', this)" title="Copy VLESS configuration URL">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                     </button>
                 ` : '';
@@ -1367,26 +1303,10 @@
                 </div>
             </div>
 
-            <div class="donation-card animate-in animate-delay-6">
-                <div class="donation-card__info">
-                    <div class="donation-card__title">💖 Support the Project</div>
-                    <div class="donation-card__desc">If you find this scanner useful for bypassing UK Content Control, please consider donating to keep our scanning servers running. Every contribution helps!</div>
-                </div>
-                <div class="donation-card__methods">
-                    <a href="https://ko-fi.com/" target="_blank" class="btn btn--secondary" style="border: 1px solid rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.08); color: var(--accent-amber); text-decoration: none;">
-                        ☕ Buy me a Coffee
-                    </a>
-                    <button class="btn btn--secondary" onclick="copyCryptoAddress('UQBsGfJ3-gZ8yB8Yc9w2_P9NqS75y3_m9z2-9P9NqS75y6_N', this)" style="border: 1px solid rgba(167, 139, 250, 0.3); background: rgba(167, 139, 250, 0.08); color: var(--accent-purple);">
-                        💎 TON
-                    </button>
-                    <button class="btn btn--secondary" onclick="copyCryptoAddress('TR7NHqJeE4VnC1mFZaovTN3VW3iWRM1alFaovTN3VW3iWRM1', this)" style="border: 1px solid rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.08); color: var(--accent-cyan);">
-                        💵 USDT (TRC-20)
-                    </button>
-                </div>
-            </div>
+
 
             <footer class="footer">
-                <p>UK VPN Scanner v2.2 — Auto-updates every 2 hours via GitHub Actions</p>
+                <p>UK VPN Scanner v2.3 — Auto-updates every 2 hours via GitHub Actions</p>
                 <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
             </footer>
             `;
@@ -1452,19 +1372,70 @@
             });
         }
 
-        function copyCryptoAddress(address, btn) {
-            if (!address) return;
-            navigator.clipboard.writeText(address).then(() => {
-                showToast("Address copied! Thank you for your support! 🙏");
-                const originalText = btn.textContent;
-                btn.textContent = "✓ Copied!";
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                }, 2000);
-            }).catch(err => {
-                console.error("Failed to copy address:", err);
+        // ═══════════════════════════════════════════════
+        //  JS TOOLTIP SYSTEM (works on mobile tap + desktop hover)
+        // ═══════════════════════════════════════════════
+        (function() {
+            const popup = document.createElement('div');
+            popup.className = 'tooltip-popup';
+            document.body.appendChild(popup);
+            let hideTimer = null;
+
+            function showTooltip(el) {
+                const text = el.getAttribute('data-tooltip');
+                if (!text) return;
+                popup.textContent = text;
+                popup.classList.add('visible');
+
+                const rect = el.getBoundingClientRect();
+                const popupW = popup.offsetWidth;
+                let left = rect.left + rect.width / 2 - popupW / 2;
+                let top = rect.top - popup.offsetHeight - 8;
+
+                // Keep within viewport
+                if (left < 8) left = 8;
+                if (left + popupW > window.innerWidth - 8) left = window.innerWidth - popupW - 8;
+                if (top < 8) top = rect.bottom + 8; // flip below if no room above
+
+                popup.style.left = left + 'px';
+                popup.style.top = top + 'px';
+            }
+
+            function hideTooltip() {
+                popup.classList.remove('visible');
+            }
+
+            // Desktop: hover
+            document.addEventListener('mouseenter', e => {
+                const th = e.target.closest('th[data-tooltip]');
+                if (th) {
+                    clearTimeout(hideTimer);
+                    showTooltip(th);
+                }
+            }, true);
+
+            document.addEventListener('mouseleave', e => {
+                const th = e.target.closest('th[data-tooltip]');
+                if (th) {
+                    hideTimer = setTimeout(hideTooltip, 100);
+                }
+            }, true);
+
+            // Mobile: tap to show, tap anywhere else to dismiss
+            document.addEventListener('click', e => {
+                const th = e.target.closest('th[data-tooltip]');
+                if (th) {
+                    e.preventDefault();
+                    if (popup.classList.contains('visible')) {
+                        hideTooltip();
+                    } else {
+                        showTooltip(th);
+                    }
+                } else {
+                    hideTooltip();
+                }
             });
-        }
+        })();
 
         // ═══════════════════════════════════════════════
         //  SMART LINKS LOGIC

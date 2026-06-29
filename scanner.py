@@ -540,27 +540,25 @@ async def test_node_via_xray(sem: asyncio.Semaphore, node: dict,
 
             # ── Тест скорости (только если ping OK и < 3с) ──
             if latency is not None and latency < 3000:
-                # Динамический размер тестового файла для более реалистичного замера
-                if latency < 150:
-                    test_bytes = 1572864  # 1.5 MB
-                elif latency < 300:
-                    test_bytes = 1048576  # 1.0 MB
-                else:
-                    test_bytes = 524288   # 512 KB
+                # 10 MB для реалистичного замера — TCP успеет разогнаться
+                test_bytes = 10485760  # 10 MB
 
                 speed_url = f"https://speed.cloudflare.com/__down?bytes={test_bytes}"
                 try:
-                    timeout = aiohttp.ClientTimeout(total=12)
+                    timeout = aiohttp.ClientTimeout(total=20)
                     async with aiohttp.ClientSession() as s:
                         t0 = asyncio.get_event_loop().time()
                         async with s.get(speed_url, proxy=proxy_url,
                                          timeout=timeout) as resp:
                             if resp.status == 200:
-                                data = await resp.read()
+                                total_bytes = 0
+                                async for chunk in resp.content.iter_chunked(65536):
+                                    total_bytes += len(chunk)
                                 elapsed = asyncio.get_event_loop().time() - t0
-                                if elapsed > 0:
-                                    # Конвертируем в Mbps: (байты * 8) / (1024 * 1024 * секунды)
-                                    speed_mbps = round((len(data) * 8) / (1024 * 1024 * elapsed), 1)
+                                if elapsed > 0 and total_bytes > 0:
+                                    # Конвертируем в Mbps: (байты * 8) / (1_000_000 * секунды)
+                                    # Используем SI Mbps (1 Mbps = 1,000,000 бит/с)
+                                    speed_mbps = round((total_bytes * 8) / (1_000_000 * elapsed), 1)
                 except Exception:
                     pass
 
@@ -929,7 +927,7 @@ async def main():
                         "country": n["country"],
                         "host": _mask_ip(n["host"]),
                         "sni": n["sni"],
-                        "raw": n["raw"],
+                        "raw": _format_raw_uri(n, i + 1, code_to_flag, country_names_full),
                         "age_days": n.get("age_days", 0),
                         "uptime": round(n.get("uptime", 1.0) * 100, 1),
                     }
@@ -967,6 +965,17 @@ def _mask_ip(ip: str) -> str:
     if len(parts) == 4:
         return f"{parts[0]}.{parts[1]}.***. ***"
     return ip[:len(ip) // 2] + "***"
+
+
+def _format_raw_uri(node: dict, rank: int, code_to_flag: dict, country_names_full: dict) -> str:
+    """Форматирование raw URI для кнопки копирования с именем phatVPN."""
+    raw_uri = node["raw"]
+    cc = node.get("country", "??")
+    flag = code_to_flag.get(cc, "🏳️")
+    c_name = country_names_full.get(cc, "Unknown")
+    new_name = f"{flag} {c_name} #{rank}"
+    base_uri = raw_uri.split("#")[0] if "#" in raw_uri else raw_uri
+    return f"{base_uri}#{new_name}"
 
 
 if __name__ == "__main__":
