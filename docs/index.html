@@ -315,8 +315,6 @@
         }
 
         .stat-card--scanned .stat-card__value { color: var(--accent-cyan); }
-        .stat-card--working .stat-card__value { color: var(--accent-emerald); }
-        .stat-card--dead .stat-card__value { color: var(--accent-rose); }
         .stat-card--rate .stat-card__value { color: var(--accent-purple); }
         .stat-card--runs .stat-card__value { color: #f472b6; }
         .stat-card--checks .stat-card__value { color: #fb923c; }
@@ -479,6 +477,7 @@
         .latency-dot--fast { background: var(--accent-emerald); }
         .latency-dot--medium { background: var(--accent-amber); }
         .latency-dot--slow { background: var(--accent-rose); }
+        .latency-dot--very-slow { background: #991b1b; }
 
         .latency-legend {
             display: flex;
@@ -1031,6 +1030,24 @@
             activity: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
         };
 
+        function renderApp(data) {
+            const html = `
+                ${renderHeader(data)}
+                ${renderStatusBar(data)}
+                ${renderQuickStart()}
+                ${renderSubscriptionCard()}
+                ${renderStatsGrid(data)}
+                ${renderChartsRow(data)}
+                ${renderNodesTable(data)}
+                ${renderScanHistory(data)}
+                <footer class="footer">
+                    <p>UK VPN Scanner v2.5 — Auto-updates every 2 hours via GitHub Actions</p>
+                    <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
+                </footer>
+            `;
+            return html;
+        }
+
         // ═══════════════════════════════════════════════
         //  DATA & STATE
         // ═══════════════════════════════════════════════
@@ -1105,35 +1122,28 @@
         }
 
         function renderStatsGrid(data) {
-            const histScanned = data.historical_unique_scanned !== undefined ? data.historical_unique_scanned : data.total_scanned;
+            const histScanned = data.total_scraped_pool !== undefined ? data.total_scraped_pool : '—';
+            const avgRate = data.historical_avg_rate !== undefined ? data.historical_avg_rate : data.success_rate;
             const totalRuns = data.total_runs_ever !== undefined ? data.total_runs_ever : '—';
             const totalChecks = data.total_checks_ever !== undefined ? data.total_checks_ever : '—';
 
             return `
-            <div class="stats-grid animate-in animate-delay-3">
-                <div class="stat-card stat-card--scanned">
-                    <div class="stat-card__label">Unique Candidates</div>
-                    <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
-                </div>
-                <div class="stat-card stat-card--working">
-                    <div class="stat-card__label">Working Nodes</div>
-                    <div class="stat-card__value" id="statWorking">${animateNumber(data.total_working)}</div>
-                </div>
-                <div class="stat-card stat-card--dead">
-                    <div class="stat-card__label">Inactive Nodes</div>
-                    <div class="stat-card__value" id="statDead">${animateNumber(data.total_dead)}</div>
-                </div>
-                <div class="stat-card stat-card--rate">
-                    <div class="stat-card__label">Success Rate</div>
-                    <div class="stat-card__value">${data.success_rate}%</div>
+            <div class="stats-grid animate-in animate-delay-3" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="stat-card stat-card--runs">
+                    <div class="stat-card__label">Total Scanner Runs</div>
+                    <div class="stat-card__value">${animateNumber(totalRuns)}</div>
                 </div>
                 <div class="stat-card stat-card--checks">
                     <div class="stat-card__label">Total Checks Ever</div>
                     <div class="stat-card__value">${animateNumber(totalChecks)}</div>
                 </div>
-                <div class="stat-card stat-card--runs">
-                    <div class="stat-card__label">Total Scanner Runs</div>
-                    <div class="stat-card__value">${animateNumber(totalRuns)}</div>
+                <div class="stat-card stat-card--scanned">
+                    <div class="stat-card__label">Scraped Candidates Pool</div>
+                    <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
+                </div>
+                <div class="stat-card stat-card--rate">
+                    <div class="stat-card__label">Avg Success Rate</div>
+                    <div class="stat-card__value">${avgRate}%</div>
                 </div>
             </div>
             `;
@@ -1188,8 +1198,8 @@
             const buckets = [
                 { label: '< 500ms', min: 0, max: 500, dots: [], class: 'fast' },
                 { label: '500-1000ms', min: 500, max: 1000, dots: [], class: 'medium' },
-                { label: '1000-2000ms', min: 1000, max: 2000, dots: [], class: 'medium' },
-                { label: '> 2000ms', min: 2000, max: Infinity, dots: [], class: 'slow' },
+                { label: '1000-2000ms', min: 1000, max: 2000, dots: [], class: 'slow' },
+                { label: '> 2000ms', min: 2000, max: Infinity, dots: [], class: 'very-slow' },
             ];
 
             nodes.forEach(n => {
@@ -1226,7 +1236,10 @@
                         <div class="latency-legend__dot" style="background:var(--accent-amber)"></div> Medium
                     </div>
                     <div class="latency-legend__item">
-                        <div class="latency-legend__dot" style="background:var(--accent-rose)"></div> Slow (&gt;2s)
+                        <div class="latency-legend__dot" style="background:var(--accent-rose)"></div> Slow (1-2s)
+                    </div>
+                    <div class="latency-legend__item">
+                        <div class="latency-legend__dot" style="background:#991b1b"></div> Very Slow (&gt;2s)
                     </div>
                 </div>
             </div>`;
@@ -1320,10 +1333,7 @@
                 </div>
             </div>
 
-            <footer class="footer">
-                <p>UK VPN Scanner v2.3 — Auto-updates every 2 hours via GitHub Actions</p>
-                <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
-            </footer>
+            </div>
             `;
         }
 

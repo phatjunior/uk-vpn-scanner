@@ -652,7 +652,7 @@ async def main():
     setup_logging()
 
     log.info("═" * 58)
-    log.info("  🚀 UK VPN Node Scanner v2.3")
+    log.info("  🚀 UK VPN Node Scanner v2.5")
     log.info("  🕐 " + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"))
     log.info("═" * 58)
 
@@ -758,6 +758,9 @@ async def main():
             if h_data.get("ok", 0) > 0 and h_data.get("node"):
                 known_working_nodes.append(h_data["node"])
 
+        random.shuffle(known_working_nodes)
+        known_working_nodes = known_working_nodes[:200]
+        
         known_keys = {(n["host"], n["port"]) for n in known_working_nodes}
         new_scraped_nodes = [
             n for n in deduped if (n["host"], n["port"]) not in known_keys
@@ -946,6 +949,17 @@ async def main():
             total_checks_ever = sum(run.get("total_scanned", 0) for run in scan_history) + historical_checks_offset
 
             # Статистика для Web Dashboard
+            # Recalculate country distribution only for top 50 working nodes
+            top_country_counts = {}
+            for n in top:
+                top_country_counts[n["country"]] = top_country_counts.get(n["country"], 0) + 1
+
+            # Calculate historical avg success rate
+            historical_avg_rate = round(ok_count / max(1, len(candidates)) * 100, 1)
+            if scan_history:
+                total_success = sum(h.get("success_rate", 0) for h in scan_history)
+                historical_avg_rate = round(total_success / len(scan_history), 1)
+
             stats = {
                 "updated_at": datetime.now(timezone.utc).isoformat(),
                 "total_scanned": len(candidates),
@@ -953,6 +967,8 @@ async def main():
                 "total_working": ok_count,
                 "total_dead": fail_count,
                 "success_rate": round(ok_count / max(1, len(candidates)) * 100, 1),
+                "historical_avg_rate": historical_avg_rate,
+                "total_scraped_pool": len(deduped),
                 "total_runs_ever": total_runs_ever,
                 "total_checks_ever": total_checks_ever,
                 "scan_history": scan_history,
@@ -973,7 +989,7 @@ async def main():
                     for i, n in enumerate(top)
                 ],
                 "country_distribution": dict(
-                    sorted(country_counts.items(), key=lambda x: -x[1])
+                    sorted(top_country_counts.items(), key=lambda x: -x[1])
                 ),
                 "scan_config": {
                     "repos_scanned": len(REPOS),
