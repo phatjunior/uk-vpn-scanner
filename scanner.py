@@ -170,15 +170,16 @@ def cleanup_history(history: dict) -> dict:
     return cleaned
 
 
-def compute_score(latency: int, speed_kbps: Optional[float],
-                  hist_data: dict) -> float:
+def compute_score(latency: int, speed_mbps: Optional[float],
+                  packet_loss: float, hist_data: dict) -> float:
     """
     Комплексный рейтинг ноды:
       • Базовый балл — обратно пропорционален latency (быстрые = лучше)
       • Uptime множитель — стабильные ноды получают бонус
-      • Speed бонус — быстрые ноды получают дополнительные очки
+      • Speed бонус — быстрые ноды получают дополнительные очки (в Mbps)
       • Stability бонус — за долгую серию успешных тестов (основан на сглаженном ok)
       • Fail штраф — основан на проценте сбоев (fail rate), а не на общей сумме
+      • Packet loss штраф — вычитается за потерю пакетов
     """
     base = 10000 / max(latency, 1)
 
@@ -188,8 +189,9 @@ def compute_score(latency: int, speed_kbps: Optional[float],
     uptime = ok / max(0.1, total)
 
     speed_bonus = 0.0
-    if speed_kbps and speed_kbps > 0:
-        speed_bonus = min(speed_kbps / 20, 50)  # cap 50
+    if speed_mbps and speed_mbps > 0:
+        # 32 Mbps дает максимальный бонус в 80 баллов
+        speed_bonus = min(speed_mbps * 2.5, 80.0)
 
     # Взвешиваем стабильность: чем дольше нода успешно работает, тем выше ее базовый авторитет
     stability_bonus = min(ok * 3, 30)  # cap 30
@@ -197,7 +199,10 @@ def compute_score(latency: int, speed_kbps: Optional[float],
     # Штраф за процент неудач (fail rate). Cоставляет до 50 баллов при 100% падений
     fail_rate_penalty = (fail / max(0.1, total)) * 50
 
-    return (base * (0.3 + 0.7 * uptime)) + speed_bonus + stability_bonus - fail_rate_penalty
+    # Штраф за потерю пакетов (до 100 баллов при 100% потере пакетов)
+    packet_loss_penalty = packet_loss * 100.0
+
+    return (base * (0.3 + 0.7 * uptime)) + speed_bonus + stability_bonus - fail_rate_penalty - packet_loss_penalty
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -508,37 +513,54 @@ async def test_node_via_xray(sem: asyncio.Semaphore, node: dict,
 
             proxy_url = f"http://127.0.0.1:{port}"
             latency = None
-            speed_kbps = None
+            speed_mbps = None
 
-            # ── Тест latency ──
-            try:
-                timeout = aiohttp.ClientTimeout(total=8)
-                async with aiohttp.ClientSession() as s:
-                    t0 = asyncio.get_event_loop().time()
-                    async with s.get(TEST_URL, proxy=proxy_url,
-                                     timeout=timeout) as resp:
-                        if resp.status in (200, 204):
-                            latency = int(
-                                (asyncio.get_event_loop().time() - t0) * 1000
-                            )
-            except Exception:
-                pass
+            # ── Тест latency и Packet Loss (3 попытки) ──
+            latencies = []
+            failures = 0
+            for _ in range(3):
+                try:
+                    timeout = aiohttp.ClientTimeout(total=3.0)
+                    async with aiohttp.ClientSession() as s:
+                        t0 = asyncio.get_event_loop().time()
+                        async with s.get(TEST_URL, proxy=proxy_url,
+                                         timeout=timeout) as resp:
+                            if resp.status in (200, 204):
+                                latencies.append(int(
+                                    (asyncio.get_event_loop().time() - t0) * 1000
+                                ))
+                            else:
+                                failures += 1
+                except Exception:
+                    failures += 1
+
+            packet_loss = round(failures / 3.0, 2)
+            if latencies:
+                latency = int(sum(latencies) / len(latencies))
 
             # ── Тест скорости (только если ping OK и < 3с) ──
             if latency is not None and latency < 3000:
+                # Динамический размер тестового файла для более реалистичного замера
+                if latency < 150:
+                    test_bytes = 1572864  # 1.5 MB
+                elif latency < 300:
+                    test_bytes = 1048576  # 1.0 MB
+                else:
+                    test_bytes = 524288   # 512 KB
+
+                speed_url = f"https://speed.cloudflare.com/__down?bytes={test_bytes}"
                 try:
                     timeout = aiohttp.ClientTimeout(total=12)
                     async with aiohttp.ClientSession() as s:
                         t0 = asyncio.get_event_loop().time()
-                        async with s.get(SPEED_TEST_URL, proxy=proxy_url,
+                        async with s.get(speed_url, proxy=proxy_url,
                                          timeout=timeout) as resp:
                             if resp.status == 200:
                                 data = await resp.read()
                                 elapsed = asyncio.get_event_loop().time() - t0
                                 if elapsed > 0:
-                                    speed_kbps = round(
-                                        len(data) / 1024 / elapsed, 1
-                                    )
+                                    # Конвертируем в Mbps: (байты * 8) / (1024 * 1024 * секунды)
+                                    speed_mbps = round((len(data) * 8) / (1024 * 1024 * elapsed), 1)
                 except Exception:
                     pass
 
@@ -546,7 +568,8 @@ async def test_node_via_xray(sem: asyncio.Semaphore, node: dict,
                 return {
                     "node": node,
                     "latency": latency,
-                    "speed_kbps": speed_kbps,
+                    "speed_mbps": speed_mbps,
+                    "packet_loss": packet_loss,
                     "success": True,
                 }
             return _fail_result(node)
@@ -575,7 +598,7 @@ async def test_node_via_xray(sem: asyncio.Semaphore, node: dict,
 
 
 def _fail_result(node: dict) -> dict:
-    return {"node": node, "latency": None, "speed_kbps": None, "success": False}
+    return {"node": node, "latency": None, "speed_mbps": None, "packet_loss": 1.0, "success": False}
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -606,7 +629,7 @@ def print_report(scored: list[dict], ok_count: int, fail_count: int,
 
     show_count = min(len(scored), 25)
     for i, n in enumerate(scored[:show_count], 1):
-        speed = f"{n['speed_kbps']}kb/s" if n.get("speed_kbps") else "—"
+        speed = f"{n['speed_mbps']}Mbps" if n.get("speed_mbps") else "—"
         log.info(
             f"  {i:>3} │ {n['score']:>7.1f} │ {n['latency']:>4}ms │ "
             f"{speed:>9} │ {n['country']:>2} │ {n['host']:<32} │ {n['sni']}"
@@ -791,12 +814,13 @@ async def main():
                     age_days = 0
 
                 score = compute_score(
-                    res["latency"], res.get("speed_kbps"), history[host],
+                    res["latency"], res.get("speed_mbps"), res.get("packet_loss", 0.0), history[host],
                 )
                 scored.append({
                     "score": score,
                     "latency": res["latency"],
-                    "speed_kbps": res.get("speed_kbps"),
+                    "speed_mbps": res.get("speed_mbps"),
+                    "packet_loss": res.get("packet_loss", 0.0),
                     "country": node.get("country", "??"),
                     "host": host,
                     "sni": node["sni"],
@@ -900,10 +924,12 @@ async def main():
                         "rank": i + 1,
                         "score": round(n["score"], 1),
                         "latency_ms": n["latency"],
-                        "speed_kbps": n["speed_kbps"],
+                        "speed_mbps": n["speed_mbps"],
+                        "packet_loss": round(n["packet_loss"] * 100, 1),
                         "country": n["country"],
                         "host": _mask_ip(n["host"]),
                         "sni": n["sni"],
+                        "raw": n["raw"],
                         "age_days": n.get("age_days", 0),
                         "uptime": round(n.get("uptime", 1.0) * 100, 1),
                     }

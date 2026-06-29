@@ -842,6 +842,132 @@
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .stat-card__value { font-size: 1.6rem; }
         }
+
+        /* ── Tooltips (Pure CSS) ── */
+        thead th[data-tooltip] {
+            position: relative;
+            cursor: help;
+        }
+
+        thead th[data-tooltip]::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%) scale(0.9);
+            background: rgba(17, 24, 39, 0.95);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: normal;
+            white-space: normal;
+            width: 220px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+            text-align: center;
+        }
+
+        thead th[data-tooltip]::after {
+            content: '';
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px 6px 0;
+            border-style: solid;
+            border-color: rgba(99, 102, 241, 0.4) transparent transparent;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100;
+        }
+
+        thead th[data-tooltip]:hover::before,
+        thead th[data-tooltip]:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+
+        /* ── Node Copy Button ── */
+        .copy-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.15s ease;
+            vertical-align: middle;
+            margin-left: 6px;
+        }
+
+        .copy-btn:hover {
+            color: var(--accent-cyan);
+            background: rgba(34, 211, 238, 0.1);
+        }
+
+        .copy-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* ── Donation Section ── */
+        .donation-card {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.06) 0%, rgba(167, 139, 250, 0.04) 100%);
+            border: 1px solid rgba(251, 191, 36, 0.15);
+            border-radius: var(--radius);
+            padding: 24px 32px;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .donation-card__info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .donation-card__title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--accent-amber);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .donation-card__desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .donation-card__methods {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .donation-card .btn {
+            padding: 10px 18px;
+            font-size: 0.85rem;
+        }
     </style>
 </head>
 <body>
@@ -1165,7 +1291,8 @@
                 const rankClass = n.rank <= 3 ? 'td-rank--top3' : '';
                 const scorePct = Math.max((n.score / maxScore) * 100, 5);
                 const latClass = n.latency_ms < 500 ? 'fast' : n.latency_ms < 1500 ? 'medium' : 'slow';
-                const speed = n.speed_kbps ? `${n.speed_kbps} KB/s` : '—';
+                const speed = n.speed_mbps ? `${n.speed_mbps} Mbps` : '—';
+                const lossLabel = n.packet_loss ? `<div style="font-size: 0.72rem; color: var(--accent-rose); font-weight: 500;">Loss: ${n.packet_loss}%</div>` : '';
                 const uptime = n.uptime !== undefined ? `${n.uptime}%` : '—';
                 const age = n.age_days !== undefined ? `${n.age_days}d` : '—';
 
@@ -1183,6 +1310,12 @@
                     else uptimeColor = 'var(--accent-rose)';
                 }
 
+                const copyBtn = n.raw ? `
+                    <button class="copy-btn" onclick="copyNode('${n.raw}', this)" title="Copy VLESS configuration URL">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                ` : '';
+
                 return `
                 <tr>
                     <td class="td-rank ${rankClass}">${n.rank <= 3 ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent-amber);vertical-align:middle;margin-right:2px"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>' : '#'} ${n.rank}</td>
@@ -1197,11 +1330,11 @@
                     <td class="td-latency">
                         <span class="latency-badge latency-badge--${latClass}">${n.latency_ms}ms</span>
                     </td>
-                    <td class="td-speed">${speed}</td>
+                    <td class="td-speed">${speed}${lossLabel}</td>
                     <td class="td-country" title="${n.country}">${flag}</td>
                     <td style="font-family: var(--font-mono); font-size: 0.85rem; color: ${uptimeColor}">${uptime}</td>
                     <td style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-secondary)">${age}</td>
-                    <td class="td-host">${n.host}</td>
+                    <td class="td-host">${n.host}${copyBtn}</td>
                     <td class="td-sni">${n.sni}</td>
                 </tr>`;
             }).join('');
@@ -1217,15 +1350,15 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Rank</th>
-                                    <th>Score</th>
-                                    <th>Latency</th>
-                                    <th>Speed</th>
-                                    <th title="Country">${ICONS.globe}</th>
-                                    <th>Uptime</th>
-                                    <th>Age</th>
-                                    <th>Host</th>
-                                    <th>SNI</th>
+                                    <th data-tooltip="Position in the top list based on overall performance score.">Rank</th>
+                                    <th data-tooltip="Overall quality score. Calculated from latency, speed, uptime, stability, and packet loss.">Score</th>
+                                    <th data-tooltip="Average connection establishment latency (ping). Lower is better.">Latency</th>
+                                    <th data-tooltip="Average download speed of a sample file. Packet loss rate is shown if any exists.">Speed</th>
+                                    <th data-tooltip="Country location of the node, determined by GeoIP.">CC</th>
+                                    <th data-tooltip="Historical percentage of successful checks. Restored dynamically via EMA.">Uptime</th>
+                                    <th data-tooltip="Number of days since the node was first discovered.">Age</th>
+                                    <th data-tooltip="IP address of the node server (masked for privacy). Includes a button to copy configuration.">Host</th>
+                                    <th data-tooltip="SNI domain used to spoof traffic as trusted infrastructure.">SNI</th>
                                 </tr>
                             </thead>
                             <tbody>${rows}</tbody>
@@ -1234,8 +1367,26 @@
                 </div>
             </div>
 
+            <div class="donation-card animate-in animate-delay-6">
+                <div class="donation-card__info">
+                    <div class="donation-card__title">💖 Support the Project</div>
+                    <div class="donation-card__desc">If you find this scanner useful for bypassing UK Content Control, please consider donating to keep our scanning servers running. Every contribution helps!</div>
+                </div>
+                <div class="donation-card__methods">
+                    <a href="https://ko-fi.com/" target="_blank" class="btn btn--secondary" style="border: 1px solid rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.08); color: var(--accent-amber); text-decoration: none;">
+                        ☕ Buy me a Coffee
+                    </a>
+                    <button class="btn btn--secondary" onclick="copyCryptoAddress('UQBsGfJ3-gZ8yB8Yc9w2_P9NqS75y3_m9z2-9P9NqS75y6_N', this)" style="border: 1px solid rgba(167, 139, 250, 0.3); background: rgba(167, 139, 250, 0.08); color: var(--accent-purple);">
+                        💎 TON
+                    </button>
+                    <button class="btn btn--secondary" onclick="copyCryptoAddress('TR7NHqJeE4VnC1mFZaovTN3VW3iWRM1alFaovTN3VW3iWRM1', this)" style="border: 1px solid rgba(34, 211, 238, 0.3); background: rgba(34, 211, 238, 0.08); color: var(--accent-cyan);">
+                        💵 USDT (TRC-20)
+                    </button>
+                </div>
+            </div>
+
             <footer class="footer">
-                <p>UK VPN Scanner v2.1 — Auto-updates every 2 hours via GitHub Actions</p>
+                <p>UK VPN Scanner v2.2 — Auto-updates every 2 hours via GitHub Actions</p>
                 <p style="margin-top:6px">VLESS Reality nodes for bypassing UK Content Control</p>
             </footer>
             `;
@@ -1269,19 +1420,50 @@
             if (!input.value || input.value === 'Loading...') return;
 
             navigator.clipboard.writeText(input.value).then(() => {
-                showToast();
+                showToast("Subscription link copied to clipboard!");
             }).catch(() => {
                 // Fallback
                 input.select();
                 document.execCommand('copy');
-                showToast();
+                showToast("Subscription link copied to clipboard!");
             });
         }
 
-        function showToast() {
+        function showToast(message) {
             const toast = document.getElementById('toast');
+            toast.textContent = message || "Subscription link copied to clipboard!";
             toast.classList.add('toast--visible');
             setTimeout(() => toast.classList.remove('toast--visible'), 2500);
+        }
+
+        function copyNode(uri, btn) {
+            if (!uri) return;
+            navigator.clipboard.writeText(uri).then(() => {
+                showToast("Node config copied to clipboard!");
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+                btn.style.color = "var(--accent-emerald)";
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.color = "";
+                }, 1500);
+            }).catch(err => {
+                console.error("Failed to copy node:", err);
+            });
+        }
+
+        function copyCryptoAddress(address, btn) {
+            if (!address) return;
+            navigator.clipboard.writeText(address).then(() => {
+                showToast("Address copied! Thank you for your support! 🙏");
+                const originalText = btn.textContent;
+                btn.textContent = "✓ Copied!";
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error("Failed to copy address:", err);
+            });
         }
 
         // ═══════════════════════════════════════════════
