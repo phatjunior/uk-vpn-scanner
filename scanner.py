@@ -120,6 +120,19 @@ async def wait_for_port(port: int, host: str = "127.0.0.1",
     return False
 
 
+async def check_tcp_port(host: str, port: int, timeout: float = 1.2) -> bool:
+    """Быстрый TCP-пинг хоста и порта."""
+    try:
+        _, writer = await asyncio.wait_for(
+            asyncio.open_connection(host, port), timeout=timeout
+        )
+        writer.close()
+        await writer.wait_closed()
+        return True
+    except Exception:
+        return False
+
+
 def make_api_headers() -> dict:
     """Заголовки для GitHub API с опциональным токеном."""
     headers = {
@@ -750,28 +763,51 @@ async def main():
         )
 
         # ═════ Step 4: Xray Testing ═════
-        # Извлекаем ранее работавшие ноды из истории, чтобы они гарантированно проверились и накопились
-        known_working_nodes = []
+        # Извлекаем ранее работавшие ноды из истории и сортируем их по аптайму (умный приоритет)
+        known_working_nodes_data = []
         for host, h_data in history.items():
             if host == "__scan_history":
                 continue
             if h_data.get("ok", 0) > 0 and h_data.get("node"):
-                known_working_nodes.append(h_data["node"])
+                ok = h_data.get("ok", 0.0)
+                fail = h_data.get("fail", 0.0)
+                uptime = ok / max(0.1, ok + fail)
+                known_working_nodes_data.append((uptime, h_data["node"]))
 
-        random.shuffle(known_working_nodes)
-        known_working_nodes = known_working_nodes[:200]
-        
-        known_keys = {(n["host"], n["port"]) for n in known_working_nodes}
+        # Сортируем: сначала с самым высоким аптаймом
+        known_working_nodes_data.sort(key=lambda x: x[0], reverse=True)
+        known_working = [node for _, node in known_working_nodes_data[:200]]
+
+        known_keys = {(n["host"], n["port"]) for n in known_working}
         new_scraped_nodes = [
             n for n in deduped if (n["host"], n["port"]) not in known_keys
         ]
-        
         random.shuffle(new_scraped_nodes)
-        
-        candidates = known_working_nodes + new_scraped_nodes
-        candidates = candidates[:MAX_CANDIDATES]
 
-        log.info(f"⚡ Step 4/6: Testing {len(candidates)} nodes via Xray ({len(known_working_nodes)} previously working)...")
+        # Объединяем пул для предварительной TCP фильтрации (200 старых + до 800 свежих)
+        pre_filter_pool = known_working + new_scraped_nodes[:800]
+        log.info(f"🔍 Running TCP port pre-filter on {len(pre_filter_pool)} candidates...")
+
+        # Быстрый асинхронный пинг портов
+        async def ping_and_mark(node):
+            ok = await check_tcp_port(node["host"], node["port"])
+            return node, ok
+
+        pre_filter_tasks = [ping_and_mark(n) for n in pre_filter_pool]
+        pre_filter_results = await asyncio.gather(*pre_filter_tasks)
+
+        tcp_alive_nodes = [node for node, ok in pre_filter_results if ok]
+        log.info(f"   TCP pre-filter: {len(tcp_alive_nodes)} nodes responded on TCP port")
+
+        # Если живых нод мало, докинем в конец не прошедшие фильтр (на всякий случай)
+        if len(tcp_alive_nodes) < MAX_CANDIDATES:
+            tcp_dead_nodes = [node for node, ok in pre_filter_results if not ok]
+            candidates = tcp_alive_nodes + tcp_dead_nodes
+        else:
+            candidates = tcp_alive_nodes
+
+        candidates = candidates[:MAX_CANDIDATES]
+        log.info(f"⚡ Step 4/6: Testing {len(candidates)} nodes via Xray...")
 
         sem = asyncio.Semaphore(MAX_CONCURRENCY)
         base_port = 25000

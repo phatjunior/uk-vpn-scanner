@@ -1129,19 +1129,19 @@
 
             return `
             <div class="stats-grid animate-in animate-delay-3" style="grid-template-columns: repeat(4, 1fr);">
-                <div class="stat-card stat-card--runs">
+                <div class="stat-card stat-card--runs" data-tooltip="Total number of background scans executed since project launch.">
                     <div class="stat-card__label">Total Scanner Runs</div>
                     <div class="stat-card__value">${animateNumber(totalRuns)}</div>
                 </div>
-                <div class="stat-card stat-card--checks">
+                <div class="stat-card stat-card--checks" data-tooltip="Cumulative count of all VLESS reality connections tested via Xray core across all rounds.">
                     <div class="stat-card__label">Total Checks Ever</div>
                     <div class="stat-card__value">${animateNumber(totalChecks)}</div>
                 </div>
-                <div class="stat-card stat-card--scanned">
+                <div class="stat-card stat-card--scanned" data-tooltip="Total unique VLESS configurations discovered from open sources in the current run before filtering.">
                     <div class="stat-card__label">Scraped Candidates Pool</div>
                     <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
                 </div>
-                <div class="stat-card stat-card--rate">
+                <div class="stat-card stat-card--rate" data-tooltip="Percentage of scanned nodes that successfully responded, averaged over the last 30 runs.">
                     <div class="stat-card__label">Avg Success Rate</div>
                     <div class="stat-card__value">${avgRate}%</div>
                 </div>
@@ -1480,29 +1480,29 @@
 
             // Desktop: hover
             document.addEventListener('mouseenter', e => {
-                const th = e.target.closest('th[data-tooltip]');
-                if (th) {
+                const el = e.target.closest('[data-tooltip]');
+                if (el) {
                     clearTimeout(hideTimer);
-                    showTooltip(th);
+                    showTooltip(el);
                 }
             }, true);
 
             document.addEventListener('mouseleave', e => {
-                const th = e.target.closest('th[data-tooltip]');
-                if (th) {
+                const el = e.target.closest('[data-tooltip]');
+                if (el) {
                     hideTimer = setTimeout(hideTooltip, 100);
                 }
             }, true);
 
             // Mobile: tap to show, tap anywhere else to dismiss
             document.addEventListener('click', e => {
-                const th = e.target.closest('th[data-tooltip]');
-                if (th) {
+                const el = e.target.closest('[data-tooltip]');
+                if (el) {
                     e.preventDefault();
                     if (popup.classList.contains('visible')) {
                         hideTooltip();
                     } else {
-                        showTooltip(th);
+                        showTooltip(el);
                     }
                 } else {
                     hideTooltip();
