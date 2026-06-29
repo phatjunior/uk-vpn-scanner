@@ -788,10 +788,13 @@ async def main():
         pre_filter_pool = known_working + new_scraped_nodes[:800]
         log.info(f"🔍 Running TCP port pre-filter on {len(pre_filter_pool)} candidates...")
 
-        # Быстрый асинхронный пинг портов
+        # Быстрый асинхронный пинг портов с ограничением параллельности
+        pre_sem = asyncio.Semaphore(150)
+
         async def ping_and_mark(node):
-            ok = await check_tcp_port(node["host"], node["port"])
-            return node, ok
+            async with pre_sem:
+                ok = await check_tcp_port(node["host"], node["port"], timeout=2.0)
+                return node, ok
 
         pre_filter_tasks = [ping_and_mark(n) for n in pre_filter_pool]
         pre_filter_results = await asyncio.gather(*pre_filter_tasks)
