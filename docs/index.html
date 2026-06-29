@@ -838,7 +838,7 @@
         /* ═══════════════════════════════════════════
            RESPONSIVE
            ═══════════════════════════════════════════ */
-        @media (max-width: 900px) {
+        @media (max-width: 932px) {
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
@@ -851,8 +851,11 @@
 
         @media (max-width: 480px) {
             .stats-grid { grid-template-columns: 1fr; }
-            .app-btn span { display: none; } /* Скрывает "Get App ↗" и "Connect ↗" на смартфонах */
-            .import-prefix { display: none; } /* Скрывает "Import to " на смартфонах */
+            .import-prefix { display: none; } /* Скрывает "Import to " на обычных смартфонах */
+        }
+
+        @media (max-width: 360px) {
+            .app-btn span { display: none; } /* Скрывает "Get App ↗" и "Connect ↗" только на сверх-узких экранах */
         }
 
         /* ── Tooltips (JS-powered) ── */
