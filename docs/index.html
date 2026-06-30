@@ -17,6 +17,7 @@
             --bg-secondary: #111827;
             --bg-card: rgba(17, 24, 39, 0.7);
             --bg-card-hover: rgba(30, 41, 59, 0.8);
+            --bg-glass: rgba(15, 23, 42, 0.6);
             --border: rgba(99, 102, 241, 0.15);
             --border-hover: rgba(99, 102, 241, 0.35);
             --text-primary: #f1f5f9;
@@ -28,7 +29,9 @@
             --accent-amber: #fbbf24;
             --accent-rose: #fb7185;
             --accent-purple: #a78bfa;
+            --accent-glow: #818cf8;
             --gradient-main: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-success: linear-gradient(135deg, #059669 0%, #34d399 100%);
             --gradient-danger: linear-gradient(135deg, #dc2626 0%, #fb7185 100%);
             --gradient-info: linear-gradient(135deg, #0891b2 0%, #22d3ee 100%);
@@ -38,6 +41,7 @@
             --radius-sm: 10px;
             --font-sans: 'Inter', -apple-system, system-ui, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+            --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         /* ═══════════════════════════════════════════
@@ -70,6 +74,19 @@
             animation: meshDrift 20s ease-in-out infinite alternate;
         }
 
+        /* Dot grid overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+            mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+            -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 40%, transparent 100%);
+        }
+
         @keyframes meshDrift {
             0% { transform: translate(0, 0) scale(1); }
             50% { transform: translate(-20px, 15px) scale(1.05); }
@@ -93,6 +110,25 @@
         .header {
             padding: 40px 0 32px;
             text-align: center;
+            position: relative;
+        }
+
+        /* Hero glow blob */
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px; height: 200px;
+            background: radial-gradient(ellipse, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.08) 40%, transparent 70%);
+            filter: blur(60px);
+            pointer-events: none;
+            animation: heroGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes heroGlow {
+            0% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
         }
 
         .header__badge {
@@ -131,6 +167,7 @@
             background-clip: text;
             letter-spacing: -0.03em;
             line-height: 1.2;
+            position: relative;
         }
 
         .header__subtitle {
@@ -138,6 +175,17 @@
             color: var(--text-secondary);
             margin-top: 10px;
             font-weight: 400;
+            background: linear-gradient(90deg, var(--text-secondary) 0%, var(--accent-glow) 50%, var(--text-secondary) 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { background-position: -200% 0; }
+            50% { background-position: 200% 0; }
         }
 
         /* ═══════════════════════════════════════════
@@ -174,8 +222,8 @@
            SUBSCRIPTION CARD
            ═══════════════════════════════════════════ */
         .sub-card {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.06) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: var(--radius);
             padding: 28px 32px;
             margin-bottom: 36px;
@@ -183,8 +231,15 @@
             align-items: center;
             gap: 20px;
             flex-wrap: wrap;
-            backdrop-filter: blur(12px);
-            box-shadow: var(--shadow-glow);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            box-shadow: var(--shadow-glow), inset 0 1px 0 rgba(255,255,255,0.05);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .sub-card:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 0 50px rgba(99, 102, 241, 0.2), inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .sub-card__info {
@@ -267,14 +322,16 @@
         }
 
         .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius);
             padding: 24px;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            transition: all 0.4s var(--ease-spring);
             position: relative;
             overflow: hidden;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .stat-card::before {
@@ -292,10 +349,27 @@
         .stat-card--runs::before { background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%); }
         .stat-card--checks::before { background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%); }
 
+        /* Mouse-tracking glow */
+        .stat-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: var(--radius);
+            background: radial-gradient(
+                300px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(99, 102, 241, 0.1),
+                transparent 50%
+            );
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .stat-card:hover::after { opacity: 1; }
+
         .stat-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-card);
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card), 0 0 30px rgba(99, 102, 241, 0.1);
         }
 
         .stat-card__label {
@@ -357,11 +431,19 @@
         }
 
         .chart-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius);
             padding: 24px;
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .chart-card:hover {
+            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 0 20px rgba(99, 102, 241, 0.08);
         }
 
         .chart-card__title {
@@ -503,11 +585,13 @@
            NODES TABLE
            ═══════════════════════════════════════════ */
         .table-wrapper {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
+            background: var(--bg-glass);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius);
             overflow: hidden;
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .table-scroll {
@@ -536,11 +620,12 @@
         }
 
         tbody tr {
-            transition: background 0.15s;
+            transition: all 0.2s ease;
         }
 
         tbody tr:hover {
-            background: rgba(99, 102, 241, 0.05);
+            background: rgba(99, 102, 241, 0.06);
+            box-shadow: inset 3px 0 0 var(--accent-blue);
         }
 
         tbody td {
@@ -641,6 +726,12 @@
             padding: 40px 0;
             color: var(--text-muted);
             font-size: 0.82rem;
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
         }
 
         .footer a {
@@ -692,15 +783,15 @@
         .error-state__desc { color: var(--text-secondary); font-size: 0.9rem; }
 
         /* ═══════════════════════════════════════════
-           ANIMATIONS
+           ANIMATIONS & SCROLL REVEALS
            ═══════════════════════════════════════════ */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(24px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .animate-in {
-            animation: fadeInUp 0.5s ease forwards;
+            animation: fadeInUp 0.6s var(--ease-spring) forwards;
             opacity: 0;
         }
 
@@ -709,6 +800,40 @@
         .animate-delay-3 { animation-delay: 0.3s; }
         .animate-delay-4 { animation-delay: 0.4s; }
         .animate-delay-5 { animation-delay: 0.5s; }
+        .animate-delay-6 { animation-delay: 0.6s; }
+
+        /* Scroll-driven reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered children inside a revealed section */
+        .reveal .stagger-child {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s var(--ease-spring), transform 0.5s var(--ease-spring);
+        }
+        .reveal.revealed .stagger-child:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+        .reveal.revealed .stagger-child:nth-child(2) { transition-delay: 0.13s; opacity: 1; transform: translateY(0); }
+        .reveal.revealed .stagger-child:nth-child(3) { transition-delay: 0.21s; opacity: 1; transform: translateY(0); }
+        .reveal.revealed .stagger-child:nth-child(4) { transition-delay: 0.29s; opacity: 1; transform: translateY(0); }
+
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+            .reveal .stagger-child { opacity: 1; transform: none; }
+        }
 
         /* ═══════════════════════════════════════════
            TOAST NOTIFICATION
@@ -717,7 +842,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: var(--bg-secondary);
+            background: rgba(17, 24, 39, 0.95);
             border: 1px solid var(--accent-emerald);
             border-radius: var(--radius-sm);
             padding: 14px 24px;
@@ -727,15 +852,16 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 20px rgba(52, 211, 153, 0.15);
             z-index: 100;
-            transform: translateY(100px);
+            transform: translateY(100px) scale(0.9);
             opacity: 0;
-            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: all 0.5s var(--ease-spring);
+            backdrop-filter: blur(16px);
         }
 
         .toast--visible {
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
             opacity: 1;
         }
 
@@ -743,13 +869,14 @@
            QUICK START SECTION
            ═══════════════════════════════════════════ */
         .quick-start {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
-            border: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.5) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: var(--radius);
             padding: 32px;
             margin-bottom: 36px;
-            backdrop-filter: blur(12px);
-            box-shadow: var(--shadow-card);
+            backdrop-filter: blur(20px) saturate(1.5);
+            -webkit-backdrop-filter: blur(20px) saturate(1.5);
+            box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,0.05);
         }
 
         .quick-start__title {
@@ -917,6 +1044,30 @@
 
         .copy-btn:active {
             transform: scale(0.9);
+        }
+
+        /* ── Ripple Effect ── */
+        .btn--primary {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ripple-effect {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple 0.6s ease-out;
+            pointer-events: none;
+        }
+
+        @keyframes ripple {
+            to { transform: scale(4); opacity: 0; }
+        }
+
+        /* ── Bar animations (triggered by JS) ── */
+        .bar-animate {
+            transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
         }
     </style>
 </head>
@@ -1131,6 +1282,15 @@
                     el.style.opacity = '1';
                 });
             });
+
+            // ── Scroll-driven reveal animations ──
+            initScrollReveals();
+
+            // ── Mouse-tracking glow on stat cards ──
+            initMouseTracking();
+
+            // ── Animated number counters ──
+            initAnimatedCounters();
         }
 
         function renderStatsGrid(data) {
@@ -1140,22 +1300,22 @@
             const totalChecks = data.total_checks_ever !== undefined ? data.total_checks_ever : '—';
 
             return `
-            <div class="stats-grid animate-in animate-delay-3">
-                <div class="stat-card stat-card--runs" data-tooltip="Total number of background scans executed since project launch.">
+            <div class="stats-grid reveal" id="statsGrid">
+                <div class="stat-card stat-card--runs stagger-child" data-tooltip="Total number of background scans executed since project launch.">
                     <div class="stat-card__label">Total Scanner Runs</div>
-                    <div class="stat-card__value">${animateNumber(totalRuns)}</div>
+                    <div class="stat-card__value" data-counter="${totalRuns || 0}">${animateNumber(totalRuns)}</div>
                 </div>
-                <div class="stat-card stat-card--checks" data-tooltip="Cumulative count of all VLESS reality connections tested via Xray core across all rounds.">
+                <div class="stat-card stat-card--checks stagger-child" data-tooltip="Cumulative count of all VLESS reality connections tested via Xray core across all rounds.">
                     <div class="stat-card__label">Total Checks Ever</div>
-                    <div class="stat-card__value">${animateNumber(totalChecks)}</div>
+                    <div class="stat-card__value" data-counter="${totalChecks || 0}">${animateNumber(totalChecks)}</div>
                 </div>
-                <div class="stat-card stat-card--scanned" data-tooltip="Total unique VLESS configurations discovered from open sources in the current run before filtering.">
+                <div class="stat-card stat-card--scanned stagger-child" data-tooltip="Total unique VLESS configurations discovered from open sources in the current run before filtering.">
                     <div class="stat-card__label">Scraped Candidates</div>
-                    <div class="stat-card__value" id="statScanned">${animateNumber(histScanned)}</div>
+                    <div class="stat-card__value" id="statScanned" data-counter="${histScanned || 0}">${animateNumber(histScanned)}</div>
                 </div>
-                <div class="stat-card stat-card--rate" data-tooltip="Percentage of scanned nodes that successfully responded, averaged over the last 30 runs.">
+                <div class="stat-card stat-card--rate stagger-child" data-tooltip="Percentage of scanned nodes that successfully responded, averaged over the last 30 runs.">
                     <div class="stat-card__label">Avg Success Rate</div>
-                    <div class="stat-card__value">${avgRate}%</div>
+                    <div class="stat-card__value" data-counter-suffix="%" data-counter="${avgRate || 0}">${avgRate}%</div>
                 </div>
             </div>
             `;
@@ -1190,7 +1350,7 @@
             }).join('');
 
             return `
-            <div class="chart-card animate-in animate-delay-4">
+            <div class="chart-card reveal">
                 <div class="chart-card__title">${ICONS.globe} Country Distribution</div>
                 <div class="country-bars">${bars || '<p style="color:var(--text-muted)">No data</p>'}</div>
             </div>`;
@@ -1237,7 +1397,7 @@
             }).join('');
 
             return `
-            <div class="chart-card animate-in animate-delay-4">
+            <div class="chart-card reveal">
                 <div class="chart-card__title">${ICONS.zap} Latency Distribution</div>
                 <div class="latency-chart">${rows}</div>
                 <div class="latency-legend">
@@ -1318,7 +1478,7 @@
             }).join('');
 
             return `
-            <div class="section animate-in animate-delay-5">
+            <div class="section reveal">
                 <div class="section__header">
                     <span class="section__icon">${ICONS.trophy}</span>
                     <h2 class="section__title">Top ${nodes.length} Nodes</h2>
@@ -1372,7 +1532,7 @@
             }).join('');
 
             return `
-            <div class="section animate-in animate-delay-6" style="margin-top: 40px;">
+            <div class="section reveal" style="margin-top: 40px;">
                 <div class="section__header">
                     <span class="section__icon">${ICONS.activity}</span>
                     <h2 class="section__title">Scanner Activity Log</h2>
@@ -1405,6 +1565,23 @@
             return n != null ? n.toLocaleString() : '—';
         }
 
+        // ── Animated counting-up effect ──
+        function animateCounterEl(el, target, duration = 1500) {
+            if (typeof target !== 'number' || isNaN(target)) {
+                el.textContent = target || '—';
+                return;
+            }
+            const start = performance.now();
+            const from = 0;
+            const step = (now) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 4); // easeOutQuart
+                el.textContent = Math.floor(from + (target - from) * eased).toLocaleString();
+                if (progress < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        }
+
         function formatRelativeTime(date) {
             const now = new Date();
             const diffMs = now - date;
@@ -1424,6 +1601,10 @@
             const input = document.getElementById('subUrl');
             if (!input.value || input.value === 'Loading...') return;
 
+            // Ripple effect
+            const btn = document.getElementById('copyBtn');
+            createRipple(btn);
+
             navigator.clipboard.writeText(input.value).then(() => {
                 showToast("Subscription link copied to clipboard!");
             }).catch(() => {
@@ -1432,6 +1613,20 @@
                 document.execCommand('copy');
                 showToast("Subscription link copied to clipboard!");
             });
+        }
+
+        function createRipple(button) {
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple-effect';
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            ripple.style.marginLeft = -(size / 2) + 'px';
+            ripple.style.marginTop = -(size / 2) + 'px';
+            button.appendChild(ripple);
+            ripple.addEventListener('animationend', () => ripple.remove());
         }
 
         function showToast(message) {
@@ -1604,6 +1799,89 @@
                     openStore(appId, true);
                 }
             }, 2500);
+        }
+
+        // ═══════════════════════════════════════════════
+        //  SCROLL REVEAL ANIMATIONS
+        // ═══════════════════════════════════════════════
+
+        function initScrollReveals() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+
+                        // Animate bars inside this revealed element
+                        const bars = entry.target.querySelectorAll('.score-bar__fill, .country-bar__fill');
+                        bars.forEach((bar, i) => {
+                            const targetWidth = bar.style.width;
+                            bar.style.width = '0%';
+                            bar.classList.add('bar-animate');
+                            setTimeout(() => {
+                                bar.style.width = targetWidth;
+                            }, 50 + i * 60);
+                        });
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        // ═══════════════════════════════════════════════
+        //  MOUSE-TRACKING GLOW ON STAT CARDS
+        // ═══════════════════════════════════════════════
+
+        function initMouseTracking() {
+            // Only enable on devices with hover capability
+            if (!window.matchMedia('(hover: hover)').matches) return;
+
+            document.querySelectorAll('.stat-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    card.style.setProperty('--mouse-x', `${x}%`);
+                    card.style.setProperty('--mouse-y', `${y}%`);
+                });
+            });
+        }
+
+        // ═══════════════════════════════════════════════
+        //  ANIMATED NUMBER COUNTERS
+        // ═══════════════════════════════════════════════
+
+        function initAnimatedCounters() {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = parseFloat(el.getAttribute('data-counter'));
+                        const suffix = el.getAttribute('data-counter-suffix') || '';
+                        if (!isNaN(target)) {
+                            const start = performance.now();
+                            const duration = 1500;
+                            const step = (now) => {
+                                const progress = Math.min((now - start) / duration, 1);
+                                const eased = 1 - Math.pow(1 - progress, 4);
+                                const current = Math.floor(target * eased);
+                                el.textContent = current.toLocaleString() + suffix;
+                                if (progress < 1) requestAnimationFrame(step);
+                                else el.textContent = target.toLocaleString() + suffix;
+                            };
+                            requestAnimationFrame(step);
+                        }
+                        counterObserver.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            document.querySelectorAll('[data-counter]').forEach(el => {
+                el.textContent = '0';
+                counterObserver.observe(el);
+            });
         }
 
         // ═══════════════════════════════════════════════
