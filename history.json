@@ -1,8 +1,8 @@
 {
   "staging.lastilhame.monster": {
-    "ok": 9.984387855941739,
-    "fail": 0.022887344925858647,
-    "last_seen": "2026-07-06T18:23:34.687206+00:00",
+    "ok": 9.985949070347566,
+    "fail": 0.020598610433272782,
+    "last_seen": "2026-07-06T21:49:41.818589+00:00",
     "node": {
       "raw": "vless://455cfdc6-9abf-4e40-863f-5ff6cc63457c@staging.lastilhame.monster:443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sid=18e4d2d21241&sni=www.microsoft.com# By EbraSha ⚙️",
       "host": "staging.lastilhame.monster",
@@ -40,9 +40,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "51.89.229.134": {
-    "ok": 10.006748434571879,
-    "fail": 0.00024274944503154723,
-    "last_seen": "2026-07-06T18:23:34.687130+00:00",
+    "ok": 10.006073591114692,
+    "fail": 0.00021847450052839252,
+    "last_seen": "2026-07-06T21:49:41.818524+00:00",
     "node": {
       "raw": "vless://53821f3c-5b03-456a-89f3-f8379f130752@51.89.229.134:443?security=reality&encryption=none&pbk=4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&sni=www.samsung.com&sid=a13a7cc5# By EbraSha 🦇",
       "host": "51.89.229.134",
@@ -60,9 +60,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "185.181.209.211": {
-    "ok": 10.008039861619446,
-    "fail": 0.00021847450052839252,
-    "last_seen": "2026-07-06T18:23:34.687111+00:00",
+    "ok": 10.007235875457502,
+    "fail": 0.00019662705047555326,
+    "last_seen": "2026-07-06T21:49:41.818507+00:00",
     "node": {
       "raw": "vless://870d3183-17a1-4a87-9021-e12e3ac2939f@185.181.209.211:443?security=reality&encryption=none&echfq=none&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&headerType=none&fp=firefox&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=gateway.icloud.com&sid=ed7b9bdfedb9b8e5# By EbraSha 🎯",
       "host": "185.181.209.211",
@@ -80,9 +80,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "204.216.216.23": {
-    "ok": 10.006547680780837,
+    "ok": 10.005892912702754,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686333+00:00",
+    "last_seen": "2026-07-06T21:49:41.817777+00:00",
     "node": {
       "raw": "vless://6ba2eac6-0ec9-44ca-a42b-a8e23aafb530@204.216.216.23:1114?security=reality&type=tcp&packetEncoding=xudp&sni=yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=79a1e14b&pbk=WfkCF0eEuIoO0MyJsKOddU89QrTzCZ4y2dzCJbH99CQ&encryption=none# By EbraSha 🧪",
       "host": "204.216.216.23",
@@ -100,9 +100,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "151.242.191.161": {
-    "ok": 9.195815106417617,
-    "fail": 0.8106735862480767,
-    "last_seen": "2026-07-06T18:23:34.687457+00:00",
+    "ok": 9.276233595775857,
+    "fail": 0.7296062276232691,
+    "last_seen": "2026-07-06T21:49:41.818792+00:00",
     "node": {
       "raw": "vless://301d514e-4aa0-47b0-ba44-a0cb891cd52f@151.242.191.161:443?encryption=none&security=reality&sni=www.samsung.com&fp=chrome&pbk=OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4&sid=a1b2c3d4&type=tcp&headerType=none# By EbraSha ♦️",
       "host": "151.242.191.161",
@@ -139,30 +139,10 @@
     },
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
-  "130.94.45.81": {
-    "ok": 0.18541892629579582,
-    "fail": 10.216322080678433,
-    "last_seen": "2026-06-22T18:20:52.152651+00:00",
-    "node": {
-      "raw": "vless://4e817899-2466-425c-a671-7ab5f25d08e8@130.94.45.81:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=eJlKZq9C1kDSoLaod29cDbS0OFBx9nOGsSQNwq2-fyk&sni=www.microsoft.com&sid=ad041ff6# By EbraSha 👑",
-      "host": "130.94.45.81",
-      "port": 443,
-      "uuid": "4e817899-2466-425c-a671-7ab5f25d08e8",
-      "pbk": "eJlKZq9C1kDSoLaod29cDbS0OFBx9nOGsSQNwq2-fyk",
-      "sid": "ad041ff6",
-      "fp": "chrome",
-      "flow": "xtls-rprx-vision",
-      "sni": "www.microsoft.com",
-      "net": "raw",
-      "name": " By EbraSha 👑",
-      "country": "AE"
-    },
-    "first_seen": "2026-06-17T00:00:00.000000+00:00"
-  },
   "80.253.251.157": {
-    "ok": 8.680136506339046,
-    "fail": 1.3255263527146548,
-    "last_seen": "2026-07-06T15:56:50.162684+00:00",
+    "ok": 8.812122855705141,
+    "fail": 1.1929737174431894,
+    "last_seen": "2026-07-06T21:49:41.818943+00:00",
     "node": {
       "raw": "vless://612c872d-1370-4109-8644-f0755f97e33f@80.253.251.157:443?fp=firefox&pbk=GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs&security=reality&sid=1680&sni=www.samsung.com&type=tcp# By EbraSha 👑",
       "host": "80.253.251.157",
@@ -200,8 +180,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "185.181.209.206": {
-    "ok": 6.567528018075791,
-    "fail": 3.439196627050476,
+    "ok": 5.910775216268212,
+    "fail": 4.0952769643454285,
     "last_seen": "2026-07-05T23:15:35.175357+00:00",
     "node": {
       "raw": "vless://870d3183-17a1-4a87-9021-e12e3ac2939f@185.181.209.206:443?security=reality&encryption=none&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&host=BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=gateway.icloud.com&sid=ed7b9bdfedb9b8e5# By EbraSha 🎯",
@@ -220,9 +200,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "dns.dressforida.monster": {
-    "ok": 9.019431677118963,
-    "fail": 0.9842845741350266,
-    "last_seen": "2026-07-06T18:23:34.687544+00:00",
+    "ok": 9.117488509407067,
+    "fail": 0.885856116721524,
+    "last_seen": "2026-07-06T21:49:41.818865+00:00",
     "node": {
       "raw": "vless://597923cd-1877-495f-9413-d0dfbd166c14@dns.dressforida.monster:443?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=2d8dc1a8a7fe&pbk=4YLfHf90V012Oyd2wHbwAXaJNvNUGrKWmatTKc165U8# By EbraSha ♦️",
       "host": "dns.dressforida.monster",
@@ -260,9 +240,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "89.23.107.137": {
-    "ok": 10.004573706135497,
-    "fail": 0.001973974645342432,
-    "last_seen": "2026-07-06T18:23:34.687176+00:00",
+    "ok": 10.004116335521948,
+    "fail": 0.001776577180808189,
+    "last_seen": "2026-07-06T21:49:41.818565+00:00",
     "node": {
       "raw": "vless://612c872d-1370-4109-8644-f0755f97e33f@89.23.107.137:443?encryption=none&fp=&pbk=GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs&security=reality&sid=16&sni=www.samsung.com&type=tcp# By EbraSha 🌪️",
       "host": "89.23.107.137",
@@ -360,9 +340,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "83.243.86.117": {
-    "ok": 10.006095438564747,
+    "ok": 10.005485894708272,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686369+00:00",
+    "last_seen": "2026-07-06T21:49:41.817821+00:00",
     "node": {
       "raw": "vless://f6431ff1-dec0-4a6c-be4a-ce917913b589@83.243.86.117:10443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=WeShDM0MdunM6N8btrY8tXlL0GT1Ah-0jcplNQf9FEo&sni=www.cloudflare.com# By EbraSha 🚧",
       "host": "83.243.86.117",
@@ -400,9 +380,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "45.145.163.115": {
-    "ok": 6.94025787652921,
-    "fail": 3.0662308161364864,
-    "last_seen": "2026-07-06T18:23:34.687724+00:00",
+    "ok": 7.2462320888762894,
+    "fail": 2.759607734522838,
+    "last_seen": "2026-07-06T21:49:41.819072+00:00",
     "node": {
       "raw": "vless://e5bd3d75-06b3-490e-9651-930b1dc29cdb@45.145.163.115:39771?type=tcp&security=reality&sni=yahoo.com&fp=chrome&pbk=GMnXK7wz7qTo_IFmPy--pQcODPhYJG_CLaY2Sh4fTCI&sid=33f2# By EbraSha ✨",
       "host": "45.145.163.115",
@@ -440,9 +420,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "de.ko.prod.n7.homes": {
-    "ok": 9.133539278165067,
-    "fail": 0.8724775095794861,
-    "last_seen": "2026-07-06T18:23:34.687504+00:00",
+    "ok": 9.22018535034856,
+    "fail": 0.7852297586215375,
+    "last_seen": "2026-07-06T21:49:41.818840+00:00",
     "node": {
       "raw": "vless://dcba77d7-bb59-4802-b32c-37fd7011fca4@de.ko.prod.n7.homes:8443?encryption=none&security=reality&sni=google.com&fp=chrome&pbk=upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo&sid=3ca620a7ed5f3196&type=tcp&headerType=none# By EbraSha 🌪️",
       "host": "de.ko.prod.n7.homes",
@@ -460,9 +440,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "13.231.185.74": {
-    "ok": 9.998761249582007,
+    "ok": 9.998885124623806,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686394+00:00",
+    "last_seen": "2026-07-06T21:49:41.817844+00:00",
     "node": {
       "raw": "vless://c6508e59-dd68-4dc0-b14f-3192e84ef843@13.231.185.74:47381?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.yahoo.com&fp=firefox&pbk=kiMGo34R7wN3bHFbY_6MqIHePd7rlnOkxGCt-Ek1Ej0&sid=67e2075367998314&spx=%2F&type=tcp&headerType=none# By EbraSha ⌨️",
       "host": "13.231.185.74",
@@ -480,9 +460,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "137.184.218.169": {
-    "ok": 7.937978902490021,
-    "fail": 2.0667991348365375,
-    "last_seen": "2026-07-06T18:23:34.687676+00:00",
+    "ok": 8.144181012241019,
+    "fail": 1.8601192213528839,
+    "last_seen": "2026-07-06T21:49:41.819022+00:00",
     "node": {
       "raw": "vless://c9fd0fb1-8251-4106-b09a-f4b426736f67@137.184.218.169:36925?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&encryption=none&type=tcp&security=reality&headerType=none&sni=www.cloudflare.com&allowInsecure=0&pbk=lJ9INPpO4rdnm2Tek_yg0PGFyUrBB6MoKyvqt_Mfqm0&flow=xtls-rprx-vision# By EbraSha 🚬",
       "host": "137.184.218.169",
@@ -520,8 +500,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "n1.nolockhere.xyz": {
-    "ok": 0.07395104114874212,
-    "fail": 10.036975520574375,
+    "ok": 0.06655593703386792,
+    "fail": 10.033277968516938,
     "last_seen": "2026-06-24T23:18:56.529499+00:00",
     "node": {
       "raw": "vless://c757fbcb-b800-41c6-a7f8-79333fec6939@n1.nolockhere.xyz:443?encryption=none&security=reality&sni=www.microsoft.com&fp=chrome&pbk=MYYmKsCC2_8v4ROpY7zT7sp4-XkWEvbzIxddjxuEwg8&sid=7a2be58ba69cf52d&type=grpc&authority=&serviceName=%2F&mode=gun# By EbraSha 🌍",
@@ -540,8 +520,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "23.26.37.119": {
-    "ok": 1.8770796198346713,
-    "fail": 8.130348513183296,
+    "ok": 1.6893716578512041,
+    "fail": 8.317313661864967,
     "last_seen": "2026-07-04T17:21:33.146134+00:00",
     "node": {
       "raw": "vless://dcba77d7-bb59-4802-b32c-37fd7011fca4@23.26.37.119:8443?security=reality&encryption=none&pbk=upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo&headerType=none&type=tcp&sni=google.com&sid=3ca620a7ed5f3196&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---# By EbraSha 🚨",
@@ -580,9 +560,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "47.253.226.114": {
-    "ok": 10.00530893036284,
-    "fail": 0.00019662705047555326,
-    "last_seen": "2026-07-06T18:23:34.687100+00:00",
+    "ok": 10.004778037326556,
+    "fail": 0.00017696434542799794,
+    "last_seen": "2026-07-06T21:49:41.818499+00:00",
     "node": {
       "raw": "vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc&sid=&sni=www.cloudflare.com# By EbraSha 🪖",
       "host": "47.253.226.114",
@@ -600,9 +580,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "83.222.23.81": {
-    "ok": 9.74667193664875,
-    "fail": 0.25881395805951884,
-    "last_seen": "2026-07-06T18:23:34.687339+00:00",
+    "ok": 9.772004742983876,
+    "fail": 0.23293256225356695,
+    "last_seen": "2026-07-06T21:49:41.818699+00:00",
     "node": {
       "raw": "vless://4b9063e0-3288-44e9-9aac-80fbfce323a0@83.222.23.81:38065?type=raw&security=reality&fp=chrome&pbk=dSSDPTK6AHfAdRAXD9i4rzqcNIY65RxlF25UyCKdiyo&sid=fa&sni=yahoo.com# By EbraSha 🧪",
       "host": "83.222.23.81",
@@ -619,29 +599,9 @@
     },
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
-  "78.17.147.65": {
-    "ok": 0.15516379676600395,
-    "fail": 10.06788416108513,
-    "last_seen": "2026-06-22T18:20:52.152799+00:00",
-    "node": {
-      "raw": "vless://b67ed271-5a34-4d07-9970-f8ba27ca2c8a@78.17.147.65:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=fcd9787f&pbk=gXc2c9NIWxhUTb7HoBCjvo-uB1L4iQj4TH38g4YhxHE&encryption=none# By EbraSha ♣️",
-      "host": "78.17.147.65",
-      "port": 443,
-      "uuid": "b67ed271-5a34-4d07-9970-f8ba27ca2c8a",
-      "pbk": "gXc2c9NIWxhUTb7HoBCjvo-uB1L4iQj4TH38g4YhxHE",
-      "sid": "fcd9787f",
-      "fp": "chrome",
-      "flow": "xtls-rprx-vision",
-      "sni": "www.microsoft.com",
-      "net": "tcp",
-      "name": " By EbraSha ♣️",
-      "country": "DE"
-    },
-    "first_seen": "2026-06-17T00:00:00.000000+00:00"
-  },
   "90.156.255.198": {
-    "ok": 5.367665126988158,
-    "fail": 4.635087651718503,
+    "ok": 4.830898614289342,
+    "fail": 5.171578886546652,
     "last_seen": "2026-07-06T18:23:34.687766+00:00",
     "node": {
       "raw": "vless://8b575b35-3c7c-42b0-ac80-2aa6b0d7717c@90.156.255.198:51114?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&type=tcp&security=reality&sni=yahoo.com&fp=chrome&pbk=lf7NJGZAcj3b-YdbsmD6oEISr0dZRjp_gM8ZhLHwb0U&sid=772e# By EbraSha 📼",
@@ -660,9 +620,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "83.222.20.64": {
-    "ok": 2.5342661387141154,
-    "fail": 7.472635470757578,
-    "last_seen": "2026-07-05T23:15:35.175969+00:00",
+    "ok": 3.280839524842704,
+    "fail": 6.725371923681821,
+    "last_seen": "2026-07-06T21:49:41.819161+00:00",
     "node": {
       "raw": "vless://079c1b04-7ef9-4c49-8a7a-849a18ba7b9b@83.222.20.64:17910?type=tcp&security=reality&fp=chrome&pbk=KUhrhiJBplVCVCrAKP2KjIA_asOgkkvEEAxUJVofjgc&sid=8c09fb78b12f&sni=yahoo.com&spx=/# By EbraSha 🔐",
       "host": "83.222.20.64",
@@ -680,9 +640,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "141.98.118.70": {
-    "ok": 10.007432502507978,
+    "ok": 10.00668925225718,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686413+00:00",
+    "last_seen": "2026-07-06T21:49:41.817862+00:00",
     "node": {
       "raw": "vless://de64aaa6-a0ea-48d0-853b-1c3cbc7fb42c@141.98.118.70:443?encryption=none&security=reality&sni=www.google.com&fp=chrome&pbk=LjEQR0FEtsOs5eQoVsZgJX5ZI0yeadUKTCLoGD641RQ&sid=44&spx=/&type=xhttp&path=/&mode=auto# By EbraSha ⚡",
       "host": "141.98.118.70",
@@ -700,8 +660,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "193.25.216.201": {
-    "ok": 0.1970991620820476,
-    "fail": 9.835767967317395,
+    "ok": 0.17738924587384286,
+    "fail": 9.852191170585655,
     "last_seen": "2026-06-27T23:15:13.120345+00:00",
     "node": {
       "raw": "vless://de86d13b-b419-4587-b643-c41ba6ea51ed@193.25.216.201:36019?type=tcp&security=reality&sni=www.icloud.com&pbk=Rkx8a8DBAW6H2H2XXN2JFdBYe24VcJPpr51ehcvMV3w&sid=90# By EbraSha 🖥️",
@@ -720,9 +680,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "138.124.52.85": {
-    "ok": 10.004758374621511,
-    "fail": 0.0005505557413315494,
-    "last_seen": "2026-07-06T18:23:34.687149+00:00",
+    "ok": 10.00428253715936,
+    "fail": 0.0004955001671983945,
+    "last_seen": "2026-07-06T21:49:41.818540+00:00",
     "node": {
       "raw": "vless://09a4bf7f-f997-4174-8bef-9fab75aa186e@138.124.52.85:443?security=reality&encryption=none&pbk=K7v4Rsxa-9lBsD_IQrzXREfIME_bFmwELHQAE3Yp1ng&headerType=none&type=tcp&flow=xtls-rprx-vision&sni=www.google.com&sid=b9988c11# By EbraSha ⚔️",
       "host": "138.124.52.85",
@@ -740,8 +700,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "sgxi.959555.xyz": {
-    "ok": 0.19481270283670052,
-    "fail": 9.986084806940239,
+    "ok": 0.17533143255303046,
+    "fail": 9.987476326246215,
     "last_seen": "2026-06-24T20:02:34.071800+00:00",
     "node": {
       "raw": "vless://af6904c1-4349-4448-8e99-0024824a0c33@sgxi.959555.xyz:10000?security=reality&type=raw&sni=gateway.icloud.com&fp=chrome&flow=xtls-rprx-vision&sid=3b0b73e5&pbk=xELgry1aUBwZLDAAvyiBkLTXsIi1M-mKhuqvwiP6FxU&encryption=none# By EbraSha 🚨",
@@ -760,8 +720,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "176.120.17.18": {
-    "ok": 1.076091252030614,
-    "fail": 8.93063339309565,
+    "ok": 0.9684821268275526,
+    "fail": 9.037570053786085,
     "last_seen": "2026-07-03T19:47:17.530639+00:00",
     "node": {
       "raw": "vless://d39664df-5bc0-4f49-9894-8f03b4150082@176.120.17.18:8443?momde=auto&path=/&security=reality&encryption=none&pbk=QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg&fp=chrome&spx=/il4uDVFQ4uJ9mPb&type=xhttp&sni=www.yahoo.com&sid=6f3192# By EbraSha 🌀",
@@ -780,8 +740,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "netherland.soft26.ir": {
-    "ok": 1.0552401390440842,
-    "fail": 8.949478910167333,
+    "ok": 0.9497161251396758,
+    "fail": 9.0545310191506,
     "last_seen": "2026-07-03T19:47:17.530688+00:00",
     "node": {
       "raw": "vless://d39664df-5bc0-4f49-9894-8f03b4150082@netherland.soft26.ir:8443?mode=auto&path=%2F&security=reality&encryption=none&pbk=QLamtir13xwzyWVlPRN3C7lw_fhSBU7X4H3A8zAl5Fg&fp=chrome&type=xhttp&sni=www.yahoo.com&sid=6f3192# By EbraSha 🎛️",
@@ -840,9 +800,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "147.45.145.127": {
-    "ok": 9.845969639574072,
-    "fail": 0.16233239144601166,
-    "last_seen": "2026-07-06T18:23:34.687301+00:00",
+    "ok": 9.861372675616666,
+    "fail": 0.1460991523014105,
+    "last_seen": "2026-07-06T21:49:41.818674+00:00",
     "node": {
       "raw": "vless://534cbbe2-cc36-4f2d-8fb0-90410e7148c9@147.45.145.127:443?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=reality&encryption=none&pbk=tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc&host=%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=chrome&spx=%2F&type=tcp&sni=yahoo.com&sid=52a6# By EbraSha 🐉",
       "host": "147.45.145.127",
@@ -860,9 +820,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "107.181.151.39": {
-    "ok": 9.894710178928479,
-    "fail": 0.10941898913151243,
-    "last_seen": "2026-07-06T18:23:34.687272+00:00",
+    "ok": 9.905239161035631,
+    "fail": 0.0984770902183612,
+    "last_seen": "2026-07-06T21:49:41.818649+00:00",
     "node": {
       "raw": "vless://1896c6c9-a941-4688-a865-29027bf7f8e6@107.181.151.39:443?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=6c825bc79850&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk# By EbraSha ♣️",
       "host": "107.181.151.39",
@@ -880,8 +840,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "31.76.38.18": {
-    "ok": 6.737148197388408,
-    "fail": 3.268514661665291,
+    "ok": 6.0634333776495675,
+    "fail": 3.941663195498762,
     "last_seen": "2026-07-06T15:56:50.162993+00:00",
     "node": {
       "raw": "vless://6e41151e-ae07-4ea6-910e-7a3986b7bc0d@31.76.38.18:7443?type=tcp&security=reality&encryption=none&flow=xtls-rprx-vision&sni=icloud.com&fp=firefox&pbk=5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI&sid=d82fb387# By EbraSha 📱",
@@ -900,8 +860,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "5.223.84.145": {
-    "ok": 0.17522835704888404,
-    "fail": 10.025768876036603,
+    "ok": 0.15770552134399562,
+    "fail": 10.023191988432943,
     "last_seen": "2026-06-23T04:14:28.260162+00:00",
     "node": {
       "raw": "vless://8ff25ce3-e8c6-45d3-8a8c-cdbd3eb1b2a6@5.223.84.145:443?flow=xtls-rprx-vision&fp=firefox&pbk=VAY8J0c6ziCIiUWREeU0OR6EQSVqKzuofvlqHm_ka0A&security=reality&sid=d72691d4&sni=www.microsoft.com&type=tcp# By EbraSha 🔮",
@@ -940,9 +900,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "185.181.209.217": {
-    "ok": 10.006193752089983,
+    "ok": 10.005574376880984,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686431+00:00",
+    "last_seen": "2026-07-06T21:49:41.817880+00:00",
     "node": {
       "raw": "vless://870d3183-17a1-4a87-9021-e12e3ac2939f@185.181.209.217:443?security=reality&encryption=none&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&host=BIA_TELEGRAM@MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=gateway.icloud.com&sid=ed7b9bdfedb9b8e5# By EbraSha 💎",
       "host": "185.181.209.217",
@@ -960,9 +920,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "server.slavkiti.monster": {
-    "ok": 10.005505557413318,
+    "ok": 10.004955001671988,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686451+00:00",
+    "last_seen": "2026-07-06T21:49:41.817892+00:00",
     "node": {
       "raw": "vless://1896c6c9-a941-4688-a865-29027bf7f8e6@server.slavkiti.monster:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=6c825bc79850&pbk=J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk# By EbraSha 🚨",
       "host": "server.slavkiti.monster",
@@ -980,9 +940,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "138.2.50.155": {
-    "ok": 9.159820317840234,
-    "fail": 0.8465503985951769,
-    "last_seen": "2026-07-06T18:23:34.687475+00:00",
+    "ok": 9.24383828605621,
+    "fail": 0.7618953587356592,
+    "last_seen": "2026-07-06T21:49:41.818823+00:00",
     "node": {
       "raw": "vless://11d29ec6-be66-4f59-97c6-7cff836ea318@138.2.50.155:44073?type=tcp&security=reality&flow=xtls-rprx-vision&fp=chrome&pbk=Z3ZGnAOdKkzJ07gR_7_0k9_iTTFP6paDOrqx1rN2LU4&sni=www.icloud.com# By EbraSha 🛸",
       "host": "138.2.50.155",
@@ -1020,8 +980,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "2.59.183.167": {
-    "ok": 9.320960381676445,
-    "fail": 0.6820982613309576,
+    "ok": 8.3888643435088,
+    "fail": 1.613888435197862,
     "last_seen": "2026-07-06T18:23:34.687438+00:00",
     "node": {
       "raw": "vless://301d514e-4aa0-47b0-ba44-a0cb891cd52f@2.59.183.167:443?security=reality&encryption=none&pbk=OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4&headerType=none&fp=chrome&type=tcp&sni=www.samsung.com&sid=a1b2c3d4# By EbraSha ⛓️",
@@ -1060,9 +1020,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "83.97.78.13": {
-    "ok": 7.792887129780994,
-    "fail": 2.2096690218751895,
-    "last_seen": "2026-07-06T18:23:34.687694+00:00",
+    "ok": 8.013598416802896,
+    "fail": 1.9887021196876706,
+    "last_seen": "2026-07-06T21:49:41.819033+00:00",
     "node": {
       "raw": "vless://612c872d-1370-4109-8644-f0755f97e33f@83.97.78.13:443/?type=tcp&encryption=none&flow=&sni=www.samsung.com&alpn=networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-channel%40.networld_vpn-&fp=firefox&security=reality&pbk=GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs&sid=1680# By EbraSha 🦈",
       "host": "83.97.78.13",
@@ -1080,9 +1040,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "23.26.37.121": {
-    "ok": 8.931149516038644,
-    "fail": 1.0760601424787963,
-    "last_seen": "2026-07-06T18:23:34.687554+00:00",
+    "ok": 9.03803456443478,
+    "fail": 0.9684541282309167,
+    "last_seen": "2026-07-06T21:49:41.818872+00:00",
     "node": {
       "raw": "vless://dcba77d7-bb59-4802-b32c-37fd7011fca4@23.26.37.121:8443?encryption=none&pbk=upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo&security=reality&sid=3ca620a7ed5f3196&sni=google.com&type=tcp# By EbraSha 🧩",
       "host": "23.26.37.121",
@@ -1160,8 +1120,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "45.130.214.192": {
-    "ok": 5.628123569274284,
-    "fail": 4.377775242239986,
+    "ok": 5.065311212346856,
+    "fail": 4.939997718015988,
     "last_seen": "2026-07-06T11:00:16.903116+00:00",
     "node": {
       "raw": "vless://4b8d8d7f-a8b4-4e44-80a9-6f13c3149b52@45.130.214.192:53231?type=raw&security=reality&fp=chrome&pbk=3mRweaWR6pK4HsbEtu874rNG9qBgdOMmSsKE4RkWSmk&sid=4ffbd0f3117c6f&sni=yahoo.com# By EbraSha 🕷️",
@@ -1220,9 +1180,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "77.73.238.191": {
-    "ok": 5.735079272675153,
-    "fail": 4.271802674091493,
-    "last_seen": "2026-07-06T04:22:10.206407+00:00",
+    "ok": 6.161571345407638,
+    "fail": 3.8446224066823436,
+    "last_seen": "2026-07-06T21:49:41.819135+00:00",
     "node": {
       "raw": "vless://f2e9df1b-e0ba-4b37-a301-6aab8662c926@77.73.238.191:16622?&security=reality&pbk=E5N_ckakvqgTOjiQ6Rmuwz1fchiT1-J3tH4cbzcH_GQ&sid=1c01d60ea915&fp=chrome&sni=yahoo.com&type=tcp&headerType=none&path=%2F# By EbraSha 🎯",
       "host": "77.73.238.191",
@@ -1260,9 +1220,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "77.91.68.70": {
-    "ok": 8.328715799181747,
-    "fail": 1.678559401685852,
-    "last_seen": "2026-07-06T18:23:34.687635+00:00",
+    "ok": 8.495844219263573,
+    "fail": 1.510703461517267,
+    "last_seen": "2026-07-06T21:49:41.818971+00:00",
     "node": {
       "raw": "vless://f667a096-5231-4cfb-8759-92bb32473139@77.91.68.70:55983?type=raw&security=reality&pbk=nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg&sid=0e&sni=yahoo.com# By EbraSha 💻",
       "host": "77.91.68.70",
@@ -1300,9 +1260,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "107.181.151.241": {
-    "ok": 9.897128691649325,
-    "fail": 0.10959595347694041,
-    "last_seen": "2026-07-06T18:23:34.687282+00:00",
+    "ok": 9.907415822484392,
+    "fail": 0.09863635812924637,
+    "last_seen": "2026-07-06T21:49:41.818657+00:00",
     "node": {
       "raw": "vless://106d20f6-d70a-40e2-b69b-8e82baf8d117@107.181.151.241:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg&sni=www.microsoft.com&sid=60500a63ad12# By EbraSha 🛰️",
       "host": "107.181.151.241",
@@ -1340,8 +1300,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "90.156.254.164": {
-    "ok": 6.001120010076716,
-    "fail": 4.006351817841357,
+    "ok": 5.401008009069044,
+    "fail": 4.605716636057221,
     "last_seen": "2026-07-06T04:22:10.206933+00:00",
     "node": {
       "raw": "vless://5b96be74-656d-4bb7-85c2-d2d8a3b7c2f3@90.156.254.164:19562?security=reality&allowInsecure=0&encryption=none&type=tcp&sni=yahoo.com&sid=9e&fp=chrome&pbk=T66pm2f_PN4Hya_A_5K0X1HQb717SUCODyoUO7Gk3Ws&spx=/&headerType=none# By EbraSha 🧨",
@@ -1360,9 +1320,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "159.89.87.21": {
-    "ok": 8.120070534960288,
-    "fail": 1.8874012929577868,
-    "last_seen": "2026-07-06T18:23:34.687655+00:00",
+    "ok": 8.30806348146426,
+    "fail": 1.6986611636620081,
+    "last_seen": "2026-07-06T21:49:41.818996+00:00",
     "node": {
       "raw": "vless://14c80e0e-f7ce-4991-94fc-99a1db4a9b1e@159.89.87.21:28190?security=reality&encryption=none&pbk=ZJRnFU-1s1JOnO8E9uZ7b00l1fPEh63fGRbdBANFRno&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=aws.amazon.com# By EbraSha ♦️",
       "host": "159.89.87.21",
@@ -1400,9 +1360,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "91.218.143.194": {
-    "ok": 6.618606315541325,
-    "fail": 3.388865512376746,
-    "last_seen": "2026-07-06T18:23:34.687736+00:00",
+    "ok": 6.956745683987193,
+    "fail": 3.0499789611390713,
+    "last_seen": "2026-07-06T21:49:41.819081+00:00",
     "node": {
       "raw": "vless://b7725d23-840a-4f8e-993c-69b40424cfc0@91.218.143.194:43798?security=reality&encryption=none&pbk=W3aiFnhZRvZuZP0Zyfy7888t-NbHc0RmMEyFa7fYShU&headerType=&fp=chrome&spx=/&type=tcp&sni=yahoo.com&sid=f71c22# By EbraSha ⌨️",
       "host": "91.218.143.194",
@@ -1479,29 +1439,9 @@
     },
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
-  "156.224.78.8": {
-    "ok": 0.20365248325538016,
-    "fail": 10.155163796766008,
-    "last_seen": "2026-06-22T18:20:52.152967+00:00",
-    "node": {
-      "raw": "vless://9c79aceb-4649-44ea-9698-b5e9ecf6d6da@156.224.78.8:10001?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&security=reality&encryption=none&pbk=D_kMOsg1KCtT0tudPFVDXGuEcSqZGtUYqBB-BiIxmls&headerType=&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.icloud.com&sid=f7223dab# By EbraSha 🔮",
-      "host": "156.224.78.8",
-      "port": 10001,
-      "uuid": "9c79aceb-4649-44ea-9698-b5e9ecf6d6da",
-      "pbk": "D_kMOsg1KCtT0tudPFVDXGuEcSqZGtUYqBB-BiIxmls",
-      "sid": "f7223dab",
-      "fp": "chrome",
-      "flow": "xtls-rprx-vision",
-      "sni": "www.icloud.com",
-      "net": "tcp",
-      "name": " By EbraSha 🔮",
-      "country": "HK"
-    },
-    "first_seen": "2026-06-17T00:00:00.000000+00:00"
-  },
   "50.114.55.14": {
-    "ok": 4.027895288309254,
-    "fail": 5.97918328550787,
+    "ok": 3.6251057594783287,
+    "fail": 6.381264956957083,
     "last_seen": "2026-07-06T04:22:10.206488+00:00",
     "node": {
       "raw": "vless://9c79aceb-4649-44ea-9698-b5e9ecf6d6da@50.114.55.14:10001?security=reality&type=tcp&sni=www.icloud.com&fp=chrome&flow=xtls-rprx-vision&sid=2afe4310&pbk=7qP6YKWx5CJXia1qjQoIcD7FRjUBbioaioioI729D34# By EbraSha 🧊",
@@ -1619,29 +1559,9 @@
     },
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
-  "193.233.202.7": {
-    "ok": 0.1979502137242294,
-    "fail": 10.04948755343106,
-    "last_seen": "2026-06-22T18:20:52.153001+00:00",
-    "node": {
-      "raw": "vless://6e76f92f-5005-42d8-8c66-ea7ffde3168a@193.233.202.7:443?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=yahoo.com&fp=chrome&sid=5a55&pbk=rSL9RX3anDN8Un4ImlYVa94n9wDdUmHdubxoMKnaXgE# By EbraSha ♦️",
-      "host": "193.233.202.7",
-      "port": 443,
-      "uuid": "6e76f92f-5005-42d8-8c66-ea7ffde3168a",
-      "pbk": "rSL9RX3anDN8Un4ImlYVa94n9wDdUmHdubxoMKnaXgE",
-      "sid": "5a55",
-      "fp": "chrome",
-      "flow": "",
-      "sni": "yahoo.com",
-      "net": "tcp",
-      "name": " By EbraSha ♦️",
-      "country": "US"
-    },
-    "first_seen": "2026-06-17T00:00:00.000000+00:00"
-  },
   "5.196.51.152": {
-    "ok": 2.8311773115766448,
-    "fail": 7.175704635190001,
+    "ok": 2.5480595804189803,
+    "fail": 7.458134171671,
     "last_seen": "2026-07-05T04:14:56.997734+00:00",
     "node": {
       "raw": "vless://87e60810-bb71-41ea-a2a6-f05c8ab903ef@5.196.51.152:54809?security=reality&encryption=none&pbk=06rvKjC9dE_Ndd-dw6B-0zAyEpn-jUs7mcNFAPQ_1G8&headerType=none&fp=chrome&spx=/&type=tcp&flow=xtls-rprx-vision-udp443&sni=dash.cloudflare.com&sid=b4b3# By EbraSha 🖥️",
@@ -1680,9 +1600,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "37.233.82.140": {
-    "ok": 6.602998464626702,
-    "fail": 3.403686855089468,
-    "last_seen": "2026-07-06T18:23:34.687746+00:00",
+    "ok": 6.942698618164032,
+    "fail": 3.0633181695805214,
+    "last_seen": "2026-07-06T21:49:41.819089+00:00",
     "node": {
       "raw": "vless://e977d854-33f3-4345-abee-bf3fa9a6d880@37.233.82.140:40478?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=yahoo.com&fp=chrome&sid=3c&pbk=lcJ0LSh015XRfz5-7wB_hln3-bq5ZatFgPugSUCrdR0# By EbraSha 🛰️",
       "host": "37.233.82.140",
@@ -1700,9 +1620,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "178.236.16.98": {
-    "ok": 7.5704984551527925,
-    "fail": 2.436186864563378,
-    "last_seen": "2026-07-06T18:23:34.687705+00:00",
+    "ok": 7.813448609637513,
+    "fail": 2.1925681781070403,
+    "last_seen": "2026-07-06T21:49:41.819056+00:00",
     "node": {
       "raw": "vless://a00d89f6-ab7e-4e30-a5e5-54c701d62c93@178.236.16.98:35728?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng&sni=yahoo.com&sid=69a2# By EbraSha 🛡️",
       "host": "178.236.16.98",
@@ -1760,9 +1680,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "149.248.79.235": {
-    "ok": 10.005898811514268,
-    "fail": 0.00019662705047555326,
-    "last_seen": "2026-07-06T18:23:34.687089+00:00",
+    "ok": 10.00530893036284,
+    "fail": 0.00017696434542799794,
+    "last_seen": "2026-07-06T21:49:41.818490+00:00",
     "node": {
       "raw": "vless://3571b127-4b3b-4c01-8249-1684daf586b5@149.248.79.235:17301?fp=firefox&pbk=nadshlxG0RqC6om__cf9E4F6qolRmHJLcNtReBTr9xY&security=reality&sid=5d&sni=aws.amazon.com&type=grpc# By EbraSha 🩸",
       "host": "149.248.79.235",
@@ -1780,8 +1700,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "192.3.120.11": {
-    "ok": 0.7221451319821255,
-    "fail": 9.283340762726146,
+    "ok": 0.649930618783913,
+    "fail": 9.355006686453532,
     "last_seen": "2026-07-03T07:37:57.134851+00:00",
     "node": {
       "raw": "vless://9e367d4d-60d9-4c42-a1f7-f1c112a469dc@192.3.120.11:50150?security=reality&sni=apple.com&fp=chrome&pbk=XqWJAWVtbVhdJyk30GxPypOmILc1ddYv8Ez_mpw0VTk&sid=6d0420e3&type=tcp&flow=xtls-rprx-vision&encryption=none# By EbraSha 🦈",
@@ -1860,9 +1780,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "51.44.16.107": {
-    "ok": 10.006095438564747,
+    "ok": 10.005485894708272,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686468+00:00",
+    "last_seen": "2026-07-06T21:49:41.817929+00:00",
     "node": {
       "raw": "vless://5454343b-541b-4c96-8c2a-52e81079d124@51.44.16.107:31413?security=reality&encryption=none&pbk=nMlxwhP34_5wFPscbso_hOfRDmsj9DonMpDSXUrnJR8&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=yahoo.com&sid=ead3d6f82a9d# By EbraSha ♣️",
       "host": "51.44.16.107",
@@ -1880,9 +1800,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "130.107.73.148": {
-    "ok": 9.073378347081418,
-    "fail": 0.9319305832814253,
-    "last_seen": "2026-07-06T18:23:34.687524+00:00",
+    "ok": 9.166040512373277,
+    "fail": 0.8387375249532828,
+    "last_seen": "2026-07-06T21:49:41.818856+00:00",
     "node": {
       "raw": "vless://a71c8954-66a8-4321-bedb-2336230d81ce@130.107.73.148:41373?Telegram=@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad,@GozargahAzad&flow=xtls-rprx-vision&security=reality&encryption=none&pbk=m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU&sni=google.com&type=tcp&spx=%2F&headerType=none&sid=0e&fp=chrome# By EbraSha 🦂",
       "host": "130.107.73.148",
@@ -1900,9 +1820,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "185.181.209.209": {
-    "ok": 10.005898811514268,
+    "ok": 10.00530893036284,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686485+00:00",
+    "last_seen": "2026-07-06T21:49:41.817948+00:00",
     "node": {
       "raw": "vless://870d3183-17a1-4a87-9021-e12e3ac2939f@185.181.209.209:443?security=reality&encryption=none&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=gateway.icloud.com&sid=ed7b9bdfedb9b8e5# By EbraSha 🪬",
       "host": "185.181.209.209",
@@ -1940,9 +1860,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "141.98.4.99": {
-    "ok": 9.322783933780126,
-    "fail": 0.6829182506836696,
-    "last_seen": "2026-07-06T18:23:34.687448+00:00",
+    "ok": 9.390505540402113,
+    "fail": 0.6146264256153027,
+    "last_seen": "2026-07-06T21:49:41.818783+00:00",
     "node": {
       "raw": "vless://46f4ee92-92df-4580-a696-4844fcb39b85@141.98.4.99:443?security=reality&type=tcp&sni=www.microsoft.com&fp=chrome&flow=xtls-rprx-vision&sid=3a57254c6a44&pbk=4YLfHf90V012Oyd2wHbwAXaJNvNUGrKWmatTKc165U8&encryption=none# By EbraSha 🚬",
       "host": "141.98.4.99",
@@ -2000,9 +1920,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "47.251.25.74": {
-    "ok": 10.004893828811838,
-    "fail": 0.0004151015510039458,
-    "last_seen": "2026-07-06T18:23:34.687140+00:00",
+    "ok": 10.004404445930655,
+    "fail": 0.0003735913959035512,
+    "last_seen": "2026-07-06T21:49:41.818533+00:00",
     "node": {
       "raw": "vless://18805ff3-b420-45de-af18-93be14024ae8@47.251.25.74:443/?type=raw&encryption=none&flow=xtls-rprx-vision&sni=www.amazon.com&fp=chrome&security=reality&pbk=H56cOJhw0xw76lDEpt7IuJJmVGemK6_CK34KtHwDMX8&sid=# By EbraSha 🖥️",
       "host": "47.251.25.74",
@@ -2020,8 +1940,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "185.48.251.195": {
-    "ok": 1.5048788939795033,
-    "fail": 8.500430036383339,
+    "ok": 1.354391004581553,
+    "fail": 8.650387032745005,
     "last_seen": "2026-07-04T03:56:30.923398+00:00",
     "node": {
       "raw": "vless://7fc0fd86-79a9-48dd-87e8-669758e9ffa8@185.48.251.195:448?type=tcp&security=reality&pbk=ncuqENP8uAV8w18kOQJlfWCC7dWjnUY1UY_5Iwtf21o&fp=chrome&sni=www.samsung.com&sid=181c8972132cca60# By EbraSha 🧠",
@@ -2100,9 +2020,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "194.226.169.36": {
-    "ok": 10.003146032807612,
-    "fail": 0.0017696434542799797,
-    "last_seen": "2026-07-06T18:23:34.687158+00:00",
+    "ok": 10.00283142952685,
+    "fail": 0.0015926791088519817,
+    "last_seen": "2026-07-06T21:49:41.818548+00:00",
     "node": {
       "raw": "vless://4706d9c3-eec0-4666-9d84-e608a200e872@194.226.169.36:443?&security=reality&pbk=i4Mx_tDND0Xxac3WyA7HgT9rvXdZlXpm5m1EGiQF-Uk&sid=b8aa&fp=chrome&sni=yahoo.com&type=tcp&headerType=none&path=%2F# By EbraSha 🌪️",
       "host": "194.226.169.36",
@@ -2140,9 +2060,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "103.166.127.195": {
-    "ok": 10.004070179944847,
+    "ok": 10.003663161950362,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686505+00:00",
+    "last_seen": "2026-07-06T21:49:41.817959+00:00",
     "node": {
       "raw": "vless://8224aa92-4a38-4756-a7d9-a9e7cde12a31@103.166.127.195:448?encryption=none&security=reality&sni=www.samsung.com&fp=chrome&pbk=nE2H52_rX3dHXENKxpHFDfZPKP40AjGoHyJv9olrr20&sid=124107a81dcd5199&type=tcp&headerType=none# By EbraSha 🩸",
       "host": "103.166.127.195",
@@ -2160,8 +2080,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "209.141.46.141": {
-    "ok": 0.7710614579672134,
-    "fail": 9.264519345971094,
+    "ok": 0.693955312170492,
+    "fail": 9.338067411373984,
     "last_seen": "2026-07-05T23:15:35.176392+00:00",
     "node": {
       "raw": "vless://b8615d20-5c52-44d8-9382-e7fc4bcc2524@209.141.46.141:8444?security=reality&encryption=none&pbk=5uQoc3Jwa6MhbA27hpy1dDFIo6LpvVstrWQ20FaJrws&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.microsoft.com&sid=d3f0df67# By EbraSha 🌪️",
@@ -2200,9 +2120,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "190.97.165.84": {
-    "ok": 9.782836465127513,
-    "fail": 0.22782163937967412,
-    "last_seen": "2026-07-06T18:23:34.687329+00:00",
+    "ok": 9.804552818614763,
+    "fail": 0.2050394754417067,
+    "last_seen": "2026-07-06T21:49:41.818690+00:00",
     "node": {
       "raw": "vless://54bb59cf-96fc-4a66-8488-fa2391f2e650@190.97.165.84:448?encryption=none&security=reality&flow=xtls-rprx-vision&sni=www.cloudflare.com&fp=chrome&pbk=XxCsLlJ3kJJa2MiPHS3FlF0DyAS9TkQkn8lfCVZgDQw&sid=cd2d4a8f08aa985d# By EbraSha ⚡",
       "host": "190.97.165.84",
@@ -2220,9 +2140,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "93.114.194.84": {
-    "ok": 9.923941403592261,
-    "fail": 0.07999113741725275,
-    "last_seen": "2026-07-06T18:23:34.687244+00:00",
+    "ok": 9.931547263233035,
+    "fail": 0.07199202367552748,
+    "last_seen": "2026-07-06T21:49:41.818623+00:00",
     "node": {
       "raw": "vless://bc5b801f-49a7-4db7-ac92-a2c57d42d132@93.114.194.84:448?type=tcp&security=reality&pbk=qX6IJfWNN-SNray6xJugb8pCpgY_zjeyCfvq9IUyd3w&fp=chrome&sni=www.samsung.com&sid=e1bdc95c1554c8eb# By EbraSha 💻",
       "host": "93.114.194.84",
@@ -2240,9 +2160,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "194.164.217.139": {
-    "ok": 10.003342659858085,
+    "ok": 10.003008393872276,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686515+00:00",
+    "last_seen": "2026-07-06T21:49:41.817969+00:00",
     "node": {
       "raw": "vless://d61b4e1b-4745-484f-8362-18537825a7af@194.164.217.139:448?security=reality&encryption=none&pbk=fjPED4_A_EQrL8PAuBUi9ChoNbY2OC4mUl7r8zaLoxo&headerType=none&fp=chrome&type=tcp&sni=www.samsung.com&sid=05fdaa8a05be46a9# By EbraSha 🧨",
       "host": "194.164.217.139",
@@ -2300,9 +2220,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "178.236.17.86": {
-    "ok": 10.002927558307084,
-    "fail": 0.00021847450052839252,
-    "last_seen": "2026-07-06T18:23:34.687120+00:00",
+    "ok": 10.002634802476376,
+    "fail": 0.00019662705047555326,
+    "last_seen": "2026-07-06T21:49:41.818516+00:00",
     "node": {
       "raw": "vless://6fdfdb73-51b0-4a14-89a5-c9355a0e0397@178.236.17.86:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=google.com&fp=chrome&pbk=vCxfuNNmogA1DlPkjvmKb7_hSgXqe4MboPfi2s1JZG0&sid=b318242471ba4f5b&type=tcp&headerType=none# By EbraSha 🃏",
       "host": "178.236.17.86",
@@ -2360,9 +2280,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "89.167.79.198": {
-    "ok": 9.45589003793958,
-    "fail": 0.5468627407670794,
-    "last_seen": "2026-07-06T18:23:34.687400+00:00",
+    "ok": 9.510301034145623,
+    "fail": 0.49217646669037146,
+    "last_seen": "2026-07-06T21:49:41.818748+00:00",
     "node": {
       "raw": "vless://39eb6d15-e27a-4f2e-b865-b49a15b2d5f6@89.167.79.198:443?security=reality&encryption=none&pbk=m0laydpddP-MhAgDbMB_QGrSk4-nrIvDSoIHK_Q8Uy4&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=a796a1f52722b3a5# By EbraSha 🕷️",
       "host": "89.167.79.198",
@@ -2380,8 +2300,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "216.167.28.246": {
-    "ok": 1.6629918910261172,
-    "fail": 8.339308645464449,
+    "ok": 1.4966927019235055,
+    "fail": 8.505377780918003,
     "last_seen": "2026-07-04T23:11:15.901646+00:00",
     "node": {
       "raw": "vless://a3a8c354-a85c-477b-90f3-dbe08cadf31c@216.167.28.246:22335/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=www.yahoo.com&fp=chrome&security=reality&pbk=zPM3iLhD0ppwxYWzwiXFhQd1PwXCjFN9u28DbXdy604&sid=a2346cd0# By EbraSha 🤖",
@@ -2480,9 +2400,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "raff-vpn-kz-server1.ru": {
-    "ok": 10.001376389353332,
+    "ok": 10.001238750417999,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686525+00:00",
+    "last_seen": "2026-07-06T21:49:41.817978+00:00",
     "node": {
       "raw": "vless://6fdfdb73-51b0-4a14-89a5-c9355a0e0397@raff-vpn-kz-server1.ru:443?security=reality&type=tcp&packetEncoding=none&allowInsecure=1&sni=google.com&fp=chrome&flow=xtls-rprx-vision&sid=b318242471ba4f5b&pbk=vCxfuNNmogA1DlPkjvmKb7_hSgXqe4MboPfi2s1JZG0# By EbraSha ♦️",
       "host": "raff-vpn-kz-server1.ru",
@@ -2520,9 +2440,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "85.208.139.100": {
-    "ok": 8.75448541671581,
-    "fail": 1.2465763693567629,
-    "last_seen": "2026-07-06T18:23:34.687563+00:00",
+    "ok": 8.879036875044228,
+    "fail": 1.1219187324210866,
+    "last_seen": "2026-07-06T21:49:41.818895+00:00",
     "node": {
       "raw": "vless://612c872d-1370-4109-8644-f0755f97e33f@85.208.139.100:443?_t=4ed1c3ec&fp=firefox&headertype=none&pbk=GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs&security=reality&sid=16&sni=www.samsung.com&type=tcp# By EbraSha 📛",
       "host": "85.208.139.100",
@@ -2540,9 +2460,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "43.108.48.169": {
-    "ok": 9.964727920166572,
-    "fail": 0.036582926836602185,
-    "last_seen": "2026-07-06T18:23:34.687234+00:00",
+    "ok": 9.968255128149915,
+    "fail": 0.032924634152941966,
+    "last_seen": "2026-07-06T21:49:41.818614+00:00",
     "node": {
       "raw": "vless://cdb7d825-9892-4d6f-80b8-7add83159dac@43.108.48.169:40701?encryption=none&type=raw&headerType=none&security=reality&fp=chrome&pbk=TWuVILeiSXfCSMZPsqNHtRquNALPRaW5Z51I63zdLEA&sni=amazon.com&sid=7ef3a8ab2886# By EbraSha 🧠",
       "host": "43.108.48.169",
@@ -2600,9 +2520,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "156.229.161.107": {
-    "ok": 7.989350201846689,
-    "fail": 2.0116329334056906,
-    "last_seen": "2026-07-06T15:56:50.162891+00:00",
+    "ok": 8.19041518166202,
+    "fail": 1.8104696400651217,
+    "last_seen": "2026-07-06T21:49:41.819014+00:00",
     "node": {
       "raw": "vless://9c79aceb-4649-44ea-9698-b5e9ecf6d6da@156.229.161.107:10001?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=chrome&pbk=4jNz4Bw-FZlaX-WtfAdwK0hegY28W_k8AttGd-7hZn4&sid=fb2c6678&type=tcp&headerType=none# By EbraSha 🌌",
       "host": "156.229.161.107",
@@ -2880,8 +2800,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "hm.khoycityman.ir": {
-    "ok": 0.025031555049932444,
-    "fail": 10.050063110099869,
+    "ok": 0.0225283995449392,
+    "fail": 10.045056799089881,
     "last_seen": "2026-06-23T23:18:54.541048+00:00",
     "node": {
       "raw": "vless://1bb79bd5-95ca-408b-804a-000f410a7d63@hm.khoycityman.ir:57176?encryption=none&fp=chrome&pbk=0SiYe8YXJTlWr6n0f2nSSGngDeW2riD_fxHWIH-SEUI&security=reality&sid=75d1f02b9da704&sni=www.yahoo.com&spx=%2FWxvMGQyvAnX06uj&type=tcp# By EbraSha 👾",
@@ -2940,9 +2860,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "112.121.184.10": {
-    "ok": 10.00019662705048,
+    "ok": 10.000176964345432,
     "fail": 0.0,
-    "last_seen": "2026-07-06T18:23:34.686536+00:00",
+    "last_seen": "2026-07-06T21:49:41.817989+00:00",
     "node": {
       "raw": "vless://970ffe5a-2c53-4b94-af3f-c95ddd417c1c@112.121.184.10:26057?security=reality&encryption=none&pbk=ipkmPcrX6VD4_cB3kS4DigWSP9FcU6TPXpkWM5m-jEw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=videos.apple.com&sid=e4fb5619# By EbraSha 🦅",
       "host": "112.121.184.10",
@@ -3000,9 +2920,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "89.124.118.227": {
-    "ok": 8.614423344981695,
-    "fail": 1.3853996906728787,
-    "last_seen": "2026-07-06T18:23:34.687617+00:00",
+    "ok": 8.752981010483527,
+    "fail": 1.2468597216055908,
+    "last_seen": "2026-07-06T21:49:41.818960+00:00",
     "node": {
       "raw": "vless://28acd046-f65e-402c-a25e-4a215af02796@89.124.118.227:443?security=reality&encryption=none&echfq=none&pbk=hLXvfh2eKV2aRlFGbWIc6pqlrhgX1uOaStQJTYfNDg0&headerType=none&fp=firefox&allowinsecure=0&type=tcp&flow=xtls-rprx-vision&sni=tv.apple.com# By EbraSha 🪖",
       "host": "89.124.118.227",
@@ -3180,8 +3100,8 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "91.98.101.62": {
-    "ok": 0.05006311009986489,
-    "fail": 9.824779114650473,
+    "ok": 0.0450567990898784,
+    "fail": 9.842301203185427,
     "last_seen": "2026-06-25T04:17:52.440639+00:00",
     "node": {
       "raw": "vless://26497367-956e-46c1-ba8a-27198e744ede@91.98.101.62:55555?security=reality&type=tcp&headerType=&path=&host=&sni=yahoo.com&fp=chrome&pbk=XPuLE49PtDeixzwOmEHuMFSZexYDTQifZ7s99w5e4QY&sid=880eeeef4927eed5# By EbraSha 💻",
@@ -3200,9 +3120,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "91.107.150.18": {
-    "ok": 9.40475079182461,
-    "fail": 0.5940694458725415,
-    "last_seen": "2026-07-06T18:23:34.687409+00:00",
+    "ok": 9.464275712642149,
+    "fail": 0.5346625012852874,
+    "last_seen": "2026-07-06T21:49:41.818757+00:00",
     "node": {
       "raw": "vless://39eb6d15-e27a-4f2e-b865-b49a15b2d5f6@91.107.150.18:443?type=tcp&security=reality&sni=play.google.com&fp=chrome&pbk=m0laydpddP-MhAgDbMB_QGrSk4-nrIvDSoIHK_Q8Uy4&sid=a796a1f52722b3a5# By EbraSha 📶",
       "host": "91.107.150.18",
@@ -3300,9 +3220,9 @@
     "first_seen": "2026-06-17T00:00:00.000000+00:00"
   },
   "20.0.105.19": {
-    "ok": 9.724245372330923,
-    "fail": 0.2741619485602292,
-    "last_seen": "2026-07-06T18:23:34.687349+00:00",
+    "ok": 9.751820835097831,
+    "fail": 0.24674575370420626,
+    "last_seen": "2026-07-06T21:49:41.818707+00:00",
     "node": {
       "raw": "vless://47df3f6c-c3a0-463b-a6a0-ad4e8494c95b@20.0.105.19:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=zNtSqVR2dp454rIsJL8qQ-miOuSIP33Koyqc9gUGdV8&sid=60bf01f7# By EbraSha 🦇",
       "host": "20.0.105.19",
@@ -3460,10 +3380,10 @@
     }
   },
   "20.151.233.69": {
-    "ok": 5.967475521246448,
-    "fail": 4.029827262697649,
+    "ok": 6.370727969121804,
+    "fail": 3.6268445364278836,
     "first_seen": "2026-06-26T04:24:36.769533+00:00",
-    "last_seen": "2026-07-06T18:23:34.688269+00:00",
+    "last_seen": "2026-07-06T21:49:41.819518+00:00",
     "node": {
       "raw": "vless://0b08b1c4-342a-4992-ac5f-5b9eff2327a0@20.151.233.69:443?security=reality&encryption=none&pbk=dalyPgxW_YMUf1O3cgNWc-3XDeShAzU43307V4rBr3s&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=64597fca# By EbraSha 🃏",
       "host": "20.151.233.69",
@@ -3520,8 +3440,8 @@
     }
   },
   "46.225.250.187": {
-    "ok": 0.46203851537147544,
-    "fail": 9.53463158826321,
+    "ok": 0.41583466383432793,
+    "fail": 9.58116842943689,
     "first_seen": "2026-06-26T12:23:30.934884+00:00",
     "last_seen": "2026-07-02T23:22:23.904002+00:00",
     "node": {
@@ -3540,10 +3460,10 @@
     }
   },
   "34.35.11.97": {
-    "ok": 9.997003093271216,
+    "ok": 9.997302783944095,
     "fail": 0.0,
     "first_seen": "2026-06-26T12:23:30.934947+00:00",
-    "last_seen": "2026-07-06T18:23:34.686547+00:00",
+    "last_seen": "2026-07-06T21:49:41.817999+00:00",
     "node": {
       "raw": "vless://9c3f61dc-ab33-48d3-b829-bc1cad0f31f7@34.35.11.97:24822?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.icloud.com&fp=firefox&pbk=tZ1ioVafOFT_0m30INlvEDNFSj6tcNnG21aJQRy3zVo&sid=32a8bfa2939125&spx=%2F&type=tcp&headerType=none# By EbraSha 🛰️",
       "host": "34.35.11.97",
@@ -3640,10 +3560,10 @@
     }
   },
   "83.228.231.188": {
-    "ok": 9.99630011514965,
+    "ok": 9.996670103634685,
     "fail": 0.0,
     "first_seen": "2026-06-26T20:06:01.548330+00:00",
-    "last_seen": "2026-07-06T18:23:34.686557+00:00",
+    "last_seen": "2026-07-06T21:49:41.818008+00:00",
     "node": {
       "raw": "vless://e6a037ff-3908-4bf9-b3e7-b1138da601f9@83.228.231.188:22000?security=reality&type=tcp&sni=www.yahoo.com&fp=chrome&sid=14&spx=%2F&pbk=NbZ4uhJZ6zpvRLXODNcVDk9UgcKNahpN1h74CsV04Fs&encryption=none# By EbraSha 🤖",
       "host": "83.228.231.188",
@@ -3720,10 +3640,10 @@
     }
   },
   "fr-d.duckray.co.uk": {
-    "ok": 9.993806859741797,
-    "fail": 0.0020821570911484888,
+    "ok": 9.994426173767618,
+    "fail": 0.00187394138203364,
     "first_seen": "2026-06-26T23:20:19.349479+00:00",
-    "last_seen": "2026-07-06T18:23:34.687186+00:00",
+    "last_seen": "2026-07-06T21:49:41.818573+00:00",
     "node": {
       "raw": "vless://b320eba7-5380-4bd1-b5e6-32daab16066f@fr-d.duckray.co.uk:3443?mode=gun&security=reality&encryption=none&pbk=Ps_w7KP3VFrZv1niWfX3synmJq_d2c7sVSckxa3sgio&fp=random&type=grpc&sni=api.github.com# By EbraSha 🪐",
       "host": "fr-d.duckray.co.uk",
@@ -3760,8 +3680,8 @@
     }
   },
   "vip.bcjdvip.com": {
-    "ok": 0.02729666062822417,
-    "fail": 9.97261072550047,
+    "ok": 0.024566994565401755,
+    "fail": 9.975349652950424,
     "first_seen": "2026-06-27T11:46:26.709928+00:00",
     "last_seen": "2026-07-01T14:58:19.331205+00:00",
     "node": {
@@ -3780,10 +3700,10 @@
     }
   },
   "147.135.214.161": {
-    "ok": 9.993127701839525,
-    "fail": 0.0017970102999144335,
+    "ok": 9.993814931655573,
+    "fail": 0.0016173092699229901,
     "first_seen": "2026-06-27T11:46:26.710041+00:00",
-    "last_seen": "2026-07-06T18:23:34.687167+00:00",
+    "last_seen": "2026-07-06T21:49:41.818557+00:00",
     "node": {
       "raw": "vless://b320eba7-5380-4bd1-b5e6-32daab16066f@147.135.214.161:3443?security=reality&sni=api.github.com&type=grpc&fp=random&pbk=Ps_w7KP3VFrZv1niWfX3synmJq_d2c7sVSckxa3sgio# By EbraSha 🦅",
       "host": "147.135.214.161",
@@ -3800,10 +3720,10 @@
     }
   },
   "20.84.155.134": {
-    "ok": 9.964649480758943,
-    "fail": 0.02838853314975248,
+    "ok": 9.968184532683049,
+    "fail": 0.025549679834777232,
     "first_seen": "2026-06-27T14:04:10.097101+00:00",
-    "last_seen": "2026-07-06T18:23:34.687224+00:00",
+    "last_seen": "2026-07-06T21:49:41.818605+00:00",
     "node": {
       "raw": "vless://d52aa2ea-e61a-47e9-8bb9-58881a681cbc@20.84.155.134:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=Yh2qNHiFk-PLlSG6s7JXgfe6BZj3siDLsm0TsAsBfmU&sid=de37c2e5# By EbraSha ⚙️",
       "host": "20.84.155.134",
@@ -3920,10 +3840,10 @@
     }
   },
   "72.146.184.66": {
-    "ok": 9.988209815422264,
+    "ok": 9.989388833880039,
     "fail": 0.0,
     "first_seen": "2026-06-28T04:44:17.194553+00:00",
-    "last_seen": "2026-07-06T18:23:34.686568+00:00",
+    "last_seen": "2026-07-06T21:49:41.818018+00:00",
     "node": {
       "raw": "vless://9e23aaba-5bf2-4810-8369-c9bf2a9979f9@72.146.184.66:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=CVbYSDZe2130NfbcGVM7P15Xy1LifR1cf0hsJKV_4V0&sid=eb4c4c6a# By EbraSha 🦂",
       "host": "72.146.184.66",
@@ -3940,8 +3860,8 @@
     }
   },
   "135.125.185.131": {
-    "ok": 0.15155624184605782,
-    "fail": 9.202335569231277,
+    "ok": 0.13640061766145203,
+    "fail": 9.28210201230815,
     "first_seen": "2026-06-28T04:44:17.194574+00:00",
     "last_seen": "2026-06-28T09:28:25.780262+00:00",
     "node": {
@@ -3960,10 +3880,10 @@
     }
   },
   "52.237.89.171": {
-    "ok": 9.982377296806863,
-    "fail": 0.005832518615401291,
+    "ok": 9.984139567126178,
+    "fail": 0.005249266753861162,
     "first_seen": "2026-06-28T09:28:25.780537+00:00",
-    "last_seen": "2026-07-06T18:23:34.687195+00:00",
+    "last_seen": "2026-07-06T21:49:41.818581+00:00",
     "node": {
       "raw": "vless://61f7a0ac-7500-42f1-b27b-e85cb16d6afa@52.237.89.171:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=Oe1AXeDO0L6_NXhNtjh3SQHOvCkfHrVZFzg1ASl4RhQ&sid=3292498d# By EbraSha 🎯",
       "host": "52.237.89.171",
@@ -4080,10 +4000,10 @@
     }
   },
   "20.70.160.45": {
-    "ok": 6.1040347659990655,
-    "fail": 3.8797921413017074,
+    "ok": 6.4936312893991595,
+    "fail": 3.491812927171537,
     "first_seen": "2026-06-28T14:10:17.100453+00:00",
-    "last_seen": "2026-07-05T23:15:35.176421+00:00",
+    "last_seen": "2026-07-06T21:49:41.819126+00:00",
     "node": {
       "raw": "vless://94bcd9a9-33a9-40e4-a6fd-05e30db5b457@20.70.160.45:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=140jRwI3SEyJezoVv7iFt2VEZOfDVu7CmPblFi2Q6ik&sid=5c333a77# By EbraSha ✨",
       "host": "20.70.160.45",
@@ -4140,8 +4060,8 @@
     }
   },
   "91.98.19.171": {
-    "ok": 1.305196394412727,
-    "fail": 8.674836824477113,
+    "ok": 1.1746767549714543,
+    "fail": 8.807353142029402,
     "first_seen": "2026-06-28T19:45:57.661887+00:00",
     "last_seen": "2026-07-04T10:26:14.376639+00:00",
     "node": {
@@ -4200,8 +4120,8 @@
     }
   },
   "77.73.232.61": {
-    "ok": 1.3477709692587032,
-    "fail": 8.630043718396676,
+    "ok": 1.2129938723328328,
+    "fail": 8.76703934655701,
     "first_seen": "2026-06-28T23:17:09.086987+00:00",
     "last_seen": "2026-07-05T23:15:35.175989+00:00",
     "node": {
@@ -4260,10 +4180,10 @@
     }
   },
   "57.128.240.247": {
-    "ok": 9.9695674727783,
+    "ok": 9.97261072550047,
     "fail": 0.0,
     "first_seen": "2026-06-29T11:22:03.097905+00:00",
-    "last_seen": "2026-07-06T18:23:34.686579+00:00",
+    "last_seen": "2026-07-06T21:49:41.818028+00:00",
     "node": {
       "raw": "vless://c8e4a7ee-07da-4d61-aed9-634b9714bb6e@57.128.240.247:35306?encryption=none&security=reality&sni=play.google.com&fp=firefox&pbk=hff4DYvLOoFv2EstI0ssEra-S8ZIXwsZR9cqe7P1TH8&sid=cac010b8710a&spx=%2FGozargahAzadi&type=tcp&headerType=none# By EbraSha 🎯",
       "host": "57.128.240.247",
@@ -4300,8 +4220,8 @@
     }
   },
   "nex1.liiliil.ir": {
-    "ok": 1.0559029421632593,
-    "fail": 8.916707783337205,
+    "ok": 0.9503126479469334,
+    "fail": 9.025037005003485,
     "first_seen": "2026-06-29T11:22:03.098058+00:00",
     "last_seen": "2026-07-04T10:26:14.376727+00:00",
     "node": {
@@ -4400,10 +4320,10 @@
     }
   },
   "195.254.165.243": {
-    "ok": 8.216043041529932,
-    "fail": 1.746385937208704,
+    "ok": 8.39443873737694,
+    "fail": 1.5717473434878337,
     "first_seen": "2026-06-29T16:07:27.715955+00:00",
-    "last_seen": "2026-07-06T18:23:34.687645+00:00",
+    "last_seen": "2026-07-06T21:49:41.818988+00:00",
     "node": {
       "raw": "vless://1f6531a1-a6eb-4274-9f51-4a0899456fcf@195.254.165.243:443?security=reality&encryption=none&pbk=zSjG6wndmLAzE8ykCBXpAm2eh0viWVSy3gt2juXF4EE&headerType=none&fp=chrome&spx=/giyWVcXDg48T294&type=tcp&flow=xtls-rprx-vision&sni=play.google.com&sid=eaa8&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---# By EbraSha 🔐",
       "host": "195.254.165.243",
@@ -4460,8 +4380,8 @@
     }
   },
   "45.13.119.3": {
-    "ok": 1.0262382364406732,
-    "fail": 8.932016184380037,
+    "ok": 0.9236144127966059,
+    "fail": 9.038814565942033,
     "first_seen": "2026-06-29T16:07:27.716403+00:00",
     "last_seen": "2026-07-04T19:32:04.494539+00:00",
     "node": {
@@ -4520,6 +4440,13 @@
     }
   },
   "__scan_history": [
+    {
+      "timestamp": "2026-07-06T21:49:41.821811+00:00",
+      "total_scanned": 500,
+      "working": 146,
+      "dead": 354,
+      "success_rate": 29.2
+    },
     {
       "timestamp": "2026-07-06T18:23:34.690857+00:00",
       "total_scanned": 500,
@@ -4722,13 +4649,6 @@
       "working": 88,
       "dead": 412,
       "success_rate": 17.6
-    },
-    {
-      "timestamp": "2026-07-02T19:49:40.617236+00:00",
-      "total_scanned": 500,
-      "working": 79,
-      "dead": 421,
-      "success_rate": 15.8
     }
   ],
   "snap.amod.site": {
@@ -4912,10 +4832,10 @@
     }
   },
   "153.80.249.227": {
-    "ok": 9.908427404659365,
-    "fail": 0.027945740929275986,
+    "ok": 9.917584664193429,
+    "fail": 0.02515116683634839,
     "first_seen": "2026-06-29T20:14:08.734978+00:00",
-    "last_seen": "2026-07-06T18:23:34.687214+00:00",
+    "last_seen": "2026-07-06T21:49:41.818597+00:00",
     "node": {
       "raw": "vless://3ef170be-05d0-479c-9753-aa2f860964ea@153.80.249.227:443?security=reality&encryption=none&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&host=Telegram-NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=cloudflare.com&sid=a1b2c3d4e5f6&note=Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---Telegram---@Raiv2mmr---# By EbraSha 📛",
       "host": "153.80.249.227",
@@ -5112,10 +5032,10 @@
     }
   },
   "nl.go-vpn.club": {
-    "ok": 9.921448327887212,
+    "ok": 9.929303495098491,
     "fail": 0.0,
     "first_seen": "2026-06-29T23:11:50.496312+00:00",
-    "last_seen": "2026-07-06T18:23:34.686611+00:00",
+    "last_seen": "2026-07-06T21:49:41.818037+00:00",
     "node": {
       "raw": "vless://40de6299-d792-4868-8a82-411ead0aa943@nl.go-vpn.club:443?type=tcp&headerType=none&security=reality&encryption=none&sni=gateway.icloud.com&fp=chrome&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&sid=ed7b9bdfedb9b8e5&flow=xtls-rprx-vision# By EbraSha 💎",
       "host": "nl.go-vpn.club",
@@ -5152,10 +5072,10 @@
     }
   },
   "167.86.83.211": {
-    "ok": 9.912720364319124,
+    "ok": 9.921448327887212,
     "fail": 0.0,
     "first_seen": "2026-06-30T04:20:40.023584+00:00",
-    "last_seen": "2026-07-06T18:23:34.686621+00:00",
+    "last_seen": "2026-07-06T21:49:41.818047+00:00",
     "node": {
       "raw": "vless://fb4f96af-267f-47c1-80ba-7c763a7b0e09@167.86.83.211:443/?type=grpc&encryption=none&flow=&sni=www.yahoo.com&fp=chrome&security=reality&pbk=Yl5jwwGZthEomnp0eVtZXcted62akm7G5pGDGv1zKn0&sid=b00c2b8d68c6c1# By EbraSha 🦇",
       "host": "167.86.83.211",
@@ -5192,8 +5112,8 @@
     }
   },
   "85.113.71.97": {
-    "ok": 3.859052905592857,
-    "fail": 6.053667458726268,
+    "ok": 3.473147615033571,
+    "fail": 6.448300712853642,
     "first_seen": "2026-06-30T04:20:40.023733+00:00",
     "last_seen": "2026-07-06T11:00:16.902653+00:00",
     "node": {
@@ -5212,8 +5132,8 @@
     }
   },
   "103.100.158.203": {
-    "ok": 0.3161589461091041,
-    "fail": 9.57608841724784,
+    "ok": 0.2845430514981937,
+    "fail": 9.618479575523056,
     "first_seen": "2026-06-30T04:20:40.023877+00:00",
     "last_seen": "2026-07-02T04:16:12.661088+00:00",
     "node": {
@@ -5232,10 +5152,10 @@
     }
   },
   "20.199.24.140": {
-    "ok": 9.539251123897216,
-    "fail": 0.37346924042191054,
+    "ok": 9.585326011507496,
+    "fail": 0.3361223163797195,
     "first_seen": "2026-06-30T04:20:40.023945+00:00",
-    "last_seen": "2026-07-06T18:23:34.687370+00:00",
+    "last_seen": "2026-07-06T21:49:41.818723+00:00",
     "node": {
       "raw": "vless://d890b403-d536-4c32-945c-b46e250492a6@20.199.24.140:443?security=reality&encryption=none&pbk=Lk_uZjr6a6DyLsgh1VasuUCN9G2YdO32u9nFZPgHxSw&headerType=none&fp=safari&type=tcp&flow=xtls-rprx-vision&sni=www.cloudflare.com&sid=0f5af4a2# By EbraSha ♦️",
       "host": "20.199.24.140",
@@ -5432,10 +5352,10 @@
     }
   },
   "144.225.187.179": {
-    "ok": 9.360806363356941,
-    "fail": 0.5314410000000002,
+    "ok": 9.424725727021247,
+    "fail": 0.47829690000000014,
     "first_seen": "2026-06-30T12:16:49.000947+00:00",
-    "last_seen": "2026-07-06T18:23:34.687390+00:00",
+    "last_seen": "2026-07-06T21:49:41.818740+00:00",
     "node": {
       "raw": "vless://c7ba28f1-dd0a-4fd8-941e-e622f24c8a19@144.225.187.179:51015/?type=tcp&encryption=none&flow=xtls-rprx-vision&sni=apple.com&fp=chrome&security=reality&pbk=wr6ERYaZWWT_P38sI5n-ZBgiNNWUzzQefuXgX_LvZCk&sid=f25f1104# By EbraSha 🪬",
       "host": "144.225.187.179",
@@ -5492,10 +5412,10 @@
     }
   },
   "153.76.122.225": {
-    "ok": 9.880274848174382,
+    "ok": 9.892247363356944,
     "fail": 0.0,
     "first_seen": "2026-06-30T16:32:41.407645+00:00",
-    "last_seen": "2026-07-06T18:23:34.686632+00:00",
+    "last_seen": "2026-07-06T21:49:41.818056+00:00",
     "node": {
       "raw": "vless://3ef170be-05d0-479c-9753-aa2f860964ea@153.76.122.225:443?security=reality&encryption=none&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&host=Telegram-NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=cloudflare.com&sid=a1b2c3d4e5f6# By EbraSha 🌐",
       "host": "153.76.122.225",
@@ -5512,10 +5432,10 @@
     }
   },
   "64.188.79.53": {
-    "ok": 9.86697205352709,
+    "ok": 9.880274848174382,
     "fail": 0.0,
     "first_seen": "2026-06-30T20:14:36.600459+00:00",
-    "last_seen": "2026-07-06T18:23:34.686642+00:00",
+    "last_seen": "2026-07-06T21:49:41.818066+00:00",
     "node": {
       "raw": "vless://72362320-3c4c-42cf-b76c-82f7b1832c47@64.188.79.53:48161?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=cm3MNPIRmySoBcEgeH6QEuVyoPbBQyjRhs8UF_swl1E&security=reality&sid=41388e02247a3902&sni=github.com&spx=/vLsiCccMXAczIgJ&type=tcp# By EbraSha 📟",
       "host": "64.188.79.53",
@@ -5612,10 +5532,10 @@
     }
   },
   "2.27.14.29": {
-    "ok": 9.321270492006791,
-    "fail": 0.496249471679207,
+    "ok": 9.389143442806112,
+    "fail": 0.4466245245112863,
     "first_seen": "2026-07-01T10:10:49.688795+00:00",
-    "last_seen": "2026-07-06T18:23:34.687380+00:00",
+    "last_seen": "2026-07-06T21:49:41.818732+00:00",
     "node": {
       "raw": "vless://3ef170be-05d0-479c-9753-aa2f860964ea@2.27.14.29:443?type=tcp&security=reality&sni=cloudflare.com&fp=firefox&flow=xtls-rprx-vision&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&sid=a1b2c3d4e5f6# By EbraSha 🛜",
       "host": "2.27.14.29",
@@ -5652,8 +5572,8 @@
     }
   },
   "107.173.237.146": {
-    "ok": 3.2734012103033616,
-    "fail": 6.544118753382634,
+    "ok": 2.9460610892730257,
+    "fail": 6.889706878044371,
     "first_seen": "2026-07-01T10:10:49.688847+00:00",
     "last_seen": "2026-07-05T11:47:49.692293+00:00",
     "node": {
@@ -5672,10 +5592,10 @@
     }
   },
   "144.124.249.252": {
-    "ok": 9.797244404095549,
+    "ok": 9.817519963685994,
     "fail": 0.0,
     "first_seen": "2026-07-01T14:58:19.332046+00:00",
-    "last_seen": "2026-07-06T18:23:34.686652+00:00",
+    "last_seen": "2026-07-06T21:49:41.818075+00:00",
     "node": {
       "raw": "vless://40de6299-d792-4868-8a82-411ead0aa943@144.124.249.252:443?encryption=none&flow=xtls-rprx-vision&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&security=reality&sid=ed7b9bdfedb9b8e5&sni=gateway.icloud.com&type=tcp# By EbraSha 🃏",
       "host": "144.124.249.252",
@@ -5692,30 +5612,30 @@
     }
   },
   "check01.allenshop66244.ir": {
-    "ok": 0.2381289880011495,
-    "fail": 9.4185026299696,
+    "ok": 1.2143160892010345,
+    "fail": 8.47665236697264,
     "first_seen": "2026-07-01T14:58:19.332273+00:00",
-    "last_seen": "2026-07-02T04:16:12.661140+00:00",
+    "last_seen": "2026-07-06T21:49:41.819288+00:00",
     "node": {
-      "raw": "vless://70f3da4d-6984-4c61-a37a-51a4c026c933@check01.allenshop66244.ir:8443?encryption=none&security=reality&type=tcp&headerType=none&sni=play.google.com&fp=firefox&pbk=D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw&sid=b7b70c104ad267b8# By EbraSha 🦇",
+      "raw": "vless://cc3e6e36-b329-435b-bb71-192fb5c718ae@check01.allenshop66244.ir:8443?encryption=none&security=reality&type=tcp&headerType=none&sni=play.google.com&fp=chrome&pbk=D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw&sid=b7b70c104ad267b8# By EbraSha 📟",
       "host": "check01.allenshop66244.ir",
       "port": 8443,
-      "uuid": "70f3da4d-6984-4c61-a37a-51a4c026c933",
+      "uuid": "cc3e6e36-b329-435b-bb71-192fb5c718ae",
       "pbk": "D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw",
       "sid": "b7b70c104ad267b8",
-      "fp": "firefox",
+      "fp": "chrome",
       "flow": "",
       "sni": "play.google.com",
       "net": "tcp",
-      "name": " By EbraSha 🦇",
+      "name": " By EbraSha 📟",
       "country": "??"
     }
   },
   "185.159.129.223": {
-    "ok": 9.77471600455061,
+    "ok": 9.797244404095549,
     "fail": 0.0,
     "first_seen": "2026-07-01T18:11:33.569818+00:00",
-    "last_seen": "2026-07-06T18:23:34.686662+00:00",
+    "last_seen": "2026-07-06T21:49:41.818084+00:00",
     "node": {
       "raw": "vless://3ef170be-05d0-479c-9753-aa2f860964ea@185.159.129.223:443?security=reality&encryption=none&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&host=Telegram-NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP---NitruVIP&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=cloudflare.com&sid=a1b2c3d4e5f6# By EbraSha 🃏",
       "host": "185.159.129.223",
@@ -5752,10 +5672,10 @@
     }
   },
   "144.124.246.55": {
-    "ok": 9.749684449500679,
+    "ok": 9.77471600455061,
     "fail": 0.0,
     "first_seen": "2026-07-01T21:49:10.143597+00:00",
-    "last_seen": "2026-07-06T18:23:34.686671+00:00",
+    "last_seen": "2026-07-06T21:49:41.818093+00:00",
     "node": {
       "raw": "vless://40de6299-d792-4868-8a82-411ead0aa943@144.124.246.55:443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&sni=gateway.icloud.com&sid=ed7b9bdfedb9b8e5# By EbraSha ♣️",
       "host": "144.124.246.55",
@@ -5772,10 +5692,10 @@
     }
   },
   "check02.allenshop66244.ir": {
-    "ok": 2.0227605558953066,
-    "fail": 7.453891811077335,
+    "ok": 2.820484500305776,
+    "fail": 6.708502629969601,
     "first_seen": "2026-07-01T23:28:50.093093+00:00",
-    "last_seen": "2026-07-06T18:23:34.687805+00:00",
+    "last_seen": "2026-07-06T21:49:41.819169+00:00",
     "node": {
       "raw": "vless://cc3e6e36-b329-435b-bb71-192fb5c718ae@check02.allenshop66244.ir:8443?security=reality&encryption=none&pbk=D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw&headerType=none&fp=chrome&type=tcp&sni=play.google.com&sid=b7b70c104ad267b8# By EbraSha 🕷️",
       "host": "check02.allenshop66244.ir",
@@ -5892,10 +5812,10 @@
     }
   },
   "144.124.248.186": {
-    "ok": 9.618479575523056,
+    "ok": 9.656631617970751,
     "fail": 0.0,
     "first_seen": "2026-07-02T12:20:50.834762+00:00",
-    "last_seen": "2026-07-06T18:23:34.686681+00:00",
+    "last_seen": "2026-07-06T21:49:41.818102+00:00",
     "node": {
       "raw": "vless://40de6299-d792-4868-8a82-411ead0aa943@144.124.248.186:443?encryption=none&flow=xtls-rprx-vision&pbk=L0acYoTxKR5ix7LXAmP10cy06n2JjgkXTojGjtWAqww&security=reality&sid=ed7b9bdfedb9b8e5&sni=gateway.icloud.com&type=tcp# By EbraSha 🚬",
       "host": "144.124.248.186",
@@ -5912,10 +5832,10 @@
     }
   },
   "51.116.101.212": {
-    "ok": 9.46089378824482,
-    "fail": 0.15758578727823871,
+    "ok": 9.514804409420337,
+    "fail": 0.14182720855041483,
     "first_seen": "2026-07-02T12:20:50.835027+00:00",
-    "last_seen": "2026-07-06T18:23:34.687319+00:00",
+    "last_seen": "2026-07-06T21:49:41.818682+00:00",
     "node": {
       "raw": "vless://ad1f7afa-af80-4878-816d-1196c9ea70f2@51.116.101.212:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=6DGUbHZFVqaAbexHjwHPggWgoHgFGyDSp20wuapQRwA&sid=e1a78782# By EbraSha ⛓️",
       "host": "51.116.101.212",
@@ -5972,10 +5892,10 @@
     }
   },
   "149.28.136.177": {
-    "ok": 9.528987130275377,
+    "ok": 9.57608841724784,
     "fail": 0.0,
     "first_seen": "2026-07-02T21:23:57.824467+00:00",
-    "last_seen": "2026-07-06T18:23:34.686690+00:00",
+    "last_seen": "2026-07-06T21:49:41.818111+00:00",
     "node": {
       "raw": "vless://c7d5062b-604e-42b0-85d0-0ba354cee311@149.28.136.177:443?security=reality&flow=xtls-rprx-vision&pbk=KpSo5m7AfnERJz2zbqi_Gqek65yGKzqvMYWiy9cMxCI&sid=4f3d16240bb853f8&fp=chrome&sni=www.apple.com&type=tcp&headerType=&host=www.apple.com&path=/#EPODONIOS",
       "host": "149.28.136.177",
@@ -6052,8 +5972,8 @@
     }
   },
   "155.103.69.33": {
-    "ok": 1.1443705369392971,
-    "fail": 8.332281830033345,
+    "ok": 1.0299334832453675,
+    "fail": 8.49905364703001,
     "first_seen": "2026-07-02T23:22:23.904295+00:00",
     "last_seen": "2026-07-04T10:26:14.376092+00:00",
     "node": {
@@ -6072,10 +5992,10 @@
     }
   },
   "vip2.firelinkvpn.shop": {
-    "ok": 9.47665236697264,
+    "ok": 9.528987130275377,
     "fail": 0.0,
     "first_seen": "2026-07-02T23:22:23.904326+00:00",
-    "last_seen": "2026-07-06T18:23:34.686700+00:00",
+    "last_seen": "2026-07-06T21:49:41.818120+00:00",
     "node": {
       "raw": "vless://969dee57-c8a8-4639-866f-2831c672dcd1@vip2.firelinkvpn.shop:8443?encryption=none&type=tcp&security=reality&fp=qq&sni=play.google.com&pbk=rfGoDoJdPrfhxrdL2neDnkGFuV3R4UjKJZPWbfXIvCg&sid=91b8&spx=/# By EbraSha 🌪️",
       "host": "vip2.firelinkvpn.shop",
@@ -6092,10 +6012,10 @@
     }
   },
   "185.159.75.160": {
-    "ok": 9.47665236697264,
+    "ok": 9.528987130275377,
     "fail": 0.0,
     "first_seen": "2026-07-02T23:22:23.904388+00:00",
-    "last_seen": "2026-07-06T18:23:34.686710+00:00",
+    "last_seen": "2026-07-06T21:49:41.818129+00:00",
     "node": {
       "raw": "vless://f097453b-5fa6-48a7-a164-7fe7ef89a140@185.159.75.160:1443?flow=xtls-rprx-vision&spx=/GzNxoxbNfQAdq4F&security=reality&sid=2ce30d4ba28b2e97&pbk=LM5y6SHLrbW00XvaN030dTyz8OFsxpb7mjFb84p3LUw&sni=www.github.com&type=tcp&fp=firefox# By EbraSha 🌀",
       "host": "185.159.75.160",
@@ -6112,10 +6032,10 @@
     }
   },
   "147.45.39.93": {
-    "ok": 9.353891811077334,
+    "ok": 9.4185026299696,
     "fail": 0.0,
     "first_seen": "2026-07-03T07:37:57.135251+00:00",
-    "last_seen": "2026-07-06T18:23:34.686720+00:00",
+    "last_seen": "2026-07-06T21:49:41.818139+00:00",
     "node": {
       "raw": "vless://3ef170be-05d0-479c-9753-aa2f860964ea@147.45.39.93:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=cloudflare.com&fp=firefox&pbk=C1hW1bTA9WOacIK-fHHg-HLkDZ3FY7FhEhAyldMSUEA&sid=a1b2c3d4e5f6&packetEncoding=xudp# By EbraSha 🕶️",
       "host": "147.45.39.93",
@@ -6132,10 +6052,10 @@
     }
   },
   "germany.lorluma.ir": {
-    "ok": 8.777117820858972,
-    "fail": 0.5767739902183612,
+    "ok": 8.899406038773076,
+    "fail": 0.5190965911965251,
     "first_seen": "2026-07-03T07:37:57.135330+00:00",
-    "last_seen": "2026-07-06T18:23:34.688253+00:00",
+    "last_seen": "2026-07-06T21:49:41.818773+00:00",
     "node": {
       "raw": "vless://b4229f01-45e5-4da1-9471-b76227fa5dc8@germany.lorluma.ir:6300?security=reality&encryption=none&pbk=lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo&headerType=none&fp=qq&type=tcp&sni=play.google.com# By EbraSha 🪖",
       "host": "germany.lorluma.ir",
@@ -6192,8 +6112,8 @@
     }
   },
   "bc-nl-rdp.ray-balance.space": {
-    "ok": 1.8957576394063334,
-    "fail": 7.458134171671,
+    "ok": 1.7061818754657,
+    "fail": 7.7123207545039,
     "first_seen": "2026-07-03T07:37:57.135486+00:00",
     "last_seen": "2026-07-04T23:11:15.900924+00:00",
     "node": {
@@ -6232,10 +6152,10 @@
     }
   },
   "all136.allenshop66245.ir": {
-    "ok": 9.274125368000462,
-    "fail": 0.07976644307687257,
+    "ok": 9.346712831200415,
+    "fail": 0.07178979876918531,
     "first_seen": "2026-07-03T07:37:57.135587+00:00",
-    "last_seen": "2026-07-06T18:23:34.687254+00:00",
+    "last_seen": "2026-07-06T21:49:41.818631+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all136.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 📼",
       "host": "all136.allenshop66245.ir",
@@ -6272,10 +6192,10 @@
     }
   },
   "all104.allenshop66245.ir": {
-    "ok": 8.156471322077333,
-    "fail": 1.1974204890000002,
+    "ok": 8.3408241898696,
+    "fail": 1.0776784401000001,
     "first_seen": "2026-07-03T07:37:57.135665+00:00",
-    "last_seen": "2026-07-06T18:23:34.687583+00:00",
+    "last_seen": "2026-07-06T21:49:41.818933+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all104.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🎯",
       "host": "all104.allenshop66245.ir",
@@ -6292,10 +6212,10 @@
     }
   },
   "all094.allenshop66245.ir": {
-    "ok": 8.456095060761871,
-    "fail": 0.8260069515462758,
+    "ok": 8.610485554685685,
+    "fail": 0.7434062563916483,
     "first_seen": "2026-07-03T10:52:46.467432+00:00",
-    "last_seen": "2026-07-06T18:23:34.687515+00:00",
+    "last_seen": "2026-07-06T21:49:41.818848+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all094.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🕷️",
       "host": "all094.allenshop66245.ir",
@@ -6312,10 +6232,10 @@
     }
   },
   "alese.locations-sub.com": {
-    "ok": 8.96829141621815,
-    "fail": 0.31381059609000017,
+    "ok": 9.071462274596335,
+    "fail": 0.28242953648100017,
     "first_seen": "2026-07-03T10:52:46.467511+00:00",
-    "last_seen": "2026-07-06T18:23:34.687361+00:00",
+    "last_seen": "2026-07-06T21:49:41.818715+00:00",
     "node": {
       "raw": "vless://8f6ccdb2-2b4e-4834-a90b-344bff490402@aleSE.locations-sub.com:6300?security=reality&type=tcp&headerType=&path=&host=&sni=play.google.com&fp=qq&pbk=lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo&sid=# By EbraSha ♦️",
       "host": "alese.locations-sub.com",
@@ -6332,10 +6252,10 @@
     }
   },
   "hayabusa.proxy.rlwy.net": {
-    "ok": 5.949135458643464,
-    "fail": 3.6269529586043765,
+    "ok": 6.354221912779117,
+    "fail": 3.264257662743939,
     "first_seen": "2026-07-03T10:52:46.467559+00:00",
-    "last_seen": "2026-07-06T18:23:34.687755+00:00",
+    "last_seen": "2026-07-06T21:49:41.819117+00:00",
     "node": {
       "raw": "vless://40b4f625-0c54-465e-8af8-8337bdda1764@hayabusa.proxy.rlwy.net:28359?security=reality&encryption=none&pbk=63AZXTQxNB-buH70Un0wIs_d5Km227FXyFKK62fRjBM&headerType=none&fp=firefox&spx=%2FE5vsnrLvUODBqSt&type=tcp&sni=www.cloudflare.com&sid=144b# By EbraSha 🦇",
       "host": "hayabusa.proxy.rlwy.net",
@@ -6352,10 +6272,10 @@
     }
   },
   "132.243.254.58": {
-    "ok": 9.202335569231277,
+    "ok": 9.28210201230815,
     "fail": 0.0,
     "first_seen": "2026-07-03T14:32:04.639511+00:00",
-    "last_seen": "2026-07-06T18:23:34.686730+00:00",
+    "last_seen": "2026-07-06T21:49:41.818147+00:00",
     "node": {
       "raw": "vless://98de0f0d-faec-43e1-ab40-a3bd6d91ceb8@132.243.254.58:443?encryption=none&flow=xtls-rprx-vision&fp=&pbk=BR69ZK8WI9lWKssofXxe45kViW7TcBoIPKv5aZI4uxE&security=reality&sid=abcd1234&sni=www.google.com&type=tcp# By EbraSha 🔥",
       "host": "132.243.254.58",
@@ -6372,10 +6292,10 @@
     }
   },
   "all112.allenshop66245.ir": {
-    "ok": 8.442126644681666,
-    "fail": 0.7602089245496102,
+    "ok": 8.5979139802135,
+    "fail": 0.6841880320946492,
     "first_seen": "2026-07-03T14:32:04.639591+00:00",
-    "last_seen": "2026-07-06T18:23:34.687466+00:00",
+    "last_seen": "2026-07-06T21:49:41.818816+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all112.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ⛓️",
       "host": "all112.allenshop66245.ir",
@@ -6392,10 +6312,10 @@
     }
   },
   "172.207.210.238": {
-    "ok": 9.103858479012915,
-    "fail": 0.0984770902183612,
+    "ok": 9.193472631111623,
+    "fail": 0.08862938119652508,
     "first_seen": "2026-07-03T14:32:04.639733+00:00",
-    "last_seen": "2026-07-06T18:23:34.687263+00:00",
+    "last_seen": "2026-07-06T21:49:41.818640+00:00",
     "node": {
       "raw": "vless://39d1c043-7bc5-4876-9d07-58574c023850@172.207.210.238:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=safari&pbk=Oua7ls5NZ2sxxFSyccAHZCMrCjW34WPEsHbaIpWmxX8&sid=ac78f53d# By EbraSha 🔥",
       "host": "172.207.210.238",
@@ -6412,8 +6332,8 @@
     }
   },
   "speedtest-chekhost-fastly.amuseftdomainroyal.com": {
-    "ok": 0.7814243580014072,
-    "fail": 8.332281830033345,
+    "ok": 0.7032819222012665,
+    "fail": 8.49905364703001,
     "first_seen": "2026-07-03T17:47:35.870309+00:00",
     "last_seen": "2026-07-04T10:26:14.376168+00:00",
     "node": {
@@ -6432,10 +6352,10 @@
     }
   },
   "157.85.230.247": {
-    "ok": 9.113706188034751,
+    "ok": 9.202335569231277,
     "fail": 0.0,
     "first_seen": "2026-07-03T17:47:35.870367+00:00",
-    "last_seen": "2026-07-06T18:23:34.686740+00:00",
+    "last_seen": "2026-07-06T21:49:41.818156+00:00",
     "node": {
       "raw": "vless://85357d35-492e-4814-835a-aba4cb7f00ad@157.85.230.247:64371?encryption=none&flow=xtls-rprx-vision&security=reality&sni=apple.com&fp=chrome&pbk=lvNgDfAnK72MtJYd3VcZWgmpKUABdH8jfUghJIScdSM&sid=38c7778a&type=tcp&headerType=none# By EbraSha 🕷️",
       "host": "157.85.230.247",
@@ -6452,10 +6372,10 @@
     }
   },
   "all016.allenshop66245.ir": {
-    "ok": 7.884938263485141,
-    "fail": 1.2287679245496101,
+    "ok": 8.096444437136627,
+    "fail": 1.1058911320946492,
     "first_seen": "2026-07-03T17:47:35.870408+00:00",
-    "last_seen": "2026-07-06T15:56:50.162657+00:00",
+    "last_seen": "2026-07-06T21:49:41.818952+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all016.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🔮",
       "host": "all016.allenshop66245.ir",
@@ -6472,8 +6392,8 @@
     }
   },
   "91.107.182.97": {
-    "ok": 0.5161754507863802,
-    "fail": 8.49905364703001,
+    "ok": 0.46455790570774214,
+    "fail": 8.649148282327008,
     "first_seen": "2026-07-03T19:47:17.531127+00:00",
     "last_seen": "2026-07-04T03:56:30.923254+00:00",
     "node": {
@@ -6512,10 +6432,10 @@
     }
   },
   "all083.allenshop66245.ir": {
-    "ok": 8.88014392604909,
-    "fail": 0.13508517176729928,
+    "ok": 8.992129533444182,
+    "fail": 0.12157665459056936,
     "first_seen": "2026-07-03T19:47:17.531240+00:00",
-    "last_seen": "2026-07-06T18:23:34.687292+00:00",
+    "last_seen": "2026-07-06T21:49:41.818665+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all083.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🪐",
       "host": "all083.allenshop66245.ir",
@@ -6532,10 +6452,10 @@
     }
   },
   "check07.allenshop66244.ir": {
-    "ok": 9.01522909781639,
+    "ok": 9.113706188034751,
     "fail": 0.0,
     "first_seen": "2026-07-03T19:47:17.531407+00:00",
-    "last_seen": "2026-07-06T18:23:34.686750+00:00",
+    "last_seen": "2026-07-06T21:49:41.818165+00:00",
     "node": {
       "raw": "vless://cc3e6e36-b329-435b-bb71-192fb5c718ae@check07.allenshop66244.ir:8443/?type=tcp&encryption=none&sni=play.google.com&fp=firefox&security=reality&pbk=D8uvi--0Aq7Hjc7cYnfcJGY0h4SSBCrPh7wEp1mvFlw&sid=b7b70c104ad267b8# By EbraSha ✨",
       "host": "check07.allenshop66244.ir",
@@ -6552,8 +6472,8 @@
     }
   },
   "91.107.152.129": {
-    "ok": 0.5735282786515334,
-    "fail": 8.332281830033345,
+    "ok": 0.5161754507863802,
+    "fail": 8.49905364703001,
     "first_seen": "2026-07-03T21:22:59.368986+00:00",
     "last_seen": "2026-07-04T10:26:14.376204+00:00",
     "node": {
@@ -6572,8 +6492,8 @@
     }
   },
   "pl-allnet.onlinernet.ir": {
-    "ok": 1.5267996734480316,
-    "fail": 7.257433780646277,
+    "ok": 1.3741197061032284,
+    "fail": 7.53169040258165,
     "first_seen": "2026-07-03T23:19:27.412590+00:00",
     "last_seen": "2026-07-05T09:24:17.923250+00:00",
     "node": {
@@ -6612,8 +6532,8 @@
     }
   },
   "teain.org": {
-    "ok": 0.45195162406096423,
-    "fail": 8.332281830033345,
+    "ok": 0.40675646165486784,
+    "fail": 8.49905364703001,
     "first_seen": "2026-07-03T23:19:27.412750+00:00",
     "last_seen": "2026-07-04T10:26:14.376213+00:00",
     "node": {
@@ -6632,8 +6552,8 @@
     }
   },
   "45.92.1.131": {
-    "ok": 1.3260992824233078,
-    "fail": 7.458134171671,
+    "ok": 1.193489354180977,
+    "fail": 7.7123207545039,
     "first_seen": "2026-07-03T23:19:27.412903+00:00",
     "last_seen": "2026-07-04T23:11:15.900977+00:00",
     "node": {
@@ -6672,10 +6592,10 @@
     }
   },
   "all082.allenshop66245.ir": {
-    "ok": 8.784233454094307,
+    "ok": 8.905810108684877,
     "fail": 0.0,
     "first_seen": "2026-07-03T23:19:27.413019+00:00",
-    "last_seen": "2026-07-06T18:23:34.686760+00:00",
+    "last_seen": "2026-07-06T21:49:41.818175+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all082.allenshop66245.ir:443?security=reality&encryption=none&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&headerType=none&fp=firefox&spx=%2F&type=tcp&sni=play.google.com&sid=98fa0b00d09419f7# By EbraSha ♠️",
       "host": "all082.allenshop66245.ir",
@@ -6692,8 +6612,8 @@
     }
   },
   "45.194.66.12": {
-    "ok": 0.45195162406096423,
-    "fail": 8.332281830033345,
+    "ok": 0.40675646165486784,
+    "fail": 8.49905364703001,
     "first_seen": "2026-07-03T23:19:27.413082+00:00",
     "last_seen": "2026-07-04T10:26:14.376239+00:00",
     "node": {
@@ -6712,10 +6632,10 @@
     }
   },
   "all074.allenshop66245.ir": {
-    "ok": 8.649148282327008,
+    "ok": 8.784233454094307,
     "fail": 0.0,
     "first_seen": "2026-07-04T03:56:30.923941+00:00",
-    "last_seen": "2026-07-06T18:23:34.686769+00:00",
+    "last_seen": "2026-07-06T21:49:41.818183+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all074.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 📱",
       "host": "all074.allenshop66245.ir",
@@ -6732,8 +6652,8 @@
     }
   },
   "13.37.228.146": {
-    "ok": 0.2058911320946491,
-    "fail": 7.94108867905351,
+    "ok": 0.1853020188851842,
+    "fail": 8.14697981114816,
     "first_seen": "2026-07-04T03:56:30.923996+00:00",
     "last_seen": "2026-07-04T03:56:30.923998+00:00",
     "node": {
@@ -6772,8 +6692,8 @@
     }
   },
   "odqwd.foot8all.ir": {
-    "ok": 2.650690389667666,
-    "fail": 5.848363257362343,
+    "ok": 2.3856213507008994,
+    "fail": 6.263526931626108,
     "first_seen": "2026-07-04T10:26:14.376936+00:00",
     "last_seen": "2026-07-06T11:00:16.902664+00:00",
     "node": {
@@ -6812,10 +6732,10 @@
     }
   },
   "swed-yott.red-panda.top": {
-    "ok": 8.49905364703001,
+    "ok": 8.649148282327008,
     "fail": 0.0,
     "first_seen": "2026-07-04T10:26:14.377165+00:00",
-    "last_seen": "2026-07-06T18:23:34.686779+00:00",
+    "last_seen": "2026-07-06T21:49:41.818192+00:00",
     "node": {
       "raw": "vless://f097453b-5fa6-48a7-a164-7fe7ef89a140@swed-yott.red-panda.top:1443?&security=reality&flow=xtls-rprx-vision&pbk=LM5y6SHLrbW00XvaN030dTyz8OFsxpb7mjFb84p3LUw&sid=2ce30d4ba28b2e97&fp=chrome&sni=www.github.com&type=tcp&headerType=none&host=swed-yott.red-panda.top&path=%2F# By EbraSha 🧬",
       "host": "swed-yott.red-panda.top",
@@ -6832,10 +6752,10 @@
     }
   },
   "franceclouding.iranlast.com": {
-    "ok": 4.1239588933804,
-    "fail": 4.375094753649611,
+    "ok": 4.71156300404236,
+    "fail": 3.93758527828465,
     "first_seen": "2026-07-04T10:26:14.377189+00:00",
-    "last_seen": "2026-07-06T15:56:50.163028+00:00",
+    "last_seen": "2026-07-06T21:49:41.819144+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@franceclouding.iranlast.com:7000?security=reality&encryption=none&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&headerType=none&fp=qq&type=tcp&sni=yahoo.com# By EbraSha 📼",
       "host": "franceclouding.iranlast.com",
@@ -6852,8 +6772,8 @@
     }
   },
   "all105.allenshop66245.ir": {
-    "ok": 7.789703309393734,
-    "fail": 0.5425785206396101,
+    "ok": 7.010732978454361,
+    "fail": 1.4883206685756492,
     "first_seen": "2026-07-04T15:20:23.605785+00:00",
     "last_seen": "2026-07-06T18:23:34.687429+00:00",
     "node": {
@@ -6872,8 +6792,8 @@
     }
   },
   "germanclouding.iranlast.com": {
-    "ok": 0.9278092702937332,
-    "fail": 7.404472559739611,
+    "ok": 0.8350283432643598,
+    "fail": 7.6640253037656505,
     "first_seen": "2026-07-04T15:20:23.605981+00:00",
     "last_seen": "2026-07-05T04:14:56.998734+00:00",
     "node": {
@@ -6892,10 +6812,10 @@
     }
   },
   "luemborgclouding.iranlast.com": {
-    "ok": 8.332281830033345,
+    "ok": 8.49905364703001,
     "fail": 0.0,
     "first_seen": "2026-07-04T15:20:23.606011+00:00",
-    "last_seen": "2026-07-06T18:23:34.686788+00:00",
+    "last_seen": "2026-07-06T21:49:41.818201+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@luemborgclouding.iranlast.com:7009?encryption=none&security=reality&sni=yahoo.com&fp=qq&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&type=tcp&headerType=none# By EbraSha 🧊",
       "host": "luemborgclouding.iranlast.com",
@@ -6912,10 +6832,10 @@
     }
   },
   "147.45.78.118": {
-    "ok": 8.332281830033345,
+    "ok": 8.49905364703001,
     "fail": 0.0,
     "first_seen": "2026-07-04T15:20:23.606039+00:00",
-    "last_seen": "2026-07-06T18:23:34.686798+00:00",
+    "last_seen": "2026-07-06T21:49:41.818211+00:00",
     "node": {
       "raw": "vless://0281c1be-e123-480a-a104-d0b506ecfc7d@147.45.78.118:443?type=tcp&security=reality&sni=www.google.com&fp=firefox&flow=xtls-rprx-vision&pbk=CJoXyyPzLgs7qeqEjvrnMlpYOPVfNHqPF0uuZpq_QUU&sid=abcd1234# By EbraSha 🧠",
       "host": "147.45.78.118",
@@ -6932,8 +6852,8 @@
     }
   },
   "178.128.204.102": {
-    "ok": 0.6888456394771592,
-    "fail": 7.458134171671,
+    "ok": 0.6199610755294432,
+    "fail": 7.7123207545039,
     "first_seen": "2026-07-04T17:21:33.146524+00:00",
     "last_seen": "2026-07-04T23:11:15.901029+00:00",
     "node": {
@@ -6952,10 +6872,10 @@
     }
   },
   "162.19.128.200": {
-    "ok": 7.137241911148159,
-    "fail": 1.0097379,
+    "ok": 7.4235177200333435,
+    "fail": 0.90876411,
     "first_seen": "2026-07-04T17:21:33.146587+00:00",
-    "last_seen": "2026-07-06T18:23:34.687573+00:00",
+    "last_seen": "2026-07-06T21:49:41.818881+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@162.19.128.200:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ✨",
       "host": "162.19.128.200",
@@ -6972,10 +6892,10 @@
     }
   },
   "all131.allenshop66245.ir": {
-    "ok": 8.14697981114816,
+    "ok": 8.332281830033345,
     "fail": 0.0,
     "first_seen": "2026-07-04T17:21:33.146646+00:00",
-    "last_seen": "2026-07-06T18:23:34.686808+00:00",
+    "last_seen": "2026-07-06T21:49:41.818220+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all131.allenshop66245.ir:443?type=tcp&security=reality&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&fp=firefox&sni=play.google.com&sid=98fa0b00d09419f7&spx=%2F# By EbraSha 🚀",
       "host": "all131.allenshop66245.ir",
@@ -7012,8 +6932,8 @@
     }
   },
   "nldnode1.frost-api.com": {
-    "ok": 0.48295450738251006,
-    "fail": 7.458134171671,
+    "ok": 0.4346590566442591,
+    "fail": 7.7123207545039,
     "first_seen": "2026-07-04T19:32:04.494736+00:00",
     "last_seen": "2026-07-04T23:11:15.901056+00:00",
     "node": {
@@ -7032,10 +6952,10 @@
     }
   },
   "46.225.142.133": {
-    "ok": 7.7123207545039,
+    "ok": 7.94108867905351,
     "fail": 0.0,
     "first_seen": "2026-07-04T23:11:15.901788+00:00",
-    "last_seen": "2026-07-06T18:23:34.686817+00:00",
+    "last_seen": "2026-07-06T21:49:41.818228+00:00",
     "node": {
       "raw": "vless://969dee57-c8a8-4639-866f-2831c672dcd1@46.225.142.133:8443?security=reality&sni=play.google.com&type=tcp&fp=qq&pbk=rfGoDoJdPrfhxrdL2neDnkGFuV3R4UjKJZPWbfXIvCg&sid=91b8# By EbraSha 🔮",
       "host": "46.225.142.133",
@@ -7052,10 +6972,10 @@
     }
   },
   "57.131.17.109": {
-    "ok": 7.462791779053511,
-    "fail": 0.47829690000000014,
+    "ok": 7.7165126011481595,
+    "fail": 0.43046721000000016,
     "first_seen": "2026-07-04T23:11:15.902024+00:00",
-    "last_seen": "2026-07-06T18:23:34.687419+00:00",
+    "last_seen": "2026-07-06T21:49:41.818765+00:00",
     "node": {
       "raw": "vless://8f6ccdb2-2b4e-4834-a90b-344bff490402@57.131.17.109:6300?security=reality&sni=play.google.com&type=tcp&fp=qq&pbk=lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo# By EbraSha 🔥",
       "host": "57.131.17.109",
@@ -7072,10 +6992,10 @@
     }
   },
   "all046.allenshop2025.ir": {
-    "ok": 7.458134171671,
+    "ok": 7.7123207545039,
     "fail": 0.0,
     "first_seen": "2026-07-05T04:14:56.998909+00:00",
-    "last_seen": "2026-07-06T18:23:34.686826+00:00",
+    "last_seen": "2026-07-06T21:49:41.818237+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all046.allenshop2025.ir:443?security=reality&encryption=none&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&headerType=none&fp=firefox&spx=%2F&type=tcp&sni=play.google.com&sid=98fa0b00d09419f7# By EbraSha 🩸",
       "host": "all046.allenshop2025.ir",
@@ -7092,10 +7012,10 @@
     }
   },
   "54.37.2.131": {
-    "ok": 7.458134171671,
+    "ok": 7.7123207545039,
     "fail": 0.0,
     "first_seen": "2026-07-05T04:14:56.999086+00:00",
-    "last_seen": "2026-07-06T18:23:34.686835+00:00",
+    "last_seen": "2026-07-06T21:49:41.818246+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@54.37.2.131:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🧿",
       "host": "54.37.2.131",
@@ -7112,10 +7032,10 @@
     }
   },
   "all196.allenshop66245.ir": {
-    "ok": 7.458134171671,
+    "ok": 7.7123207545039,
     "fail": 0.0,
     "first_seen": "2026-07-05T04:14:56.999129+00:00",
-    "last_seen": "2026-07-06T18:23:34.686843+00:00",
+    "last_seen": "2026-07-06T21:49:41.818255+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all196.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ⚡",
       "host": "all196.allenshop66245.ir",
@@ -7132,10 +7052,10 @@
     }
   },
   "195.201.232.215": {
-    "ok": 7.458134171671,
+    "ok": 7.7123207545039,
     "fail": 0.0,
     "first_seen": "2026-07-05T04:14:56.999198+00:00",
-    "last_seen": "2026-07-06T18:23:34.686852+00:00",
+    "last_seen": "2026-07-06T21:49:41.818263+00:00",
     "node": {
       "raw": "vless://5e8add97-7e48-458a-a000-32d0d6fa253e@195.201.232.215:8443?mode=auto&path=/&security=reality&encryption=none&pbk=nm8EUwqyxdBuJke7StEgzNV9BEeVYDNqfRFb3v_KI2w&host=play.google.com&fp=chrome&type=xhttp&sni=play.google.com&sid=099fadc24a55af9a# By EbraSha ✨",
       "host": "195.201.232.215",
@@ -7172,8 +7092,8 @@
     }
   },
   "31.56.186.146": {
-    "ok": 1.0499095251900001,
-    "fail": 6.12579511,
+    "ok": 0.9449185726710001,
+    "fail": 6.5132155990000005,
     "first_seen": "2026-07-05T09:24:17.923396+00:00",
     "last_seen": "2026-07-05T14:03:44.313184+00:00",
     "node": {
@@ -7192,8 +7112,8 @@
     }
   },
   "51.195.232.106": {
-    "ok": 2.4901146351900008,
-    "fail": 4.68559,
+    "ok": 2.241103171671001,
+    "fail": 5.217031,
     "first_seen": "2026-07-05T09:24:17.923454+00:00",
     "last_seen": "2026-07-05T19:42:41.022492+00:00",
     "node": {
@@ -7212,8 +7132,8 @@
     }
   },
   "polja.foot8all.ir": {
-    "ok": 2.2014890361900004,
-    "fail": 4.974215599000001,
+    "ok": 1.9813401325710003,
+    "fail": 5.4767940391000005,
     "first_seen": "2026-07-05T09:24:17.923904+00:00",
     "last_seen": "2026-07-06T11:00:16.902672+00:00",
     "node": {
@@ -7232,8 +7152,8 @@
     }
   },
   "51.83.251.60": {
-    "ok": 1.8528105960900005,
-    "fail": 5.322894039100001,
+    "ok": 1.6675295364810006,
+    "fail": 5.790604635190001,
     "first_seen": "2026-07-05T11:47:49.692889+00:00",
     "last_seen": "2026-07-06T11:00:16.902682+00:00",
     "node": {
@@ -7252,8 +7172,8 @@
     }
   },
   "::ffff:193.24.209.106": {
-    "ok": 0.34867844010000015,
-    "fail": 6.5132155990000005,
+    "ok": 0.31381059609000017,
+    "fail": 6.861894039100001,
     "first_seen": "2026-07-05T11:47:49.692977+00:00",
     "last_seen": "2026-07-05T11:47:49.692979+00:00",
     "node": {
@@ -7272,8 +7192,8 @@
     }
   },
   "q.telewebion.ir.varzesh3.com.de": {
-    "ok": 0.38742048900000015,
-    "fail": 6.12579511,
+    "ok": 0.34867844010000015,
+    "fail": 6.5132155990000005,
     "first_seen": "2026-07-05T14:03:44.313780+00:00",
     "last_seen": "2026-07-05T14:03:44.313783+00:00",
     "node": {
@@ -7292,10 +7212,10 @@
     }
   },
   "180.93.114.56": {
-    "ok": 5.981774599,
-    "fail": 0.5314410000000002,
+    "ok": 6.383597139100001,
+    "fail": 0.47829690000000014,
     "first_seen": "2026-07-05T14:03:44.313796+00:00",
-    "last_seen": "2026-07-06T18:23:34.687485+00:00",
+    "last_seen": "2026-07-06T21:49:41.818799+00:00",
     "node": {
       "raw": "vless://16a9c5d3-284c-4107-a98f-ad13a59d2899@180.93.114.56:9473?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=71ua1AXQS8ygAYdRvaJF31V_IfpTGqUb2r4Uu8APkU4&security=reality&sid=62f98698&sni=www.apple.com&type=tcp# By EbraSha 🪐",
       "host": "180.93.114.56",
@@ -7312,10 +7232,10 @@
     }
   },
   "155.117.137.239": {
-    "ok": 6.5132155990000005,
+    "ok": 6.861894039100001,
     "fail": 0.0,
     "first_seen": "2026-07-05T14:03:44.313893+00:00",
-    "last_seen": "2026-07-06T18:23:34.686861+00:00",
+    "last_seen": "2026-07-06T21:49:41.818272+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.239:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🦾",
       "host": "155.117.137.239",
@@ -7332,10 +7252,10 @@
     }
   },
   "149.88.28.132": {
-    "ok": 6.5132155990000005,
+    "ok": 6.861894039100001,
     "fail": 0.0,
     "first_seen": "2026-07-05T14:03:44.313974+00:00",
-    "last_seen": "2026-07-06T18:23:34.686870+00:00",
+    "last_seen": "2026-07-06T21:49:41.818280+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@149.88.28.132:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🐺",
       "host": "149.88.28.132",
@@ -7352,10 +7272,10 @@
     }
   },
   "149.88.28.130": {
-    "ok": 6.5132155990000005,
+    "ok": 6.861894039100001,
     "fail": 0.0,
     "first_seen": "2026-07-05T14:03:44.314003+00:00",
-    "last_seen": "2026-07-06T18:23:34.686879+00:00",
+    "last_seen": "2026-07-06T21:49:41.818289+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@149.88.28.130:443?security=reality&encryption=none&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=cdn6-49.yahoo.com&sid=3c9c5d01c6f824dd# By EbraSha 🪬",
       "host": "149.88.28.130",
@@ -7372,8 +7292,8 @@
     }
   },
   "45.192.196.226": {
-    "ok": 0.817887699,
-    "fail": 5.6953279000000006,
+    "ok": 0.7360989291000001,
+    "fail": 6.12579511,
     "first_seen": "2026-07-05T14:03:44.314048+00:00",
     "last_seen": "2026-07-05T15:27:18.347144+00:00",
     "node": {
@@ -7392,10 +7312,10 @@
     }
   },
   "204.168.141.172": {
-    "ok": 5.981774599,
-    "fail": 0.5314410000000002,
+    "ok": 6.383597139100001,
+    "fail": 0.47829690000000014,
     "first_seen": "2026-07-05T14:03:44.314078+00:00",
-    "last_seen": "2026-07-06T18:23:34.687495+00:00",
+    "last_seen": "2026-07-06T21:49:41.818808+00:00",
     "node": {
       "raw": "vless://8f6ccdb2-2b4e-4834-a90b-344bff490402@204.168.141.172:6300?security=reality&sni=play.google.com&type=tcp&fp=qq&pbk=lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo# By EbraSha ⌨️",
       "host": "204.168.141.172",
@@ -7412,10 +7332,10 @@
     }
   },
   "155.117.137.110": {
-    "ok": 6.5132155990000005,
+    "ok": 6.861894039100001,
     "fail": 0.0,
     "first_seen": "2026-07-05T14:03:44.314107+00:00",
-    "last_seen": "2026-07-06T18:23:34.686889+00:00",
+    "last_seen": "2026-07-06T21:49:41.818297+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.110:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=cdn6-49.yahoo.com&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&sid=3c9c5d01c6f824dd&type=tcp&headerType=none# By EbraSha 🖥️",
       "host": "155.117.137.110",
@@ -7432,8 +7352,8 @@
     }
   },
   "dex.mpzdev.ir": {
-    "ok": 3.309138976581001,
-    "fail": 4.14899519509,
+    "ok": 2.978225078922901,
+    "fail": 4.734095675581001,
     "first_seen": "2026-07-05T14:03:44.314120+00:00",
     "last_seen": "2026-07-06T18:23:34.687778+00:00",
     "node": {
@@ -7452,10 +7372,10 @@
     }
   },
   "5.223.67.129": {
-    "ok": 6.5132155990000005,
+    "ok": 6.861894039100001,
     "fail": 0.0,
     "first_seen": "2026-07-05T14:03:44.314163+00:00",
-    "last_seen": "2026-07-06T18:23:34.686898+00:00",
+    "last_seen": "2026-07-06T21:49:41.818306+00:00",
     "node": {
       "raw": "vless://eb295947-24de-4fe3-9b8f-85431e5fe493@5.223.67.129:8443?flow=xtls-rprx-vision&fp=firefox&pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ&security=reality&sni=apple.com&type=tcp# By EbraSha 🚀",
       "host": "5.223.67.129",
@@ -7472,10 +7392,10 @@
     }
   },
   "all128.allenshop66245.ir": {
-    "ok": 5.59435411,
-    "fail": 0.5314410000000002,
+    "ok": 6.034918699,
+    "fail": 0.47829690000000014,
     "first_seen": "2026-07-05T15:27:18.347906+00:00",
-    "last_seen": "2026-07-06T18:23:34.687533+00:00",
+    "last_seen": "2026-07-06T21:49:41.818831+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all128.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=chrome&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 📼",
       "host": "all128.allenshop66245.ir",
@@ -7492,10 +7412,10 @@
     }
   },
   "it-just.dataload-cdn.ru": {
-    "ok": 6.12579511,
+    "ok": 6.5132155990000005,
     "fail": 0.0,
     "first_seen": "2026-07-05T15:27:18.347933+00:00",
-    "last_seen": "2026-07-06T18:23:34.686907+00:00",
+    "last_seen": "2026-07-06T21:49:41.818315+00:00",
     "node": {
       "raw": "vless://a2415a12-3f92-4636-9823-9828d3ceb818@it-just.dataload-cdn.ru:443?security=reality&encryption=none&pbk=lZf2K14GxiyyUM4zovDM20iuvkYQcGrXbPd18F3Jyzo&host=it-just.dataload-cdn.ru&headerType=none&fp=chrome&type=tcp&sni=www.sony.com&sid=1ab2#EPODONIOS",
       "host": "it-just.dataload-cdn.ru",
@@ -7512,10 +7432,10 @@
     }
   },
   "155.117.137.53": {
-    "ok": 6.12579511,
+    "ok": 6.5132155990000005,
     "fail": 0.0,
     "first_seen": "2026-07-05T15:27:18.348104+00:00",
-    "last_seen": "2026-07-06T18:23:34.686916+00:00",
+    "last_seen": "2026-07-06T21:49:41.818323+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.53:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🛡️",
       "host": "155.117.137.53",
@@ -7532,10 +7452,10 @@
     }
   },
   "54.37.6.235": {
-    "ok": 4.59435411,
-    "fail": 1.531441,
+    "ok": 5.134918699,
+    "fail": 1.3782969,
     "first_seen": "2026-07-05T15:27:18.348119+00:00",
-    "last_seen": "2026-07-06T15:56:50.162908+00:00",
+    "last_seen": "2026-07-06T21:49:41.819064+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@54.37.6.235:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🐉",
       "host": "54.37.6.235",
@@ -7552,10 +7472,10 @@
     }
   },
   "162.19.156.170": {
-    "ok": 6.12579511,
+    "ok": 6.5132155990000005,
     "fail": 0.0,
     "first_seen": "2026-07-05T15:27:18.348185+00:00",
-    "last_seen": "2026-07-06T18:23:34.686924+00:00",
+    "last_seen": "2026-07-06T21:49:41.818331+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@162.19.156.170:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ⚔️",
       "host": "162.19.156.170",
@@ -7572,8 +7492,8 @@
     }
   },
   "ger2.shireporcharb.com": {
-    "ok": 1.0097379,
-    "fail": 4.68559,
+    "ok": 0.90876411,
+    "fail": 5.217031,
     "first_seen": "2026-07-05T17:27:15.507642+00:00",
     "last_seen": "2026-07-05T19:42:41.022568+00:00",
     "node": {
@@ -7592,10 +7512,10 @@
     }
   },
   "engelestanclouding.iranlast.com": {
-    "ok": 5.6953279000000006,
+    "ok": 6.12579511,
     "fail": 0.0,
     "first_seen": "2026-07-05T17:27:15.507718+00:00",
-    "last_seen": "2026-07-06T18:23:34.686934+00:00",
+    "last_seen": "2026-07-06T21:49:41.818340+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@engelestanclouding.iranlast.com:7009?encryption=none&security=reality&sni=yahoo.com&fp=qq&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&type=tcp&headerType=none# By EbraSha 🎛️",
       "host": "engelestanclouding.iranlast.com",
@@ -7612,10 +7532,10 @@
     }
   },
   "all149.allenshop66245.ir": {
-    "ok": 5.6953279000000006,
+    "ok": 6.12579511,
     "fail": 0.0,
     "first_seen": "2026-07-05T17:27:15.507802+00:00",
-    "last_seen": "2026-07-06T18:23:34.686942+00:00",
+    "last_seen": "2026-07-06T21:49:41.818348+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all149.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ♦️",
       "host": "all149.allenshop66245.ir",
@@ -7632,8 +7552,8 @@
     }
   },
   "us-nyc-01.fsulink.com": {
-    "ok": 1.6002279000000001,
-    "fail": 4.0951,
+    "ok": 1.4402051100000002,
+    "fail": 4.68559,
     "first_seen": "2026-07-05T17:27:15.507961+00:00",
     "last_seen": "2026-07-05T21:18:06.161962+00:00",
     "node": {
@@ -7652,8 +7572,8 @@
     }
   },
   "fardad-nl.lorluma.ir": {
-    "ok": 1.2072969000000002,
-    "fail": 4.488031,
+    "ok": 1.0865672100000003,
+    "fail": 5.0392279,
     "first_seen": "2026-07-05T17:27:15.507986+00:00",
     "last_seen": "2026-07-06T04:22:10.206949+00:00",
     "node": {
@@ -7672,8 +7592,8 @@
     }
   },
   "talianaccentclouding.iranlast.com": {
-    "ok": 5.6953279000000006,
-    "fail": 0.0,
+    "ok": 5.12579511,
+    "fail": 1.0,
     "first_seen": "2026-07-05T17:27:15.508067+00:00",
     "last_seen": "2026-07-06T18:23:34.686952+00:00",
     "node": {
@@ -7692,10 +7612,10 @@
     }
   },
   "155.117.137.103": {
-    "ok": 5.6953279000000006,
+    "ok": 6.12579511,
     "fail": 0.0,
     "first_seen": "2026-07-05T17:27:15.508093+00:00",
-    "last_seen": "2026-07-06T18:23:34.686961+00:00",
+    "last_seen": "2026-07-06T21:49:41.818358+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.103:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha ⚡",
       "host": "155.117.137.103",
@@ -7712,10 +7632,10 @@
     }
   },
   "all065.allenshop66245.ir": {
-    "ok": 4.217031,
-    "fail": 1.0,
+    "ok": 4.7953279,
+    "fail": 0.9,
     "first_seen": "2026-07-05T19:42:41.023194+00:00",
-    "last_seen": "2026-07-06T15:56:50.162341+00:00",
+    "last_seen": "2026-07-06T21:49:41.819004+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@all065.allenshop66245.ir:443?security=reality&type=tcp&headerType=none&path=&host=&sni=play.google.com&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🖥️",
       "host": "all065.allenshop66245.ir",
@@ -7732,8 +7652,8 @@
     }
   },
   "2.26.28.179": {
-    "ok": 3.3170310000000005,
-    "fail": 1.9,
+    "ok": 2.9853279000000006,
+    "fail": 2.71,
     "first_seen": "2026-07-05T19:42:41.023256+00:00",
     "last_seen": "2026-07-06T11:00:16.902068+00:00",
     "node": {
@@ -7752,10 +7672,10 @@
     }
   },
   "51.89.117.21": {
-    "ok": 3.8755900000000003,
-    "fail": 0.81,
+    "ok": 4.488031,
+    "fail": 0.7290000000000001,
     "first_seen": "2026-07-05T21:18:06.162733+00:00",
-    "last_seen": "2026-07-06T18:23:34.687666+00:00",
+    "last_seen": "2026-07-06T21:49:41.818979+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@51.89.117.21:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha ♠️",
       "host": "51.89.117.21",
@@ -7772,10 +7692,10 @@
     }
   },
   "51.89.227.151": {
-    "ok": 4.68559,
+    "ok": 5.217031,
     "fail": 0.0,
     "first_seen": "2026-07-05T21:18:06.162939+00:00",
-    "last_seen": "2026-07-06T18:23:34.686972+00:00",
+    "last_seen": "2026-07-06T21:49:41.818367+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@51.89.227.151:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 🧿",
       "host": "51.89.227.151",
@@ -7792,8 +7712,8 @@
     }
   },
   "217.144.189.90": {
-    "ok": 3.78559,
-    "fail": 0.9,
+    "ok": 3.407031,
+    "fail": 1.81,
     "first_seen": "2026-07-05T21:18:06.163064+00:00",
     "last_seen": "2026-07-06T18:23:34.687685+00:00",
     "node": {
@@ -7812,8 +7732,8 @@
     }
   },
   "us-nyc-02.fsulink.com": {
-    "ok": 0.5904900000000002,
-    "fail": 4.0951,
+    "ok": 0.5314410000000002,
+    "fail": 4.68559,
     "first_seen": "2026-07-05T21:18:06.163082+00:00",
     "last_seen": "2026-07-05T21:18:06.163084+00:00",
     "node": {
@@ -7832,8 +7752,8 @@
     }
   },
   "nl2-unlimited.pavilof.ir": {
-    "ok": 0.6561000000000001,
-    "fail": 3.439,
+    "ok": 0.5904900000000002,
+    "fail": 4.0951,
     "first_seen": "2026-07-05T23:15:35.176230+00:00",
     "last_seen": "2026-07-05T23:15:35.176232+00:00",
     "node": {
@@ -7852,10 +7772,10 @@
     }
   },
   "155.117.137.89": {
-    "ok": 4.0951,
+    "ok": 4.68559,
     "fail": 0.0,
     "first_seen": "2026-07-05T23:15:35.176278+00:00",
-    "last_seen": "2026-07-06T18:23:34.686981+00:00",
+    "last_seen": "2026-07-06T21:49:41.818376+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.89:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🕶️",
       "host": "155.117.137.89",
@@ -7872,10 +7792,10 @@
     }
   },
   "155.117.137.174": {
-    "ok": 4.0951,
+    "ok": 4.68559,
     "fail": 0.0,
     "first_seen": "2026-07-05T23:15:35.176361+00:00",
-    "last_seen": "2026-07-06T18:23:34.686992+00:00",
+    "last_seen": "2026-07-06T21:49:41.818385+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.174:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🔮",
       "host": "155.117.137.174",
@@ -7892,10 +7812,10 @@
     }
   },
   "51.89.136.191": {
-    "ok": 4.0951,
+    "ok": 4.68559,
     "fail": 0.0,
     "first_seen": "2026-07-05T23:15:35.176371+00:00",
-    "last_seen": "2026-07-06T18:23:34.687001+00:00",
+    "last_seen": "2026-07-06T21:49:41.818393+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@51.89.136.191:7009?encryption=none&security=reality&sni=yahoo.com&fp=qq&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&type=tcp&headerType=none# By EbraSha ♣️",
       "host": "51.89.136.191",
@@ -7912,8 +7832,8 @@
     }
   },
   "e.ramcalshoping.ir": {
-    "ok": 2.1951,
-    "fail": 1.9,
+    "ok": 1.9755900000000002,
+    "fail": 2.71,
     "first_seen": "2026-07-05T23:15:35.176381+00:00",
     "last_seen": "2026-07-06T11:00:16.902117+00:00",
     "node": {
@@ -7932,8 +7852,8 @@
     }
   },
   "91.107.177.68": {
-    "ok": 0.7290000000000001,
-    "fail": 2.71,
+    "ok": 0.6561000000000001,
+    "fail": 3.439,
     "first_seen": "2026-07-06T04:22:10.206748+00:00",
     "last_seen": "2026-07-06T04:22:10.206750+00:00",
     "node": {
@@ -7952,10 +7872,10 @@
     }
   },
   "188.245.50.251": {
-    "ok": 3.439,
+    "ok": 4.0951,
     "fail": 0.0,
     "first_seen": "2026-07-06T04:22:10.206799+00:00",
-    "last_seen": "2026-07-06T18:23:34.687012+00:00",
+    "last_seen": "2026-07-06T21:49:41.818401+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@188.245.50.251:7000?security=reality&encryption=none&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&headerType=none&fp=qq&type=tcp&sni=yahoo.com# By EbraSha 🚨",
       "host": "188.245.50.251",
@@ -7972,10 +7892,10 @@
     }
   },
   "se.p2g.prod.innobharat.space": {
-    "ok": 2.629,
-    "fail": 0.81,
+    "ok": 3.3661,
+    "fail": 0.7290000000000001,
     "first_seen": "2026-07-06T04:22:10.206883+00:00",
-    "last_seen": "2026-07-06T18:23:34.687714+00:00",
+    "last_seen": "2026-07-06T21:49:41.819048+00:00",
     "node": {
       "raw": "vless://cb30e8c4-beff-46e3-9179-b45553144890@se.p2g.prod.innobharat.space:8443?encryption=none&flow=xtls-rprx-vision&type=raw&headerType=none&security=reality&fp=chrome&pbk=1KY_jqa2yPLBEBa-3TG77zs4ak2zQLGul4eexxCueyI&sni=github.com&sid=f087eb07da743e94# By EbraSha 🔐",
       "host": "se.p2g.prod.innobharat.space",
@@ -7992,10 +7912,10 @@
     }
   },
   "54.37.1.176": {
-    "ok": 1.71,
-    "fail": 1.0,
+    "ok": 2.5389999999999997,
+    "fail": 0.9,
     "first_seen": "2026-07-06T11:00:16.902721+00:00",
-    "last_seen": "2026-07-06T15:56:50.162393+00:00",
+    "last_seen": "2026-07-06T21:49:41.819096+00:00",
     "node": {
       "raw": "vless://36644091-0cec-47fe-9955-97c3f424baf7@54.37.1.176:443?security=reality&sni=play.google.com&type=tcp&fp=firefox&pbk=YRKpNLfduSsOl3l-CCUkhZDEjvcKytnuELqnWjLZI1M&sid=98fa0b00d09419f7# By EbraSha 👾",
       "host": "54.37.1.176",
@@ -8012,10 +7932,10 @@
     }
   },
   "155.117.137.153": {
-    "ok": 2.71,
+    "ok": 3.439,
     "fail": 0.0,
     "first_seen": "2026-07-06T11:00:16.902767+00:00",
-    "last_seen": "2026-07-06T18:23:34.687023+00:00",
+    "last_seen": "2026-07-06T21:49:41.818410+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.153:443?security=reality&type=tcp&packetEncoding=xudp&sni=cdn6-49.yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=3c9c5d01c6f824dd&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&encryption=none# By EbraSha 🥷",
       "host": "155.117.137.153",
@@ -8032,8 +7952,8 @@
     }
   },
   "e.telewebion.ir.varzesh3.com.de": {
-    "ok": 0.81,
-    "fail": 1.9,
+    "ok": 0.7290000000000001,
+    "fail": 2.71,
     "first_seen": "2026-07-06T11:00:16.902802+00:00",
     "last_seen": "2026-07-06T11:00:16.902804+00:00",
     "node": {
@@ -8052,10 +7972,10 @@
     }
   },
   "aleit.locations-sub.com": {
-    "ok": 2.71,
+    "ok": 3.439,
     "fail": 0.0,
     "first_seen": "2026-07-06T11:00:16.902856+00:00",
-    "last_seen": "2026-07-06T18:23:34.687032+00:00",
+    "last_seen": "2026-07-06T21:49:41.818418+00:00",
     "node": {
       "raw": "vless://8f6ccdb2-2b4e-4834-a90b-344bff490402@aleIT.locations-sub.com:6300?security=reality&encryption=none&pbk=lQbgwNDYw6Zbjdim0JtXUarzb-3GSjDvtX6FJYZD9Qo&headerType=none&fp=chrome&type=tcp&sni=play.google.com# By EbraSha 🛸",
       "host": "aleit.locations-sub.com",
@@ -8072,10 +7992,10 @@
     }
   },
   "141.227.138.193": {
-    "ok": 1.71,
-    "fail": 1.0,
+    "ok": 2.5389999999999997,
+    "fail": 0.9,
     "first_seen": "2026-07-06T11:00:16.902974+00:00",
-    "last_seen": "2026-07-06T15:56:50.162420+00:00",
+    "last_seen": "2026-07-06T21:49:41.819108+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@141.227.138.193:7009?encryption=none&security=reality&sni=yahoo.com&fp=qq&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&type=tcp&headerType=none# By EbraSha 🛸",
       "host": "141.227.138.193",
@@ -8092,10 +8012,10 @@
     }
   },
   "155.117.137.166": {
-    "ok": 1.9,
+    "ok": 2.71,
     "fail": 0.0,
     "first_seen": "2026-07-06T15:56:50.163069+00:00",
-    "last_seen": "2026-07-06T18:23:34.687043+00:00",
+    "last_seen": "2026-07-06T21:49:41.818426+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.166:443?security=reality&type=tcp&packetEncoding=xudp&sni=cdn6-49.yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=3c9c5d01c6f824dd&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&encryption=none# By EbraSha 🛰️",
       "host": "155.117.137.166",
@@ -8112,10 +8032,10 @@
     }
   },
   "141.227.168.83": {
-    "ok": 1.9,
+    "ok": 2.71,
     "fail": 0.0,
     "first_seen": "2026-07-06T15:56:50.163218+00:00",
-    "last_seen": "2026-07-06T18:23:34.687051+00:00",
+    "last_seen": "2026-07-06T21:49:41.818434+00:00",
     "node": {
       "raw": "vless://3f298aca-2412-49ac-9f20-235f0e448d31@141.227.168.83:7009?security=reality&encryption=none&pbk=f8TgqVBYK3tmhip3lJ-r8D0i6fqEF1Zy-zAfEhS-Cl8&headerType=none&fp=qq&type=tcp&sni=yahoo.com# By EbraSha 🕹️",
       "host": "141.227.168.83",
@@ -8132,10 +8052,10 @@
     }
   },
   "38.7.145.245": {
-    "ok": 1.9,
+    "ok": 2.71,
     "fail": 0.0,
     "first_seen": "2026-07-06T15:56:50.163304+00:00",
-    "last_seen": "2026-07-06T18:23:34.687061+00:00",
+    "last_seen": "2026-07-06T21:49:41.818442+00:00",
     "node": {
       "raw": "vless://dcba77d7-bb59-4802-b32c-37fd7011fca4@38.7.145.245:8444?type=xhttp&headerType=none&security=reality&encryption=none&sni=google.com&fp=firefox&pbk=upDCW94g-pSYQrmXvOrTVYlwBUrSKhYFF9QwrqObdVo&sid=3ca620a7ed5f3196&path=%2F# By EbraSha 📼",
       "host": "38.7.145.245",
@@ -8152,8 +8072,8 @@
     }
   },
   "turkey.shopbertar.ir": {
-    "ok": 0.9,
-    "fail": 1.0,
+    "ok": 0.81,
+    "fail": 1.9,
     "first_seen": "2026-07-06T15:56:50.163319+00:00",
     "last_seen": "2026-07-06T15:56:50.163321+00:00",
     "node": {
@@ -8172,10 +8092,10 @@
     }
   },
   "155.117.137.225": {
-    "ok": 1.9,
+    "ok": 2.71,
     "fail": 0.0,
     "first_seen": "2026-07-06T15:56:50.163374+00:00",
-    "last_seen": "2026-07-06T18:23:34.687070+00:00",
+    "last_seen": "2026-07-06T21:49:41.818450+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.225:443?type=tcp&headerType=none&security=reality&encryption=none&sni=cdn6-49.yahoo.com&fp=firefox&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&sid=3c9c5d01c6f824dd&flow=xtls-rprx-vision# By EbraSha 🦈",
       "host": "155.117.137.225",
@@ -8192,10 +8112,10 @@
     }
   },
   "149.88.28.131": {
-    "ok": 1.9,
+    "ok": 2.71,
     "fail": 0.0,
     "first_seen": "2026-07-06T15:56:50.163528+00:00",
-    "last_seen": "2026-07-06T18:23:34.687080+00:00",
+    "last_seen": "2026-07-06T21:49:41.818457+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@149.88.28.131:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=cdn6-49.yahoo.com&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&sid=3c9c5d01c6f824dd&type=tcp&headerType=none# By EbraSha 🦈",
       "host": "149.88.28.131",
@@ -8211,119 +8131,11 @@
       "country": "FR"
     }
   },
-  "kazakhstan.cloudpath.live": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687821+00:00",
-    "last_seen": ""
-  },
-  "t3.abol5419.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687826+00:00",
-    "last_seen": ""
-  },
-  "germany.aliriw.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687830+00:00",
-    "last_seen": ""
-  },
-  "shop.zon-softir.xyz": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687834+00:00",
-    "last_seen": ""
-  },
-  "178.105.78.23": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687838+00:00",
-    "last_seen": ""
-  },
-  "77.105.169.188": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687842+00:00",
-    "last_seen": ""
-  },
-  "153.52.92.23": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687845+00:00",
-    "last_seen": ""
-  },
-  "31.57.47.81": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687849+00:00",
-    "last_seen": ""
-  },
-  "147.45.221.254": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687852+00:00",
-    "last_seen": ""
-  },
-  "89.124.114.170": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687856+00:00",
-    "last_seen": ""
-  },
-  "46.33.11.3": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687859+00:00",
-    "last_seen": ""
-  },
-  "login.borna-lbop.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687863+00:00",
-    "last_seen": ""
-  },
-  "185.220.226.20": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687866+00:00",
-    "last_seen": ""
-  },
-  "check08.allenshop2024.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687870+00:00",
-    "last_seen": ""
-  },
-  "45.82.13.82": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687874+00:00",
-    "last_seen": ""
-  },
-  "108.61.203.76": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687878+00:00",
-    "last_seen": ""
-  },
-  "de6.safepass.click": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687881+00:00",
-    "last_seen": ""
-  },
-  "mtn.konjedland.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687885+00:00",
-    "last_seen": ""
-  },
   "155.117.137.224": {
-    "ok": 1.0,
+    "ok": 1.9,
     "fail": 0.0,
     "first_seen": "2026-07-06T18:23:34.687888+00:00",
-    "last_seen": "2026-07-06T18:23:34.687891+00:00",
+    "last_seen": "2026-07-06T21:49:41.818465+00:00",
     "node": {
       "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.224:443?security=reality&type=tcp&packetEncoding=xudp&sni=cdn6-49.yahoo.com&fp=chrome&flow=xtls-rprx-vision&sid=3c9c5d01c6f824dd&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&encryption=none# By EbraSha 🖥️",
       "host": "155.117.137.224",
@@ -8339,413 +8151,11 @@
       "country": "FR"
     }
   },
-  "pinto6.wubbalubbadubdubb.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687902+00:00",
-    "last_seen": ""
-  },
-  "filmnet.ir.worldwebhunter.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687906+00:00",
-    "last_seen": ""
-  },
-  "109.175.211.175": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687910+00:00",
-    "last_seen": ""
-  },
-  "185.83.127.82": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687913+00:00",
-    "last_seen": ""
-  },
-  "172.81.102.142": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687918+00:00",
-    "last_seen": ""
-  },
-  "202.78.174.112": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687922+00:00",
-    "last_seen": ""
-  },
-  "142.93.174.176": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687925+00:00",
-    "last_seen": ""
-  },
-  "lt4.maps-yandex.net": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687929+00:00",
-    "last_seen": ""
-  },
-  "rope.consolgame.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687932+00:00",
-    "last_seen": ""
-  },
-  "5.181.171.2": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687936+00:00",
-    "last_seen": ""
-  },
-  "172.65.220.225": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687939+00:00",
-    "last_seen": ""
-  },
-  "84.32.217.85": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687943+00:00",
-    "last_seen": ""
-  },
-  "217.179.6.100": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687946+00:00",
-    "last_seen": ""
-  },
-  "ge-nn.jorzel.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687949+00:00",
-    "last_seen": ""
-  },
-  "life6.forredeye.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687953+00:00",
-    "last_seen": ""
-  },
-  "193.202.10.86": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687956+00:00",
-    "last_seen": ""
-  },
-  "188.166.61.147": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687959+00:00",
-    "last_seen": ""
-  },
-  "reality.zodproxy.qzz.io": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687963+00:00",
-    "last_seen": ""
-  },
-  "151.240.151.159": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687967+00:00",
-    "last_seen": ""
-  },
-  "amst.ponmoon.ru": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687971+00:00",
-    "last_seen": ""
-  },
-  "fastly.pcapps.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687974+00:00",
-    "last_seen": ""
-  },
-  "us02.ssr.ee": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687978+00:00",
-    "last_seen": ""
-  },
-  "31.76.78.14": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687981+00:00",
-    "last_seen": ""
-  },
-  "46.33.11.252": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687985+00:00",
-    "last_seen": ""
-  },
-  "vm852-10052-20055-73.888877778888.top": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687988+00:00",
-    "last_seen": ""
-  },
-  "dl12sw.cdn-ir-prime.shop": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687991+00:00",
-    "last_seen": ""
-  },
-  "aws1.best-domain-1.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687995+00:00",
-    "last_seen": ""
-  },
-  "al2.jorzel.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.687998+00:00",
-    "last_seen": ""
-  },
-  "188.225.31.121": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688001+00:00",
-    "last_seen": ""
-  },
-  "a9d.maxriser.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688005+00:00",
-    "last_seen": ""
-  },
-  "lt2.ultima.foundation": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688008+00:00",
-    "last_seen": ""
-  },
-  "game.zuuvpn.space": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688011+00:00",
-    "last_seen": ""
-  },
-  "203.175.12.217": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688017+00:00",
-    "last_seen": ""
-  },
-  "wjndfshn.tourbonoor.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688024+00:00",
-    "last_seen": ""
-  },
-  "awgshop24.ru": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688028+00:00",
-    "last_seen": ""
-  },
-  "212.192.22.50": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688032+00:00",
-    "last_seen": ""
-  },
-  "pl-1-direct.memeplanet.org": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688036+00:00",
-    "last_seen": ""
-  },
-  "areal5.greewebservices.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688040+00:00",
-    "last_seen": ""
-  },
-  "vip.ansooyefilter.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688043+00:00",
-    "last_seen": ""
-  },
-  "203.175.12.216": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688046+00:00",
-    "last_seen": ""
-  },
-  "163.172.189.39": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688050+00:00",
-    "last_seen": ""
-  },
-  "188.132.234.90": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688053+00:00",
-    "last_seen": ""
-  },
-  "lolo.iranwwwweb.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688057+00:00",
-    "last_seen": ""
-  },
-  "2.27.7.116": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688060+00:00",
-    "last_seen": ""
-  },
-  "23.94.252.144": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688064+00:00",
-    "last_seen": ""
-  },
-  "193.23.219.144": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688070+00:00",
-    "last_seen": ""
-  },
-  "sync2.hexogate.net": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688074+00:00",
-    "last_seen": ""
-  },
-  "u1.spadgaming.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688077+00:00",
-    "last_seen": ""
-  },
-  "qbsgyn.888877778888.top": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688080+00:00",
-    "last_seen": ""
-  },
-  "real.purplrose.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688084+00:00",
-    "last_seen": ""
-  },
-  "18ecd7e9e3bea65b.instasup.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688087+00:00",
-    "last_seen": ""
-  },
-  "109.122.198.76": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688092+00:00",
-    "last_seen": ""
-  },
-  "opo.maf-rehbos.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688096+00:00",
-    "last_seen": ""
-  },
-  "m9.server-dev2.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688100+00:00",
-    "last_seen": ""
-  },
-  "node60.tomalgopas.fun": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688103+00:00",
-    "last_seen": ""
-  },
-  "195.2.93.160": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688106+00:00",
-    "last_seen": ""
-  },
-  "194.238.57.104": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688110+00:00",
-    "last_seen": ""
-  },
-  "144.124.236.44": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688113+00:00",
-    "last_seen": ""
-  },
-  "check02.allenshop2024.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688117+00:00",
-    "last_seen": ""
-  },
-  "switchyard.proxy.rlwy.net": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688120+00:00",
-    "last_seen": ""
-  },
-  "sugem.consolgame.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688124+00:00",
-    "last_seen": ""
-  },
-  "194.180.206.136": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688127+00:00",
-    "last_seen": ""
-  },
-  "ladinpo1.consolgame.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688130+00:00",
-    "last_seen": ""
-  },
-  "hello.xigmond.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688135+00:00",
-    "last_seen": ""
-  },
-  "as.daltoonserver.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688138+00:00",
-    "last_seen": ""
-  },
-  "dashboard.borna-lbop.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688141+00:00",
-    "last_seen": ""
-  },
-  "nlintez.sempai.site": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688144+00:00",
-    "last_seen": ""
-  },
   "germaan.jetstoreapp.ru": {
-    "ok": 1.0,
+    "ok": 1.9,
     "fail": 0.0,
     "first_seen": "2026-07-06T18:23:34.688147+00:00",
-    "last_seen": "2026-07-06T18:23:34.688150+00:00",
+    "last_seen": "2026-07-06T21:49:41.818473+00:00",
     "node": {
       "raw": "vless://040782e7-07a7-4e15-b2a0-ea63aaac17fc@germaan.jetstoreapp.ru:2055?security=reality&encryption=none&pbk=CWfqf06pemmlwAM8Ju1SMmnrYnAxoxMdGve0Bnu3yQ0&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=www.icloud.com&sid=a1b2c3d4e5f6a7b8# By EbraSha 🦂",
       "host": "germaan.jetstoreapp.ru",
@@ -8761,83 +8171,11 @@
       "country": "??"
     }
   },
-  "23.148.20.55": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688160+00:00",
-    "last_seen": ""
-  },
-  "143.246.138.103": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688163+00:00",
-    "last_seen": ""
-  },
-  "91.99.154.53": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688166+00:00",
-    "last_seen": ""
-  },
-  "singtel.maywind.us.kg": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688169+00:00",
-    "last_seen": ""
-  },
-  "104.249.43.7": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688174+00:00",
-    "last_seen": ""
-  },
-  "us.mail-appstatus.net": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688177+00:00",
-    "last_seen": ""
-  },
-  "italy.lizard2shop.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688180+00:00",
-    "last_seen": ""
-  },
-  "66.33.22.225": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688185+00:00",
-    "last_seen": ""
-  },
-  "greece.cloudpath.live": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688188+00:00",
-    "last_seen": ""
-  },
-  "4c27416e4ef0c1cf.movies.deldadehtarin.ir": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688192+00:00",
-    "last_seen": ""
-  },
-  "static2.hexogate.net": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688195+00:00",
-    "last_seen": ""
-  },
-  "vm81-10036-20036-131.888877778888.top": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688198+00:00",
-    "last_seen": ""
-  },
   "vpn-sg.spend.tg": {
-    "ok": 1.0,
+    "ok": 1.9,
     "fail": 0.0,
     "first_seen": "2026-07-06T18:23:34.688201+00:00",
-    "last_seen": "2026-07-06T18:23:34.688204+00:00",
+    "last_seen": "2026-07-06T21:49:41.818482+00:00",
     "node": {
       "raw": "vless://eb295947-24de-4fe3-9b8f-85431e5fe493@vpn-sg.spend.tg:8443?flow=xtls-rprx-vision&encryption=none&security=reality&sni=apple.com&fp=chrome&pbk=kt-wshmPVd-J1dlU-tsXUoGag2-oFwYQ5UafScaAfzQ&allowinsecure=0&type=tcp&headerType=none# By EbraSha ♦️",
       "host": "vpn-sg.spend.tg",
@@ -8853,520 +8191,1152 @@
       "country": "??"
     }
   },
-  "mypanel.parsclad.ir": {
+  "nl.ipsenter.net": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688214+00:00",
+    "first_seen": "2026-07-06T21:49:41.819191+00:00",
     "last_seen": ""
   },
-  "ukr.arain-gogamecenter.ir": {
+  "81.90.25.255": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688218+00:00",
+    "first_seen": "2026-07-06T21:49:41.819195+00:00",
     "last_seen": ""
   },
-  "static1.hexogate.net": {
+  "sw.eorqen.ir": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688222+00:00",
+    "first_seen": "2026-07-06T21:49:41.819199+00:00",
     "last_seen": ""
   },
-  "turk1.appcodes.ir": {
+  "fanland2.monopoli.shop": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688225+00:00",
+    "first_seen": "2026-07-06T21:49:41.819203+00:00",
     "last_seen": ""
   },
-  "wp.walking-with-death.shop": {
+  "de.theatak.com": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688228+00:00",
+    "first_seen": "2026-07-06T21:49:41.819206+00:00",
     "last_seen": ""
   },
-  "conn.arma-web.org": {
+  "153.52.92.217": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688231+00:00",
+    "first_seen": "2026-07-06T21:49:41.819210+00:00",
     "last_seen": ""
   },
-  "162.248.162.34": {
+  "107.189.23.192": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688235+00:00",
+    "first_seen": "2026-07-06T21:49:41.819213+00:00",
     "last_seen": ""
   },
-  "zzjp2.ainivp.com": {
+  "135.125.184.152": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688238+00:00",
+    "first_seen": "2026-07-06T21:49:41.819215+00:00",
     "last_seen": ""
   },
-  "kaz.friendlypetsclub.uk": {
+  "49.13.39.163": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688242+00:00",
+    "first_seen": "2026-07-06T21:49:41.819218+00:00",
+    "last_seen": ""
+  },
+  "159.195.59.107": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819221+00:00",
+    "last_seen": ""
+  },
+  "185.83.127.82": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819225+00:00",
+    "last_seen": ""
+  },
+  "uae.appcodes.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819228+00:00",
+    "last_seen": ""
+  },
+  "uk2.iranmomas.org": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819231+00:00",
+    "last_seen": ""
+  },
+  "172.65.188.155": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819234+00:00",
+    "last_seen": ""
+  },
+  "homa.letsconnectu.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819237+00:00",
+    "last_seen": ""
+  },
+  "104.248.42.77": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819241+00:00",
+    "last_seen": ""
+  },
+  "badangellll.shopiranii.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819244+00:00",
+    "last_seen": ""
+  },
+  "77.110.106.1": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819248+00:00",
+    "last_seen": ""
+  },
+  "140.235.168.3": {
+    "ok": 0.0,
+    "fail": 1.9,
+    "first_seen": "2026-07-06T21:49:41.819251+00:00",
+    "last_seen": ""
+  },
+  "ipx3.reallyclody.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819254+00:00",
+    "last_seen": ""
+  },
+  "server.leedsroastery.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819258+00:00",
+    "last_seen": ""
+  },
+  "chuixuevl1.blowingsnowclouds.cc": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819261+00:00",
+    "last_seen": ""
+  },
+  "mail.mail-appstatus.net": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819264+00:00",
+    "last_seen": ""
+  },
+  "ur.teraideri.sbs": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819268+00:00",
+    "last_seen": ""
+  },
+  "sk.synatra.net": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819273+00:00",
+    "last_seen": ""
+  },
+  "38.180.182.149": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819276+00:00",
+    "last_seen": ""
+  },
+  "ca.appcodes.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819279+00:00",
+    "last_seen": ""
+  },
+  "pl-1-direct.memeplanet.org": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819281+00:00",
+    "last_seen": ""
+  },
+  "ae81-10063-20066-23.888877778888.top": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819284+00:00",
+    "last_seen": ""
+  },
+  "185.58.207.216": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819297+00:00",
+    "last_seen": ""
+  },
+  "98fra.rolexcloud.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819300+00:00",
+    "last_seen": ""
+  },
+  "103.200.28.142": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819305+00:00",
+    "last_seen": ""
+  },
+  "join.badangellll.tr": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819308+00:00",
+    "last_seen": ""
+  },
+  "5.182.86.230": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819311+00:00",
+    "last_seen": ""
+  },
+  "cname.jgpy.help": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819313+00:00",
+    "last_seen": ""
+  },
+  "journalist_info.allcaline.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819317+00:00",
+    "last_seen": ""
+  },
+  "171.22.133.134": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819320+00:00",
+    "last_seen": ""
+  },
+  "45.136.58.34": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819323+00:00",
+    "last_seen": ""
+  },
+  "de.appcodes.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819326+00:00",
+    "last_seen": ""
+  },
+  "poland.khirss.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819329+00:00",
+    "last_seen": ""
+  },
+  "boss.rovzania.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819332+00:00",
+    "last_seen": ""
+  },
+  "pl.minoosell.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819335+00:00",
+    "last_seen": ""
+  },
+  "mizbansr.consolgame.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819339+00:00",
+    "last_seen": ""
+  },
+  "qapoi.foot8all.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819343+00:00",
+    "last_seen": ""
+  },
+  "netherlands.vpnserverhub.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819346+00:00",
+    "last_seen": ""
+  },
+  "us-4.hwowst.ru": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819351+00:00",
+    "last_seen": ""
+  },
+  "51.158.67.21": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819354+00:00",
+    "last_seen": ""
+  },
+  "45.38.41.237": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819357+00:00",
+    "last_seen": ""
+  },
+  "nor.voxyvpn.ru": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819360+00:00",
+    "last_seen": ""
+  },
+  "ireland.cloudpath.live": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819363+00:00",
+    "last_seen": ""
+  },
+  "109.248.170.119": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819366+00:00",
+    "last_seen": ""
+  },
+  "web.matcloud.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819369+00:00",
+    "last_seen": ""
+  },
+  "152.236.3.28": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819372+00:00",
+    "last_seen": ""
+  },
+  "de.ipsenter.org": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819375+00:00",
+    "last_seen": ""
+  },
+  "blue.noyzcenter.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819378+00:00",
+    "last_seen": ""
+  },
+  "178.105.168.171": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819381+00:00",
+    "last_seen": ""
+  },
+  "sonaly.consolgame.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819383+00:00",
+    "last_seen": ""
+  },
+  "tforde.baxgate.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819386+00:00",
+    "last_seen": ""
+  },
+  "77.110.122.22": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819389+00:00",
+    "last_seen": ""
+  },
+  "areal5.greewebservices.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819392+00:00",
+    "last_seen": ""
+  },
+  "pl.appcodes.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819396+00:00",
+    "last_seen": ""
+  },
+  "game.walking-with-death.shop": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819399+00:00",
+    "last_seen": ""
+  },
+  "ipx5.reallyclody.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819402+00:00",
+    "last_seen": ""
+  },
+  "31.57.47.81": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819404+00:00",
+    "last_seen": ""
+  },
+  "edge-pl01.oneset.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819408+00:00",
+    "last_seen": ""
+  },
+  "45.151.102.99": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819411+00:00",
+    "last_seen": ""
+  },
+  "138.124.61.111": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819414+00:00",
+    "last_seen": ""
+  },
+  "72.62.133.200": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819417+00:00",
+    "last_seen": ""
+  },
+  "83.219.250.194": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819420+00:00",
+    "last_seen": ""
+  },
+  "178.239.148.217": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819423+00:00",
+    "last_seen": ""
+  },
+  "57.129.138.130": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819426+00:00",
+    "last_seen": ""
+  },
+  "4c27416e4ef0c1cf.movies.deldadehtarin.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819429+00:00",
+    "last_seen": ""
+  },
+  "sg003.421421.xyz": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819432+00:00",
+    "last_seen": ""
+  },
+  "sw.linuxbase.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819435+00:00",
+    "last_seen": ""
+  },
+  "213.176.73.54": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819438+00:00",
     "last_seen": ""
   },
   "den.n1etwork.prostosetup.org": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688246+00:00",
+    "first_seen": "2026-07-06T21:49:41.819441+00:00",
     "last_seen": ""
   },
-  "166.1.131.7": {
+  "nl.clgate.network": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688249+00:00",
+    "first_seen": "2026-07-06T21:49:41.819445+00:00",
     "last_seen": ""
   },
-  "219.79.98.117": {
+  "vm852-10053-20056-242.888877778888.top": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688305+00:00",
+    "first_seen": "2026-07-06T21:49:41.819448+00:00",
     "last_seen": ""
   },
-  "91.216.104.45": {
+  "transparency.cloud-de.appcore.org": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688308+00:00",
+    "first_seen": "2026-07-06T21:49:41.819451+00:00",
     "last_seen": ""
   },
-  "1.1.2.8": {
+  "185.186.78.193": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688311+00:00",
+    "first_seen": "2026-07-06T21:49:41.819453+00:00",
     "last_seen": ""
   },
-  "144.31.38.207": {
-    "ok": 0.0,
-    "fail": 9.618479575523056,
-    "first_seen": "2026-07-06T18:23:34.688315+00:00",
-    "last_seen": ""
-  },
-  "ektyoi4k.foot8all.ir": {
+  "dogh.asan-ps.ir": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688318+00:00",
+    "first_seen": "2026-07-06T21:49:41.819456+00:00",
     "last_seen": ""
   },
-  "in.farafile.com": {
+  "83.147.252.52": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688322+00:00",
+    "first_seen": "2026-07-06T21:49:41.819459+00:00",
+    "last_seen": ""
+  },
+  "jp.talavpn.org": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819462+00:00",
+    "last_seen": ""
+  },
+  "login.borna-lbop.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819465+00:00",
+    "last_seen": ""
+  },
+  "static1.hexogate.net": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819468+00:00",
+    "last_seen": ""
+  },
+  "155.117.137.60": {
+    "ok": 1.0,
+    "fail": 0.0,
+    "first_seen": "2026-07-06T21:49:41.819471+00:00",
+    "last_seen": "2026-07-06T21:49:41.819473+00:00",
+    "node": {
+      "raw": "vless://9480871a-3843-441c-9b83-aa8c5c96b209@155.117.137.60:443?encryption=none&flow=xtls-rprx-vision&fp=chrome&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&security=reality&sid=3c9c5d01c6f824dd&sni=cdn6-49.yahoo.com&type=tcp# By EbraSha 🧪",
+      "host": "155.117.137.60",
+      "port": 443,
+      "uuid": "9480871a-3843-441c-9b83-aa8c5c96b209",
+      "pbk": "CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw",
+      "sid": "3c9c5d01c6f824dd",
+      "fp": "chrome",
+      "flow": "xtls-rprx-vision",
+      "sni": "cdn6-49.yahoo.com",
+      "net": "tcp",
+      "name": " By EbraSha 🧪",
+      "country": "FR"
+    }
+  },
+  "109.120.187.207": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819482+00:00",
+    "last_seen": ""
+  },
+  "31.59.93.174": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819485+00:00",
+    "last_seen": ""
+  },
+  "45.38.60.100": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819488+00:00",
+    "last_seen": ""
+  },
+  "mizban.webgrenconsolegame.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819491+00:00",
+    "last_seen": ""
+  },
+  "130.94.59.236": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819494+00:00",
+    "last_seen": ""
+  },
+  "82.22.40.176": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819497+00:00",
+    "last_seen": ""
+  },
+  "grr.lizard2shop.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819500+00:00",
+    "last_seen": ""
+  },
+  "89.124.64.16": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819503+00:00",
+    "last_seen": ""
+  },
+  "u1.spadgaming.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819506+00:00",
+    "last_seen": ""
+  },
+  "hkt-home.xn--9kqp42aims.top": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819511+00:00",
+    "last_seen": ""
+  },
+  "flnda.jobwebs.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819547+00:00",
+    "last_seen": ""
+  },
+  "8.216.21.135": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819552+00:00",
     "last_seen": ""
   },
   "96.47.230.5": {
     "ok": 0.0,
-    "fail": 9.995432240925494,
-    "first_seen": "2026-07-06T18:23:34.688325+00:00",
+    "fail": 9.99630011514965,
+    "first_seen": "2026-07-06T21:49:41.819555+00:00",
     "last_seen": ""
   },
-  "62.60.156.223": {
+  "3.0.54.249": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688331+00:00",
+    "first_seen": "2026-07-06T21:49:41.819558+00:00",
     "last_seen": ""
   },
-  "31.56.28.52": {
+  "15.164.100.17": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688337+00:00",
+    "first_seen": "2026-07-06T21:49:41.819560+00:00",
     "last_seen": ""
   },
-  "62.60.221.190": {
+  "13.125.115.101": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688340+00:00",
+    "first_seen": "2026-07-06T21:49:41.819564+00:00",
     "last_seen": ""
   },
-  "blog.mozilla.org": {
+  "65.109.248.144": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688346+00:00",
+    "first_seen": "2026-07-06T21:49:41.819570+00:00",
     "last_seen": ""
   },
-  "83.228.231.196": {
+  "13.212.170.88": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688352+00:00",
+    "first_seen": "2026-07-06T21:49:41.819573+00:00",
     "last_seen": ""
   },
-  "smart.ccnnx.ru": {
+  "144.31.38.207": {
     "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688355+00:00",
+    "fail": 9.353891811077334,
+    "first_seen": "2026-07-06T21:49:41.819578+00:00",
     "last_seen": ""
   },
-  "104.167.196.143": {
+  "15.164.225.173": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688363+00:00",
+    "first_seen": "2026-07-06T21:49:41.819585+00:00",
     "last_seen": ""
   },
-  "78.67.57.198": {
+  "185.8.51.20": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688366+00:00",
+    "first_seen": "2026-07-06T21:49:41.819588+00:00",
     "last_seen": ""
   },
-  "v1.medium.com": {
+  "77.239.114.176": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688370+00:00",
+    "first_seen": "2026-07-06T21:49:41.819591+00:00",
     "last_seen": ""
   },
-  "3.34.125.170": {
+  "151.241.228.254": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688373+00:00",
+    "first_seen": "2026-07-06T21:49:41.819598+00:00",
     "last_seen": ""
   },
-  "us.gryaz-vpn.com": {
+  "13.235.51.189": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688376+00:00",
+    "first_seen": "2026-07-06T21:49:41.819602+00:00",
     "last_seen": ""
   },
-  "37.203.35.59": {
+  "91.107.152.217": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688381+00:00",
+    "first_seen": "2026-07-06T21:49:41.819612+00:00",
     "last_seen": ""
   },
-  "cmd.linuxbase.ir": {
+  "ir4.benyinglis1.com": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688387+00:00",
+    "first_seen": "2026-07-06T21:49:41.819615+00:00",
+    "last_seen": ""
+  },
+  "85.198.21.41": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819618+00:00",
+    "last_seen": ""
+  },
+  "83.219.97.166": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819620+00:00",
+    "last_seen": ""
+  },
+  "ip.speedcheck.mobileemdad.top": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819627+00:00",
+    "last_seen": ""
+  },
+  "tr2.farafile.com": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819632+00:00",
+    "last_seen": ""
+  },
+  "45.95.65.108": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819636+00:00",
+    "last_seen": ""
+  },
+  "91.107.166.66": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819640+00:00",
+    "last_seen": ""
+  },
+  "94.184.6.116": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819643+00:00",
+    "last_seen": ""
+  },
+  "de-fardad.oorluma.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819646+00:00",
+    "last_seen": ""
+  },
+  "109.120.176.138": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819654+00:00",
+    "last_seen": ""
+  },
+  "79.72.90.132": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819657+00:00",
+    "last_seen": ""
+  },
+  "77.91.84.45": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819663+00:00",
+    "last_seen": ""
+  },
+  "91.107.248.233": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819667+00:00",
+    "last_seen": ""
+  },
+  "18.184.226.106": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819671+00:00",
+    "last_seen": ""
+  },
+  "mx2.drawnrisha.one": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819678+00:00",
+    "last_seen": ""
+  },
+  "130.12.242.112": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819683+00:00",
+    "last_seen": ""
+  },
+  "3.34.98.241": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819686+00:00",
+    "last_seen": ""
+  },
+  "3.70.72.166": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819689+00:00",
+    "last_seen": ""
+  },
+  "13.214.190.40": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819692+00:00",
+    "last_seen": ""
+  },
+  "h1.netblockss.ir": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819695+00:00",
+    "last_seen": ""
+  },
+  "72.56.15.43": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819698+00:00",
+    "last_seen": ""
+  },
+  "140.238.100.35": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819703+00:00",
+    "last_seen": ""
+  },
+  "18.139.228.252": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819707+00:00",
+    "last_seen": ""
+  },
+  "46.8.236.129": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819715+00:00",
+    "last_seen": ""
+  },
+  "185.220.227.1": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819719+00:00",
+    "last_seen": ""
+  },
+  "13.214.195.105": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819722+00:00",
+    "last_seen": ""
+  },
+  "85.208.104.42": {
+    "ok": 0.0,
+    "fail": 1.0,
+    "first_seen": "2026-07-06T21:49:41.819729+00:00",
     "last_seen": ""
   },
   "91.107.190.49": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688390+00:00",
+    "first_seen": "2026-07-06T21:49:41.819732+00:00",
     "last_seen": ""
   },
-  "109.120.133.167": {
+  "3.37.127.136": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688396+00:00",
+    "first_seen": "2026-07-06T21:49:41.819734+00:00",
     "last_seen": ""
   },
-  "sio.sannest.ir": {
+  "13.209.7.194": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688400+00:00",
+    "first_seen": "2026-07-06T21:49:41.819738+00:00",
     "last_seen": ""
   },
-  "91.107.155.189": {
+  "2.26.5.114": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688404+00:00",
+    "first_seen": "2026-07-06T21:49:41.819742+00:00",
     "last_seen": ""
   },
-  "45.15.152.167": {
+  "92.242.196.167": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688408+00:00",
+    "first_seen": "2026-07-06T21:49:41.819746+00:00",
     "last_seen": ""
   },
-  "aelix-se.mymarzban.com": {
+  "185.211.101.214": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688411+00:00",
+    "first_seen": "2026-07-06T21:49:41.819749+00:00",
     "last_seen": ""
   },
-  "178.18.147.163": {
+  "52.47.86.31": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688415+00:00",
+    "first_seen": "2026-07-06T21:49:41.819752+00:00",
     "last_seen": ""
   },
-  "nl2.farsping.lat": {
+  "176.123.165.134": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688422+00:00",
+    "first_seen": "2026-07-06T21:49:41.819756+00:00",
     "last_seen": ""
   },
-  "de.talavpn.org": {
+  "91.99.3.72": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688426+00:00",
+    "first_seen": "2026-07-06T21:49:41.819759+00:00",
     "last_seen": ""
   },
-  "german.monopoli.shop": {
+  "s1.nodu8.ru": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688429+00:00",
+    "first_seen": "2026-07-06T21:49:41.819763+00:00",
     "last_seen": ""
   },
-  "57.128.162.105": {
+  "london.netguardians.ir": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688436+00:00",
+    "first_seen": "2026-07-06T21:49:41.819766+00:00",
     "last_seen": ""
   },
-  "195.225.240.80": {
+  "185.248.144.70": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688441+00:00",
+    "first_seen": "2026-07-06T21:49:41.819769+00:00",
     "last_seen": ""
   },
-  "83.228.251.47": {
+  "yahoo.epiconline.ir": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688449+00:00",
+    "first_seen": "2026-07-06T21:49:41.819771+00:00",
     "last_seen": ""
   },
-  "irturki.meligoli.lol": {
+  "217.26.222.30": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688454+00:00",
+    "first_seen": "2026-07-06T21:49:41.819774+00:00",
     "last_seen": ""
   },
-  "nl1.nomac.ir": {
+  "212.74.39.81": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688470+00:00",
+    "first_seen": "2026-07-06T21:49:41.819778+00:00",
     "last_seen": ""
   },
-  "friends.melodyfax.com": {
+  "178.105.208.97": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688475+00:00",
+    "first_seen": "2026-07-06T21:49:41.819782+00:00",
     "last_seen": ""
   },
-  "poland.talavpn.org": {
+  "91.99.150.89": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688481+00:00",
+    "first_seen": "2026-07-06T21:49:41.819785+00:00",
     "last_seen": ""
   },
-  "18.140.7.103": {
+  "54.169.177.89": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688486+00:00",
+    "first_seen": "2026-07-06T21:49:41.819788+00:00",
     "last_seen": ""
   },
-  "13.229.140.185": {
+  "samis.iddns.ir": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688490+00:00",
+    "first_seen": "2026-07-06T21:49:41.819791+00:00",
     "last_seen": ""
   },
-  "3.37.61.173": {
+  "9sbisocj5c11.dxdx5.com": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688496+00:00",
+    "first_seen": "2026-07-06T21:49:41.819794+00:00",
     "last_seen": ""
   },
-  "95.179.187.188": {
+  "43.200.170.129": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688501+00:00",
+    "first_seen": "2026-07-06T21:49:41.819797+00:00",
     "last_seen": ""
   },
-  "85.234.84.206": {
+  "meli_proxyy.vip-plan.org": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688509+00:00",
+    "first_seen": "2026-07-06T21:49:41.819801+00:00",
     "last_seen": ""
   },
-  "wire.zerinh.net": {
+  "bsuqian01.dynu.net": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688514+00:00",
+    "first_seen": "2026-07-06T21:49:41.819804+00:00",
     "last_seen": ""
   },
-  "54.180.117.240": {
+  "188.121.109.55": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688517+00:00",
+    "first_seen": "2026-07-06T21:49:41.819807+00:00",
     "last_seen": ""
   },
-  "18.140.247.56": {
+  "45.89.244.210": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688521+00:00",
+    "first_seen": "2026-07-06T21:49:41.819811+00:00",
     "last_seen": ""
   },
-  "18.143.195.132": {
+  "91.132.57.205": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688532+00:00",
+    "first_seen": "2026-07-06T21:49:41.819820+00:00",
     "last_seen": ""
   },
-  "45.77.140.70": {
+  "51.158.241.51": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688540+00:00",
+    "first_seen": "2026-07-06T21:49:41.819823+00:00",
     "last_seen": ""
   },
-  "172.233.131.193": {
+  "13.212.46.207": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688545+00:00",
+    "first_seen": "2026-07-06T21:49:41.819827+00:00",
     "last_seen": ""
   },
-  "goldenmemory.downloadnova.info": {
+  "94.228.170.58": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688549+00:00",
+    "first_seen": "2026-07-06T21:49:41.819830+00:00",
     "last_seen": ""
   },
-  "zorovpn.xubi.org": {
+  "real1.hovpe.com": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688554+00:00",
+    "first_seen": "2026-07-06T21:49:41.819834+00:00",
     "last_seen": ""
   },
-  "212.100.171.202": {
+  "3.35.218.34": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688557+00:00",
+    "first_seen": "2026-07-06T21:49:41.819836+00:00",
     "last_seen": ""
   },
-  "31.59.39.85": {
+  "153.76.116.191": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688560+00:00",
+    "first_seen": "2026-07-06T21:49:41.819840+00:00",
     "last_seen": ""
   },
-  "66.245.218.196": {
+  "13.212.184.167": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688564+00:00",
+    "first_seen": "2026-07-06T21:49:41.819844+00:00",
     "last_seen": ""
   },
-  "azerbaijan.mymarzban.com": {
+  "54.169.249.99": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688567+00:00",
+    "first_seen": "2026-07-06T21:49:41.819849+00:00",
     "last_seen": ""
   },
-  "37.156.44.50": {
+  "168.222.43.108": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688576+00:00",
+    "first_seen": "2026-07-06T21:49:41.819851+00:00",
     "last_seen": ""
   },
-  "ve3.royalro.shop": {
+  "144.31.158.145": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688580+00:00",
+    "first_seen": "2026-07-06T21:49:41.819854+00:00",
     "last_seen": ""
   },
-  "194.5.193.150": {
+  "specxtech.ticketdatabase.info": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688623+00:00",
+    "first_seen": "2026-07-06T21:49:41.819858+00:00",
     "last_seen": ""
   },
-  "em1.modernstore3.ir": {
+  "uk-lon-1.azreefs.com": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688632+00:00",
+    "first_seen": "2026-07-06T21:49:41.819863+00:00",
     "last_seen": ""
   },
-  "130.94.1.225": {
+  "87.199.205.78": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688637+00:00",
+    "first_seen": "2026-07-06T21:49:41.819866+00:00",
     "last_seen": ""
   },
-  "38.244.21.164": {
+  "148.135.195.96": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688642+00:00",
+    "first_seen": "2026-07-06T21:49:41.819868+00:00",
     "last_seen": ""
   },
-  "31.59.40.53": {
+  "136.244.114.106": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688648+00:00",
+    "first_seen": "2026-07-06T21:49:41.819872+00:00",
     "last_seen": ""
   },
-  "cgft.foot8all.ir": {
+  "91.107.249.110": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688653+00:00",
+    "first_seen": "2026-07-06T21:49:41.819876+00:00",
     "last_seen": ""
   },
-  "sourceving.ir": {
+  "13.251.81.245": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688656+00:00",
+    "first_seen": "2026-07-06T21:49:41.819879+00:00",
     "last_seen": ""
   },
-  "18.143.152.86": {
+  "45.136.5.98": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688661+00:00",
+    "first_seen": "2026-07-06T21:49:41.819882+00:00",
     "last_seen": ""
   },
-  "95.110.157.117": {
+  "152.236.3.24": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688664+00:00",
+    "first_seen": "2026-07-06T21:49:41.819886+00:00",
     "last_seen": ""
   },
-  "13.158.211.135": {
+  "2.26.114.60": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688668+00:00",
+    "first_seen": "2026-07-06T21:49:41.819892+00:00",
     "last_seen": ""
   },
-  "de-1d.harchihast.com": {
+  "172.86.77.189": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688673+00:00",
+    "first_seen": "2026-07-06T21:49:41.819895+00:00",
     "last_seen": ""
   },
-  "ipx1.reallyclody.ir": {
+  "13.212.93.216": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688676+00:00",
+    "first_seen": "2026-07-06T21:49:41.819922+00:00",
     "last_seen": ""
   },
-  "by_info.allcaline.ir": {
+  "3.0.201.91": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688679+00:00",
+    "first_seen": "2026-07-06T21:49:41.819930+00:00",
     "last_seen": ""
   },
-  "164.138.202.34": {
+  "94.125.102.111": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688684+00:00",
+    "first_seen": "2026-07-06T21:49:41.819936+00:00",
     "last_seen": ""
   },
-  "18.140.68.145": {
+  "13.125.73.68": {
     "ok": 0.0,
     "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688690+00:00",
-    "last_seen": ""
-  },
-  "gozarxbot2.zipfly.org": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688694+00:00",
-    "last_seen": ""
-  },
-  "47.129.181.252": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688698+00:00",
-    "last_seen": ""
-  },
-  "pol4.fghy27.top": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688701+00:00",
-    "last_seen": ""
-  },
-  "srvtr.theretrovip.com": {
-    "ok": 0.0,
-    "fail": 1.0,
-    "first_seen": "2026-07-06T18:23:34.688704+00:00",
+    "first_seen": "2026-07-06T21:49:41.819939+00:00",
     "last_seen": ""
   }
 }
